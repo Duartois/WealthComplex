@@ -3,11 +3,11 @@ import { Header, Footer } from "./components";
 
 const App = () => {
     return (
-        <>  
+        <div>
             <Header />
             <Outlet />
             <Footer />
-        </>
+        </div>
     );
 };
 

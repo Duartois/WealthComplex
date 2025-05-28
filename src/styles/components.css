@@ -7,7 +7,7 @@
   transition: color 300ms;
 }
 .link:hover {
-  color: #1465FF;   /* text-primary-50 */
+  color: #344668;   /* text-primary-50 */
 }
 
 .btn-primary {
@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px; /* rounded-full */
-  background-color: #1465FF; /* bg-primary-50 */
+  background-color: #344668; /* bg-primary-50 */
   padding-left: 1.5rem; /* px-6 */
   padding-right: 1.5rem;
   font-size: 1rem; /* text-base */
@@ -26,7 +26,7 @@
   transition: background-color 300ms;
 }
 .btn-primary:hover {
-  background-color: #1059E4; /* hover:bg-primary-60 */
+  background-color: #344668; /* hover:bg-primary-60 */
 }
 
 .label {

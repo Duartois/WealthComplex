@@ -1,5 +1,5 @@
 import logo from "../assets/logo.svg";
-import home from "../assets/home-01.svg";
+import home from "../assets/gif/home.gif";
 import about from "../assets/about-01.jpg";
 import project01 from "../assets/project-01.jpg";
 import project02 from "../assets/project-02.jpg";

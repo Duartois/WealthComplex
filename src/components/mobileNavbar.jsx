@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { mobileNavbarVariants } from "../constants/motion";
 import Proptypes from "prop-types";
 
-const MobileNavbar = React.forwardRef(({setToggleMenu}, ref) => {
+const MobileNavbar = React.forwardRef(({setToggleMenu,activeSection}, ref) => {
     return (
         <motion.div 
             ref={ref} 
@@ -24,7 +24,7 @@ const MobileNavbar = React.forwardRef(({setToggleMenu}, ref) => {
                     {navbarLinks.map((link,index) => {
                         return (
                             <li key={index}>
-                                <Link to={link.path} className="link text-lg">
+                                <Link to={link.path} className={`link text-lg ${activeSection === link.id ? "text-primary-50" : ""}`}>
                                     {link.label}
                                 </Link>
                             </li>
@@ -43,7 +43,8 @@ const MobileNavbar = React.forwardRef(({setToggleMenu}, ref) => {
 });
 
 MobileNavbar.propTypes = {
-    setToggleMenu: Proptypes.func, 
+    setToggleMenu: Proptypes.func,
+    activeSection: Proptypes.string
 };
 
 MobileNavbar.displayName = "MobileNavbar";
