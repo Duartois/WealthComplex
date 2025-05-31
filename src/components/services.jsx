@@ -19,7 +19,7 @@ const Services = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-h3 leading-tight mb-4">
                 Feels Kinda Alive, Right?
               </h2>
-              <p className="text-lg mb-6">
+              <p className="text-sm md:text-lg mb-6">
                 Dynamic interfaces respond, adapt, and evolve in real time. They’re changing the web, making it more interactive and engaging.
               </p>
               <a
