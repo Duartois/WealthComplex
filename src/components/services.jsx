@@ -9,7 +9,7 @@ const Services = () => {
       <div className="container relative flex flex-col items-center items-center gap-y-6 md:top-[60px]">
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
-        <div className="max-w-5xl mx-auto">
+        <div className="w-full md:max-w-5xl md:scale-100">
           <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl p-8 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px]">
             {/* Texto */}
             <div className="w-full lg:w-1/2">
