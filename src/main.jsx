@@ -5,7 +5,7 @@ import './index.css'
 import './styles/fonts.css'
 import App from './App.jsx'
 import Home from './pages/home.jsx'
-import Contact from './pages/Contact.jsx'
+import Contact from './pages/contact.jsx'
 
 
 const router = createBrowserRouter([
