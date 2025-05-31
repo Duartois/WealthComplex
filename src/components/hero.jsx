@@ -21,9 +21,9 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex min-h-screen items-center bg-bege rounded-b-2xl"
+      className="flex sm:min-h-screen items-center bg-bege rounded-b-2xl"
     >
-      <div className="container flex flex-col-reverse items-center justify-between gap-y-12 md:flex-row">
+      <div className="container flex flex-col-reverse items-center justify-between gap-y-12 md:flex-row sm:top-[-100px]">
         <motion.div
             variants={leftSideVariants}
             initial="hidden"

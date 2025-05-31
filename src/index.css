@@ -7,7 +7,7 @@
         @apply m-0 box-border scroll-smooth border-red-500 p-0 font-inter;
     }
     section {
-        @apply relative overflow-hidden py-sec-md;
+        @apply relative overflow-hidden;
     }
 
     img {
@@ -262,7 +262,7 @@ img,video {
 section {
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+
     padding-bottom: 80px;
 }
 
