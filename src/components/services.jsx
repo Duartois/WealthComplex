@@ -6,7 +6,7 @@ const Services = () => {
     <motion.section
       id="services"
       className='mt-24'>
-      <div className="container relative flex flex-col items-center items-center gap-y-6 md:top-[60px]">
+      <div className="container relative flex flex-col items-center items-center gap-y-6 top-[10px] md:top-[60px]">
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
         <div className="max-w-5xl mx-auto">
