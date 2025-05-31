@@ -24,20 +24,20 @@ export default {
             },
             colors: {
                 primary: {
-                    10: "#8EB5FF",
+                    10: "#9bc7c4",
                     20: "#70A1FF",
-                    30: "#518DFF",
-                    40: "#3379FF",
-                    50: "#1465FF",
-                    60: "#1059E4",
+                    30: "#f8f4c4",
+                    40: "#4c7774",
+                    50: "#6494b5",
+                    60: "#47667b",
                 },
                 secondary: {
-                    10: "#FFE2A2",
-                    20: "#FFD77F",
+                    10: "#f8f4c4",
+                    20: "#dedcc0",
                     30: "#FFCB5B",
                     40: "#FFC038",
-                    50: "#FFB514",
-                    60: "#DF9E10",
+                    50: "#b4be99",
+                    60: "#a5c3a7",
                 },
                 gray: {
                     10: "#F4F4F5",
@@ -82,4 +82,7 @@ export default {
         },
     },
     plugins: [],
+    corePlugins: {
+        preflight: true,
+    },
 };

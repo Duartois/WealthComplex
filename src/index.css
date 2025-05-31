@@ -2,13 +2,6 @@
 @tailwind base;
 @tailwind components;
 
-@theme {
-  --tracking-1: 0em;
-  --tracking-2: 0.025em;
-  --tracking-3: 0.05em;
-  --tracking-4: 0.1em;
-}
-
 @layer base {
     * {
         @apply m-0 box-border scroll-smooth border-red-500 p-0 font-inter;
@@ -74,7 +67,8 @@ html,:host {
     font-feature-settings: normal;
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
-    color:#ffffff
+    color:#ffffff;
+    scroll-behavior: smooth;
 }
 
 body {

@@ -21,7 +21,7 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex min-h-screen items-center bg-bege rounded-b-xl"
+      className="flex min-h-screen items-center bg-bege rounded-b-2xl"
     >
       <div className="container flex flex-col-reverse items-center justify-between gap-y-12 md:flex-row">
         <motion.div
@@ -60,7 +60,9 @@ const Hero = () => {
                     "Front-End Developer",
                     "Back-End Developer",
                     "Full-Stack Developer",
-                    "Software Engineer",
+                    "Web Developer",
+                    "Creative Developer",
+                    "Web Designer",
                   ]}
                 />
               </span>
@@ -69,8 +71,7 @@ const Hero = () => {
               Do you need some help?
             </h3>
             <p className="text-lg font-normal text-primary-50">
-              I am a passionate developer with experience in building dynamic
-              and responsive web applications.
+              I'm an independent creative developer from Brasil, South America.
             </p>
           </div>
           <div className="flex justify-between gap-x-4">
@@ -98,7 +99,12 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             className="relative flex h-full justify-end md:w-1/2"
-        ></motion.div>
+        >
+          {/* Placeholder de vídeo ou imagem */}
+          <div className="w-[400px] md:w-full lg:w-3/4 h-64 lg:h-80 rounded-2xl bg-black opacity-60 flex items-center justify-center">
+            <span className="text-white text-sm">Mídia aqui</span>
+          </div>
+        </motion.div>
       </div>
     </motion.section>
   );

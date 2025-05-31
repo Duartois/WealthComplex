@@ -18,6 +18,11 @@ export const navbarLinks = [
         label: "Home",
     },
     {
+        id: "services",
+        path: "/#services",
+        label: "Services",
+    },
+    {
         id: "about",
         path: "/#about",
         label: "About",
@@ -28,9 +33,9 @@ export const navbarLinks = [
         label: "Portfolio",
     },
     {
-        id: "testimonials",
-        path: "/#testimonials",
-        label: "Testimonials",
+        id: "projects",
+        path: "/#projects",
+        label: "Projects",
     },
 ];
 
