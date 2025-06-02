@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Send } from "lucide-react";
 import { arrow01, arrow02 } from "../constants/assets";
 import { leftSideVariants, rightSideVariants } from "../constants/motion";
+import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -101,9 +102,9 @@ const Hero = () => {
             className="relative flex h-full justify-end md:w-1/2"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="w-[400px] md:w-full lg:w-3/4 h-64 lg:h-80 rounded-2xl bg-black opacity-60 flex items-center justify-center">
-            <span className="text-white text-sm">Mídia aqui</span>
-          </div>
+          <Spline
+        scene="https://prod.spline.design/RmrV3mxdlid8POzE/scene.splinecode" 
+      />
         </motion.div>
       </div>
     </motion.section>
