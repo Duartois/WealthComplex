@@ -102,9 +102,9 @@ const Hero = () => {
             className="relative flex h-full justify-end md:w-1/2"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <Spline
-        scene="https://prod.spline.design/RmrV3mxdlid8POzE/scene.splinecode" 
-      />
+        <div className="w-full lg:w-1/2 h-64 lg:h-80 rounded-2xl bg-black opacity-60 flex items-center justify-center">
+              <span className="text-white text-sm">Mídia aqui</span>
+            </div>
         </motion.div>
       </div>
     </motion.section>
