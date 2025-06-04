@@ -7,7 +7,7 @@
         @apply m-0 box-border scroll-smooth border-red-500 p-0 font-inter;
     }
     section {
-        @apply relative overflow-hidden;
+        @apply relative;
     }
 
     img {
@@ -259,13 +259,6 @@ img,video {
     font-family: Inter,sans-serif
 }
 
-section {
-    position: relative;
-    overflow: hidden;
-
-    padding-bottom: 80px;
-}
-
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -430,6 +423,11 @@ img {
     .container {
         max-width:1400px
     }
+}
+
+.scale-lucky {
+transform: scale(1.35); /* ou 1.2, 1.4 — ajuste como preferir */
+  transform-origin: center;
 }
 .link {
     font-size: 1rem;

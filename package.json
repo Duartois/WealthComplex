@@ -21,7 +21,8 @@
     "react-router": "^7.6.0",
     "react-router-dom": "^7.6.0",
     "react-simple-typewriter": "^5.0.1",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

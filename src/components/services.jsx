@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
 import SectionTitle from './sectionTitle';
+import LuckyBlock from './luckyBlock';
 
 const Services = () => {
   return (
     <motion.section
-      id="services"
-      className='mt-24'>
-      <div className="container relative flex flex-col items-center items-center gap-y-6 md:top-[60px]">
+      id="services">
+      <div className="container relative flex flex-col items-center items-center gap-y-6 md:top-[130px] md:bottom-[130px]">
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
         <div className="w-full md:max-w-5xl md:scale-100">
-          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl p-8 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px]">
+          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl px-14 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px] overflow-visible">
             {/* Texto */}
             <div className="w-full lg:w-1/2">
               <p className="uppercase text-sm tracking-widest mb-2">
@@ -31,8 +31,10 @@ const Services = () => {
             </div>
 
             {/* Placeholder de vídeo ou imagem */}
-            <div className="w-full lg:w-1/2 h-64 lg:h-80 rounded-2xl bg-black opacity-60 flex items-center justify-center">
-              <span className="text-white text-sm">Mídia aqui</span>
+            <div className="w-full lg:w-1/2 h-80 lg:h-96 relative overflow-visible">
+              <div className="absolute inset-0 z-20 pointer-events-none scale-lucky">
+                <LuckyBlock />
+              </div>
             </div>
           </div>
         </div>

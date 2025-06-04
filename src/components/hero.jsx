@@ -6,6 +6,7 @@ import { Send } from "lucide-react";
 import { arrow01, arrow02 } from "../constants/assets";
 import { leftSideVariants, rightSideVariants } from "../constants/motion";
 import Spline from "@splinetool/react-spline";
+import LuckyBlock from "./luckyBlock";
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -22,14 +23,14 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex sm:min-h-screen items-center bg-bege rounded-b-2xl"
+      className="flex sm:min-h-screen items-center bg-bege rounded-b-2xl overflow-visible"
     >
-      <div className="container flex flex-col-reverse items-center justify-between gap-y-12 md:flex-row sm:top-[-100px]">
+      <div className="container flex flex-col-reverse items-center justify-between md:flex-row sm:top-[-100px] h-[800px]">
         <motion.div
-            variants={leftSideVariants}
-            initial="hidden"
-            animate="visible"
-            className="relative flex flex-col items-center gap-y-7 text-center md:w-1/2 md:items-start md:text-start"
+          variants={leftSideVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative flex flex-col items-center text-center md:w-1/2 md:items-start md:text-start"
         >
           <motion.img
             variants={leftSideVariants}
@@ -93,18 +94,20 @@ const Hero = () => {
             className="absolute bottom-[-150px] hidden -translate-y-full lg:block w-20"
           />
         </motion.div>
-        
+
         {/* Hero Lado Direito */}
         <motion.div
-            variants={rightSideVariants}
-            initial="hidden"
-            animate="visible"
-            className="relative flex h-full justify-end md:w-1/2"
+          variants={rightSideVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative flex h-full justify-end md:w-1/2"
         >
           {/* Placeholder de vídeo ou imagem */}
-        <div className="w-full lg:w-1/2 h-64 lg:h-80 rounded-2xl bg-black opacity-60 flex items-center justify-center">
-              <span className="text-white text-sm">Mídia aqui</span>
+          <div className="relative w-full overflow-visible">
+            <div className="absolute inset-0 z-20 pointer-events-none">
+              <LuckyBlock />
             </div>
+          </div>
         </motion.div>
       </div>
     </motion.section>
