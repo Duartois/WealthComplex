@@ -23,9 +23,9 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex sm:min-h-screen items-center bg-bege rounded-b-2xl overflow-visible"
+      className="flex items-center bg-bege rounded-b-2xl"
     >
-      <div className="container flex flex-col-reverse items-center justify-between md:flex-row sm:top-[-100px] h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[700px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
@@ -100,11 +100,11 @@ const Hero = () => {
           variants={rightSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex h-full justify-end md:w-1/2"
+          className="relative flex h-2/3 justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="relative w-full overflow-visible">
-            <div className="absolute inset-0 z-20 pointer-events-none">
+          <div className="relative w-full">
+            <div className="absolute inset-0 z-20 pointer-events-none sm:scale-lucky lg:scale-100">
               <LuckyBlock />
             </div>
           </div>

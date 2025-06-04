@@ -6,11 +6,11 @@ const Services = () => {
   return (
     <motion.section
       id="services">
-      <div className="container relative flex flex-col items-center items-center gap-y-6 md:top-[130px] md:bottom-[130px]">
+      <div className="container relative flex flex-col items-center items-center gap-y-6 top-[80px] md:bottom-[130px]">
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
         <div className="w-full md:max-w-5xl md:scale-100">
-          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl px-14 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px] overflow-visible">
+          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl p-14 lg:py-0 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px] overflow-visible">
             {/* Texto */}
             <div className="w-full lg:w-1/2">
               <p className="uppercase text-sm tracking-widest mb-2">

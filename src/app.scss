@@ -9,8 +9,7 @@
     scroll-snap-type: y mandatory;
   }
   section {
-    height: 200vh;
-    display: flex;
+    height: 100vh;
     scroll-snap-align: start;
   }
 }

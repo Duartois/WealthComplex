@@ -381,12 +381,7 @@ img {
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-    @media(max-width: 640px) {
-       transform: scale(0.9);
-       transform-origin: top center;
-       margin: 0 auto;
-       padding: 0;
-    }
+    
 }
 
 @media (min-width: 425px) {

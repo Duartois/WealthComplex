@@ -70,9 +70,9 @@ export default function LuckyBlock() {
             if (screenWidth > 1280) {
                 scale = 1.2;
             } else if (screenWidth > 1024) {
-                scale = 1.2;
+                scale = 1.0;
             } else if (screenWidth > 768) {
-                scale = 1.2;
+                scale = 0.8;
             }
             group.scale.set(scale, scale, scale);
         });
