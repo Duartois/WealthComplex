@@ -25,12 +25,12 @@ const Hero = () => {
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
       className="flex items-center bg-bege md:bg-gradient-to-l from-[#47667b] via-[#d5e0b5] to-[#f8f4c4] rounded-b-2xl w:1/2 md:w:full"
     >
-      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row top-0 es:h-[420px] sm:h-[400px] md:h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[200px] es:h-[420px] sm:h-[400px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex flex-col items-center text-center max-w-94 md:w-1/2 md:items-start md:text-start md:h-[400px]"
+          className="relative flex flex-col items-center text-center max-w-[600px] w-full md:w-1/2 md:items-start md:text-start md:h-[400px]"
         >
           <motion.img
             variants={leftSideVariants}
@@ -42,15 +42,15 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           />
           <div className="flex flex-col">
-            <h1 className="text-h3 font-Supabold text-green-90">
+            <h1 className="es:text-h3 text-xxl font-Supabold text-green-90">
               Hi, I’m{" "}
-              <span className="text-inherit text-h3 font-bold text-secondary">
+              <span className="text-inherit es:text-h3 text-xxl font-bold text-secondary">
                 Matheus Duarte
               </span>
             </h1>
-            <h2 className="text-h2 text-green-90">
+            <h2 className="es:text-h2 text-xxl text-green-90">
               I’m{" "}
-              <span className="text-primary-50 text-h2 typewriter-wrapper">
+              <span className="text-primary-50 es:text-h2 text-xxl typewriter-wrapper">
                 <Typewriter
                   cursor
                   cursorBlinking
@@ -69,10 +69,10 @@ const Hero = () => {
                 />
               </span>
             </h2>
-            <h3 className="text-h1 font-Supabold text-green-90 mb-1">
+            <h3 className="es:text-h1 text-xxl font-Supabold text-green-90 mb-1">
               Do you need some help?
             </h3>
-            <p className="text-lg font-normal text-primary-50 mb-1">
+            <p className="text-lg es:text-xl font-normal text-primary-50 mb-1">
               I'm an independent creative developer from Brasil, South America.
             </p>
           </div>
@@ -103,7 +103,7 @@ const Hero = () => {
           className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="relative w-full h-[50vh] md:h-[600px] top-[20px] es:top-[40px]">
+          <div className="relative w-full h-[30vh] md:h-[600px] top-[-20px]">
             <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
               <LuckyBlock
               />

@@ -1194,6 +1194,13 @@ img {
     line-height: 1.75rem
 }
 
+.text-xxl {
+    font-family: 'Test Tiempos Headline Regular', serif;
+    font-size: 1.55rem;
+    line-height: normal;
+    font-weight: 700
+}
+
 .font-SupaBold {
     font-weight: 900
 }
