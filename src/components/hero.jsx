@@ -30,7 +30,7 @@ const Hero = () => {
           variants={leftSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex flex-col items-center text-center max-w-[600px] w-full md:w-1/2 md:items-start md:text-start md:h-[400px]"
+          className="relative flex flex-col items-center text-center max-w-[600px] w-[400px] md:w-1/2 md:items-start md:text-start md:h-[400px]"
         >
           <motion.img
             variants={leftSideVariants}
