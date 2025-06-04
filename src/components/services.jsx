@@ -10,7 +10,7 @@ const Services = () => {
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
         <div className="w-full md:max-w-5xl md:scale-100">
-          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl p-14 lg:py-0 text-white flex flex-col lg:flex-row items-center gap-8 shadow-lg min-h-[500px] overflow-visible">
+          <div className="bg-gradient-to-br from-[#47667b] to-[#f8f4c4] rounded-2xl px-12 pt-4 lg:py-0 text-white flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[550px] md:min-h-[500px] overflow-visible">
             {/* Texto */}
             <div className="w-full lg:w-1/2">
               <p className="uppercase text-sm tracking-widest mb-2">
@@ -31,8 +31,8 @@ const Services = () => {
             </div>
 
             {/* Placeholder de vídeo ou imagem */}
-            <div className="w-full lg:w-1/2 h-80 lg:h-96 relative overflow-visible">
-              <div className="absolute inset-0 z-20 pointer-events-none scale-lucky">
+            <div className="w-full lg:w-1/2 h-60 lg:h-96 relative overflow-visible">
+              <div className="absolute inset-0 z-20 pointer-events-none md:h-[30vh] lg:h-[60vh] top-[-30px] md:top-[-100px] lg:top-0 xl:top-[-100px]">
                 <LuckyBlock />
               </div>
             </div>

@@ -23,14 +23,14 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-bege rounded-b-2xl"
+      className="flex items-center bg-bege rounded-b-2xl w:1/2 md:w:full"
     >
-      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[700px] md:h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row top-0 es:h-[420px] sm:h-[400px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex flex-col items-center text-center md:w-1/2 md:items-start md:text-start"
+          className="relative flex flex-col items-center text-center max-w-94 md:w-1/2 md:items-start md:text-start"
         >
           <motion.img
             variants={leftSideVariants}
@@ -42,7 +42,7 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           />
           <div className="flex flex-col">
-            <h1 className="text-h4 font-Supabold text-green-90">
+            <h1 className="text-h3 font-Supabold text-green-90">
               Hi, I’m{" "}
               <span className="text-inherit text-h3 font-bold text-secondary">
                 Matheus Duarte
@@ -69,14 +69,14 @@ const Hero = () => {
                 />
               </span>
             </h2>
-            <h3 className="text-h1 font-Supabold text-green-90">
+            <h3 className="text-h1 font-Supabold text-green-90 mb-1">
               Do you need some help?
             </h3>
-            <p className="text-lg font-normal text-primary-50">
+            <p className="text-lg font-normal text-primary-50 mb-1">
               I'm an independent creative developer from Brasil, South America.
             </p>
           </div>
-          <div className="flex justify-between gap-x-4">
+          <div className="flex justify-between gap-x-4 pt-4">
             <Link to={"/contact"} className="btn-primary w-fit">
               Contact <Send />
             </Link>
@@ -100,12 +100,13 @@ const Hero = () => {
           variants={rightSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex h-2/3 justify-end w-full md:w-1/2 md:h-full"
+          className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="relative w-full">
-            <div className="absolute inset-0 z-20 pointer-events-none sm:scale-lucky lg:scale-100">
-              <LuckyBlock />
+          <div className="relative w-full h-[50vh] md:h-full top-[20px] es:top-[40px]">
+            <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
+              <LuckyBlock
+              />
             </div>
           </div>
         </motion.div>
