@@ -23,14 +23,14 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-bege rounded-b-2xl w:1/2 md:w:full"
+      className="flex items-center bg-bege md:bg-gradient-to-l from-[#47667b] via-[#d5e0b5] to-[#f8f4c4] rounded-b-2xl w:1/2 md:w:full"
     >
       <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row top-0 es:h-[420px] sm:h-[400px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
           animate="visible"
-          className="relative flex flex-col items-center text-center max-w-94 md:w-1/2 md:items-start md:text-start"
+          className="relative flex flex-col items-center text-center max-w-94 md:w-1/2 md:items-start md:text-start md:h-[400px]"
         >
           <motion.img
             variants={leftSideVariants}
@@ -91,7 +91,7 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
             src={arrow02}
             alt="arrow"
-            className="absolute bottom-[-150px] hidden -translate-y-full lg:block w-20"
+            className="absolute bottom-[-50px] hidden -translate-y-full lg:block w-20"
           />
         </motion.div>
 
@@ -103,7 +103,7 @@ const Hero = () => {
           className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="relative w-full h-[50vh] md:h-full top-[20px] es:top-[40px]">
+          <div className="relative w-full h-[50vh] md:h-[600px] top-[20px] es:top-[40px]">
             <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
               <LuckyBlock
               />
