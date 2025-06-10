@@ -23,7 +23,7 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-bege md:bg-gradient-to-l from-[#47667b] via-[#d5e0b5] to-[#f8f4c4] rounded-b-2xl w:1/2 md:w:full"
+      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full"
     >
       <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[400px] es:h-[420px] sm:h-[400px] md:h-[800px]">
         <motion.div
@@ -42,15 +42,15 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           />
           <div className="flex flex-col">
-            <h1 className="es:text-h3 text-xxl font-Supabold text-green-90">
+            <h1 className="es:text-h3 text-xxl font-Supabold text-secondary-50">
               Hi, I’m{" "}
-              <span className="text-inherit es:text-h3 text-xxl font-bold text-secondary">
+              <span className="es:text-h3 text-xxl font-bold text-[#fcfdff] text-shadow-lg">
                 Matheus Duarte
               </span>
             </h1>
-            <h2 className="es:text-h2 text-xxl text-green-90">
+            <h2 className="es:text-h2 text-xxl text-secondary-50">
               I’m{" "}
-              <span className="text-primary-50 es:text-h2 text-xxl typewriter-wrapper">
+              <span className="text-secondary-50 es:text-h2 text-xxl typewriter-wrapper">
                 <Typewriter
                   cursor
                   cursorBlinking
@@ -69,10 +69,10 @@ const Hero = () => {
                 />
               </span>
             </h2>
-            <h3 className="es:text-h1 text-xxl font-Supabold text-green-90 mb-1">
+            <h3 className="es:text-h1 text-xxl font-Supabold text-secondary-50 mb-1">
               Do you need some help?
             </h3>
-            <p className="text-lg es:text-xl font-normal text-primary-50 mb-1">
+            <p className="text-lg es:text-xl font-normal text-secondary-50 mb-1">
               I'm an independent creative developer from Brasil, South America.
             </p>
           </div>

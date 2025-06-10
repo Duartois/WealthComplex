@@ -25,6 +25,11 @@
         @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary-50 px-6 text-base font-normal text-gray-10 transition-colors hover:bg-primary-60;
     }
 
+    .btn-secondary {
+        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-6 text-base font-normal text-primary transition-colors hover:bg-white;
+    }
+
+
     .label {
         @apply w-full text-base font-normal text-gray-90;
     }
@@ -513,7 +518,8 @@ img {
     column-gap: .5rem;
     border-radius: 9999px;
     --tw-bg-opacity: 1;
-    background-color: #47667b;
+    background-color: #6c788e;
+    border: 1px solid #fcfdff;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-size: 1rem;
@@ -528,7 +534,9 @@ img {
 
 .btn-primary:hover {
     --tw-bg-opacity: 1;
-    background-color: #6d8b89
+    background-color: #fcfdff;
+    color: #6c788e;
+    border: 1px solid #6c788e; 
 }
 
 .btn-secondary {
@@ -540,7 +548,7 @@ img {
     -moz-column-gap: .5rem;
     column-gap: .5rem;
     border-radius: 9999px;
-    border: 2px solid #47667b;
+    border: 2px solid #6c788e;
     --tw-bg-opacity: 1;
     background-color: #ffffff;
     padding-left: 1.5rem;
@@ -549,10 +557,17 @@ img {
     line-height: 1.5rem;
     font-weight: 400;
     --tw-text-opacity: 1;
-    color: #47667b;
+    color: #6c788e;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s;
+}
+
+.btn-secondary:hover {
+    --tw-bg-opacity: 1;
+    background-color: #6c788e;
+    color: #fcfdff;
+    border: 1px solid #fcfdff
 }
 
 .hover-underline-animation {
@@ -1243,7 +1258,7 @@ img {
 
 .text-primary {
     --tw-text-opacity: 1;
-    color: #47667b
+    color: #6c788e
 }
 
 .text-primary-50 {
@@ -1253,12 +1268,11 @@ img {
 
 .text-secondary {
     --tw-text-opacity: 1;
-    color: #a5c3a7
+    color: #cfd5e1;
 }
 
 .text-secondary-50 {
-    --tw-text-opacity: 1;
-    color: #d5e0b5
+    color:#ededf2;
 }
 
 .bg-bege {
