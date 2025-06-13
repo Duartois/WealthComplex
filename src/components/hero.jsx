@@ -25,7 +25,7 @@ const Hero = () => {
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
       className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full"
     >
-      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[400px] es:h-[420px] sm:h-[400px] md:h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
