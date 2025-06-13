@@ -103,7 +103,7 @@ const Hero = () => {
           className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          <div className="relative w-full h-[35vh] md:h-[600px] top-[50px]">
+          <div className="relative w-full h-[35vh] hidden md:block md:h-[600px] top-[50px]">
             <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
               <LuckyBlock
               />
