@@ -23,9 +23,9 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full"
+      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full h-[680px]  overflow-hidden relative"
     >
-      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row md:h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[300px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
@@ -95,7 +95,7 @@ const Hero = () => {
           />
         </motion.div>
 
-        {/* Hero Lado Direito
+        {/* Hero Lado Direito */}
         <motion.div
           variants={rightSideVariants}
           initial="hidden"
@@ -103,13 +103,13 @@ const Hero = () => {
           className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-          {/* <div className="relative w-full h-[35vh] hidden md:block md:h-[600px] top-[50px]">
+           <div className="relative w-full h-[35vh] hidden md:block md:h-[600px] top-[50px]">
             <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
               <LuckyBlock
               />
             </div>
           </div>
-        </motion.div> */}
+        </motion.div>
       </div>
     </motion.section>
   );
