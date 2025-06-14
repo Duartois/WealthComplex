@@ -93,7 +93,7 @@ export default function LuckyBlock() {
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableZoom = false;
         controls.enablePan = false;
-        controls.enableRotate = true;
+        controls.enableRotate = false;
         controls.dampingFactor = 0.05;
 
         const clock = new THREE.Clock();

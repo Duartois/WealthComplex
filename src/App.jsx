@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import { Header, Footer } from "./components";
 import LoaderProgressBar from "./components/LoaderProgressBar";
 import { useFakeProgress } from "./components/useFakeProgress";
+import './app.scss';
 
 
 const App = () => {
