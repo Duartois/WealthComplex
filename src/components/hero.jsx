@@ -23,7 +23,7 @@ const Hero = () => {
     <motion.section
       id="home"
       style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full h-[680px]  overflow-hidden relative"
+      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full h-[680px] md:h-full overflow-hidden relative"
     >
       <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[300px] md:h-[800px]">
         <motion.div

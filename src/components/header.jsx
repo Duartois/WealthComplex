@@ -1,14 +1,12 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from './mobileNavbar';
 import { useClickOutside, useResize, useScroll } from '../hook';
 import { navbarLinks } from '../constants';
 import { logo } from "../constants/assets";
 import { Menu } from 'lucide-react';
 import { navbarVariants } from '../constants/motion';
-
-
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -17,7 +15,6 @@ const Header = () => {
     const { resizedX } = useResize({ targetX: 768 });
     const { scrolledY } = useScroll({ targetY: 100 });
     const location = useLocation();
-    const [hovered, setHovered] = React.useState(null);
 
     useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
 
@@ -30,19 +27,20 @@ const Header = () => {
     React.useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll("section[id]");
-            let currentSection = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= sectionTop - 60) {
-                    currentSection = section.getAttribute("id");
+            for (const section of sections) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 80 && rect.bottom >= 80) {
+                    const current = section.getAttribute("id");
+                    if (current) {
+                        setActiveSection(current);
+                        break;
+                    }
                 }
-            });
-            setActiveSection(currentSection);
+            }
         };
 
         handleScroll();
         window.addEventListener("scroll", handleScroll);
-
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -53,6 +51,8 @@ const Header = () => {
             const element = document.querySelector(location.hash);
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
+                const id = location.hash.replace("#", "");
+                setActiveSection(id); // Força a atualização ao navegar via hash
             }
         }
     }, [location]);
@@ -86,7 +86,8 @@ const Header = () => {
                                 <li key={link.id}>
                                     <Link
                                         to={link.path}
-                                        className={`text-base font-medium text-primary hover-underline-animation left ${activeSection === link.id && activeSection !==  "" ? "active" : ""}`}
+                                        onClick={() => setActiveSection(link.id)}
+                                        className={`text-base font-medium text-primary hover-underline-animation left ${activeSection === link.id && activeSection !== "" ? "active" : ""}`}
                                     >
                                         {link.label}
                                     </Link>
