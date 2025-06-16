@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <section id="about" className="mt-24">
-      <div className="container relative flex flex-col items-center gap-y-9 py-12 md:py-24 h-full">
+      <div className="container relative flex flex-col items-center gap-y-9 py-10 md:py-24 h-full">
         <SectionTitle
           title="About Me"
           subtitle="A brief introduction about myself."
@@ -29,7 +29,7 @@ const About = () => {
             <img
               src={about}
               alt="Matheus Duarte"
-              className="aspect-square w-3/4 md:w-full max-w-[450px] rounded-xl"
+              className="aspect-square w-1/2 md:w-full max-w-[450px] rounded-xl"
             />
           </div>
 
