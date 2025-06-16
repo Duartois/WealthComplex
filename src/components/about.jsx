@@ -1,24 +1,27 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { about } from "../constants/assets";
 import SectionTitle from "./sectionTitle";
+import { useClickOutside } from "../hook";
 
 const About = () => {
   const [showModal, setShowModal] = useState(false);
 
   const aboutContent = (
     <blockquote className="relative pl-6 border-l-4 border-primary text-primary-50 italic fancy-quote whitespace-pre-wrap">
-      <p className="text-h4 font-semibold text-primary mb-4">
+      <h4 className="text-h5 text-primary mb-4">
         Matheus Duarte G.
-      </p>
-      <p className="text-lg font-normal text-primary-50">
+      </h4>
+      <p className="text-sm md:text-lg font-normal text-primary-50">
         As a skilled web developer and designer, I've honed my craft since 2022, focusing on delivering top-notch digital solutions. My expertise lies in managing end-to-end website development projects, from inception to delivery. I specialize in creating user-friendly websites tailored to specific needs, ensuring seamless functionality across platforms and industries. With a broad skill set and commitment to quality, I aim to be a valuable addition to any web development team.
       </p>
     </blockquote>
   );
-
+  const modalRef = useRef(null);
+  useClickOutside(modalRef, () => setShowModal(false));
+  
   return (
     <section id="about" className="mt-24">
-      <div className="container relative flex flex-col items-center gap-y-9 py-10 md:py-24 h-full">
+      <div className="container relative flex flex-col items-center gap-y-9 py-12 md:py-24 h-full">
         <SectionTitle
           title="About Me"
           subtitle="A brief introduction about myself."
@@ -29,7 +32,7 @@ const About = () => {
             <img
               src={about}
               alt="Matheus Duarte"
-              className="aspect-square w-1/2 md:w-full max-w-[450px] rounded-xl"
+              className="aspect-square w-3/4 md:w-full max-w-[450px] rounded-xl"
             />
           </div>
 
@@ -44,7 +47,7 @@ const About = () => {
             </button>
 
             {/* Desktop: conteúdo direto */}
-            <div className="hidden md:block w-full text-left">{aboutContent}</div>
+            <div className="hidden md:block w-full h-full text-left">{aboutContent}</div>
           </div>
         </div>
       </div>
@@ -52,7 +55,7 @@ const About = () => {
       {/* Modal para mobile */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4 md:hidden">
-          <div className="bg-white text-gray-90 rounded-xl p-6 w-full max-w-md relative shadow-lg">
+          <div ref={modalRef} className="bg-white text-gray-90 rounded-xl p-4 w-[80%] max-w-sm relative shadow-lg">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-3 text-gray-500 text-2xl hover:text-primary"

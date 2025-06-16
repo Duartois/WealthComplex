@@ -108,7 +108,8 @@ h4,
 h5,
 h6 {
     font-size: inherit;
-    font-weight: inherit
+    font-weight: inherit;
+    font-family: inherit;
 }
 
 a {
@@ -1207,6 +1208,12 @@ section[id] {
 .text-h4 {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: 27px;
+    line-height: normal;
+    font-weight: 700
+}
+.text-h5 {
+    font-family: 'Test Tiempos Headline Regular', serif;
+    font-size: 22px;
     line-height: normal;
     font-weight: 700
 }
