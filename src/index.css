@@ -443,6 +443,9 @@ img {
     padding-left: 1rem;
 
 }
+section[id] {
+  scroll-margin-top: 100px;
+}
 
 @media (min-width: 425px) {
     .container {

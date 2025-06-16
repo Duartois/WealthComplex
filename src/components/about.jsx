@@ -18,7 +18,8 @@ const About = () => {
 
   return (
     <section id="about" className="mt-24">
-      <div className="container relative flex flex-col items-center gap-y-9 top-[80px]">
+<div className="container relative flex flex-col items-center gap-y-9 py-[80px]">
+
         <SectionTitle
           title="About Me"
           subtitle="A brief introduction about myself."
