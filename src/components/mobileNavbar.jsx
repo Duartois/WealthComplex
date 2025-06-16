@@ -96,7 +96,8 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu, activeSection }, ref) =>
                 </Link>
                 <div className="mt-10 flex items-center justify-around gap-4 text-primary-50">
                     <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://linkedin.com/in/matheusduarte" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.instagram.com/matheus.duarteg/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/matheusduartegoncalves/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </nav>
         </motion.div>

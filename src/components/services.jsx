@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <motion.section
       id="services">
-      <div className="container relative flex flex-col items-center gap-4 top-[80px] md:bottom-[130px]">
+      <div className="container relative flex flex-col items-center gap-4 top-[80px] md:bottom-[130px] h-full">
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
         <div className="w-full md:max-w-5xl md:scale-100">
@@ -24,7 +24,7 @@ const Services = () => {
               </p>
               <a
                 href="/en-ca/presents"
-                className="inline-block bg-white text-primary font-semibold py-3 px-6 rounded-full transition hover:bg-gray-100"
+                className="inline-block btn-secondary font-bold w-fit"
               >
                 Learn More
               </a>
