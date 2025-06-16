@@ -623,16 +623,26 @@ section[id] {
     left: 0;
     top: 0;
     border-radius: 50%;
-    width: 56px;
+    width: 40px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 300px;
-    line-height: 200px;
+    font-size: 150px;
+    line-height: 60px;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
   }
+  .modal-quote::after {
+  font-size: 120px;
+  width: 36px;
+  height: 150px;
+  line-height: 60px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 
 .input {
     height: 3rem;
@@ -1215,7 +1225,8 @@ section[id] {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: 22px;
     line-height: normal;
-    font-weight: 700
+    font-weight: 700;
+    z-index: 1;
 }
 
 .text-lg {

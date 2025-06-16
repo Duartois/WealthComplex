@@ -8,7 +8,7 @@ const About = () => {
 
   const aboutContent = (
     <blockquote className="relative pl-6 border-l-4 border-primary text-primary-50 italic fancy-quote whitespace-pre-wrap">
-      <h4 className="text-h5 text-primary mb-4">
+      <h4 className="text-h5 text-primary mb-4 z-20">
         Matheus Duarte G.
       </h4>
       <p className="text-sm md:text-lg font-normal text-primary-50">
@@ -18,7 +18,7 @@ const About = () => {
   );
   const modalRef = useRef(null);
   useClickOutside(modalRef, () => setShowModal(false));
-  
+
   return (
     <section id="about" className="mt-24">
       <div className="container relative flex flex-col items-center gap-y-9 py-12 md:py-24 h-full">
@@ -55,14 +55,16 @@ const About = () => {
       {/* Modal para mobile */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4 md:hidden">
-          <div ref={modalRef} className="bg-white text-gray-90 rounded-xl p-4 w-[80%] max-w-sm relative shadow-lg">
+          <div ref={modalRef} className="bg-white text-gray-90 rounded-xl p-4 w-[80%] max-w-sm relative shadow-lg z-10">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-3 text-gray-500 text-2xl hover:text-primary"
             >
               &times;
             </button>
-            <div>{aboutContent}</div>
+            <div className="fancy-quote modal-quote relative pl-6 border-l-4 border-primary text-primary-50 italic whitespace-pre-wrap z-0">
+              {aboutContent.props.children}
+            </div>
           </div>
         </div>
       )}
