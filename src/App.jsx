@@ -7,6 +7,7 @@ import './app.scss';
 
 const App = () => {
   const { progress, loading } = useFakeProgress();
+  
 
   return (
     <>

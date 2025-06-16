@@ -39,29 +39,6 @@ export const navbarLinks = [
     },
 ];
 
-export const services = [
-    {
-        id: "webdesign",
-        icon: LayoutPanelLeftIcon,
-        title: "Web Design",
-        description:
-            "Creating visually appealing and user-friendly websites that reflect your brand's identity.",
-    },
-    {
-        id: "webdevelopment",
-        icon: CodeXml,
-        title: "Web Development",
-        description:
-            "Building high-performance websites using the latest technologies and frameworks. Focusing on front-end development, I ensure your site is fast, and tailored to your specific.",
-    },
-    {
-        id: "SEOptimization",
-        icon: FileCog,
-        title: "SEO Optimization",
-        description:
-            "Enhancing your site’s content, structure, and performance with technical strategies, ensuring higher rankings and easier discovery by customers.",
-    },
-];
 
 export const projects = [
     {

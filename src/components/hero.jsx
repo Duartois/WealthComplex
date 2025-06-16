@@ -1,30 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Send } from "lucide-react";
 import { arrow01, arrow02 } from "../constants/assets";
 import { leftSideVariants, rightSideVariants } from "../constants/motion";
-import Spline from "@splinetool/react-spline";
 import LuckyBlock from "./luckyBlock";
+
 
 const Hero = () => {
   const { scrollY } = useScroll();
+  const location = useLocation();
+  const isHome = location.hash === "#home" || location.hash === "" || location.pathname === "/";
 
-  // Transforma o scrollY global (em pixels) em valores visuais
-  const rawScale = useTransform(scrollY, [0, 300], [1, 0.94]);
-  const rawPadding = useTransform(scrollY, [0, 300], [120, 60]);
 
-  // Anima suavemente com mola
-  const scale = useSpring(rawScale, { stiffness: 120, damping: 20 });
-  const paddingY = useSpring(rawPadding, { stiffness: 120, damping: 20 });
+  const scale = isHome
+    ? useSpring(useTransform(scrollY, [0, 300], [1, 0.94]), {
+      stiffness: 120,
+      damping: 20,
+    })
+    : 0.94;
+
+  const paddingY = isHome
+    ? useSpring(useTransform(scrollY, [0, 300], [120, 60]), {
+      stiffness: 120,
+      damping: 20,
+    })
+    : 60;
+
 
   return (
-    <motion.section
-      id="home"
-      style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-      className="flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl w:1/2 md:w:full min-h-[600px] md:min-h-[800px] overflow-hidden relative"
-    >
+    <section id="home" className="md:min-h-[1000px] relative">
+  <motion.div
+    style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
+    className="absolute inset-0 z-10 flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl overflow-hidden"
+  >
       <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[300px] md:h-[800px]">
         <motion.div
           variants={leftSideVariants}
@@ -103,7 +113,7 @@ const Hero = () => {
           className="relative flex h-full justify-end w-full md:w-1/2 md:h-full"
         >
           {/* Placeholder de vídeo ou imagem */}
-           <div className="relative w-full h-[35vh] hidden md:block md:h-[600px] top-[50px]">
+          <div className="relative w-full h-[35vh] hidden md:block md:h-[600px] top-[50px]">
             <div className="absolute inset-0 z-20 pointer-events-none lg:scale-100">
               <LuckyBlock
               />
@@ -111,7 +121,8 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-    </motion.section>
+    </motion.div>
+    </section>
   );
 };
 

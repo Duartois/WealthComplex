@@ -13,7 +13,7 @@ const Header = () => {
     const [activeSection, setActiveSection] = React.useState("");
     const mobileNavbarRef = React.useRef(null);
     const { resizedX } = useResize({ targetX: 768 });
-    const { scrolledY } = useScroll({ targetY: 100 });
+    const { scrolledY } = useScroll({ targetY: 50 });
     const location = useLocation();
 
     useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
@@ -50,12 +50,17 @@ const Header = () => {
         if (location.hash) {
             const element = document.querySelector(location.hash);
             if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
                 const id = location.hash.replace("#", "");
-                setActiveSection(id); // Força a atualização ao navegar via hash
+                const yOffset = -80; // altura do header fixo + hero reduzido
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({ top: y, behavior: "smooth" });
+                setActiveSection(id);
             }
         }
     }, [location]);
+
+
 
     return (
         <>
@@ -77,7 +82,7 @@ const Header = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            Matheus Duarte <span className="text-base font-bold text-sm">Co.</span>
+                            Matheus Duarte <span className="text-base font-bold">Co.</span>
                         </motion.p>
                     </Link>
                     <nav className="hidden md:block">
@@ -86,11 +91,23 @@ const Header = () => {
                                 <li key={link.id}>
                                     <Link
                                         to={link.path}
-                                        onClick={() => setActiveSection(link.id)}
+                                        onClick={(e) => {
+                                            if (location.hash === link.path) {
+                                                e.preventDefault(); // impede o comportamento padrão
+                                                const element = document.querySelector(link.path);
+                                                if (element) {
+                                                    element.scrollIntoView({ behavior: "smooth" });
+                                                    setActiveSection(link.id);
+                                                }
+                                            } else {
+                                                setActiveSection(link.id);
+                                            }
+                                        }}
                                         className={`text-base font-medium text-primary hover-underline-animation left ${activeSection === link.id && activeSection !== "" ? "active" : ""}`}
                                     >
                                         {link.label}
                                     </Link>
+
                                 </li>
                             ))}
                         </ul>

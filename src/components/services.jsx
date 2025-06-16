@@ -5,8 +5,10 @@ import LuckyBlock from './luckyBlock';
 const Services = () => {
   return (
     <motion.section
-      id="services">
-      <div className="container relative flex flex-col items-center gap-4 py-[80px] h-full">
+      id="services"
+      className="py-10"
+    >
+      <div className="container relative flex flex-col items-center gap-4 h-full">
 
         <SectionTitle title="SERVICES" subtitle="What I Offer" />
 
