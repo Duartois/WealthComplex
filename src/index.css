@@ -470,7 +470,6 @@ img {
 .container {
     width: 100%;
     max-width: 1280px;
-    padding-block: 5rem;
 }
 
 .section {
@@ -1529,4 +1528,17 @@ img {
     .lg\:grid-cols-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr))
     }
+}
+
+
+@media (min-width: 992px) {
+.container {
+    padding-block: 4rem ;
+    height: 110vh;
+}       
+.hero-container {
+    padding-block: 4rem;
+    height: 100vh;
+}
+
 }

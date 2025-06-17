@@ -10,8 +10,8 @@ const Services = () => {
     >
       <div className="container relative flex flex-col items-center gap-4 h-full">
 
-        <div className="w-full md:max-w-5xl md:scale-100">
-          <div className="bg-services rounded-2xl px-12 pt-4 lg:py-0 text-white flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[450px] md:min-h-[500px]">
+        <div className="w-full md:max-w-6xl md:scale-100">
+          <div className="bg-services rounded-2xl px-12 pt-4 lg:py-0 text-white flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[500px] md:min-h-[600px]">
             {/* Texto */}
             <div className="w-[250px] sm:w-[350px] lg:w-1/2">
               <p className="uppercase text-extra-sm tracking-widest mb-2">
@@ -33,7 +33,7 @@ const Services = () => {
 
             {/* Placeholder de vídeo ou imagem */}
             <div className="w-full lg:w-1/2 h-60 lg:h-96 relative overflow-visible">
-              <div className="absolute inset-0 z-20 pointer-events-none ">
+              <div className="absolute inset-0 z-20 pointer-events-none w-full scale-100">
                 <LuckyBlock />
               </div>
             </div>
