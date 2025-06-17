@@ -10,6 +10,7 @@
     }
 
     html {
+        @apply bg-ice scroll-smooth;
         font-family: 'Futura', sans-serif;
     }
 
@@ -25,17 +26,20 @@
 
 @layer components {
     .link {
-        @apply text-base font-medium text-gray-90 transition-colors hover:text-primary-50;
+        @apply font-medium text-primary transition-colors ;
     }
 
     .btn-primary {
-        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary-50 px-6 text-base font-normal text-gray-10 transition-colors hover:bg-primary-60;
+        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 text-base font-normal text-secondary transition-colors hover:bg-primary-60;
     }
 
     .btn-secondary {
-        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-6 text-base font-normal text-primary transition-colors hover:bg-white;
+        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
+    .btn-secondary-white {
+        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base bg-[#E4E8F1] font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+    }
 
     .label {
         @apply w-full text-base font-normal text-gray-90;
@@ -463,6 +467,7 @@ img {
     padding-block: 4rem 14.75rem;
     height: 80vh;
 }
+
 .hero-image {
     width: 140%;
 }
@@ -513,7 +518,7 @@ img {
 
 .link:hover {
     --tw-text-opacity: 1;
-    color: #cfd5e1;
+    color: #E4E8F1;
 }
 
 .btn-primary {
@@ -527,14 +532,14 @@ img {
     border-radius: 9999px;
     --tw-bg-opacity: 1;
     background-color: #282A3E;
-    border: 1px solid #fcfdff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    border: .25rem;
+    padding: 1.25rem 2rem;
+    min-height: 4rem;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
     --tw-text-opacity: 1;
-    color: rgb(244 244 245 / var(--tw-text-opacity));
+    color: #E4E8F1;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s
@@ -542,7 +547,7 @@ img {
 
 .btn-primary:hover {
     --tw-bg-opacity: 1;
-    background-color: #fcfdff;
+    background-color: #E4E8F1;
     color: #282A3E;
     border: 1px solid #282A3E;
 }
@@ -558,9 +563,8 @@ img {
     border-radius: 9999px;
     border: 1px solid #282A3E;
     --tw-bg-opacity: 1;
-    background-color: #ffffff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 1.25rem 2rem;
+    min-height: 4rem;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
@@ -574,8 +578,66 @@ img {
 .btn-secondary:hover {
     --tw-bg-opacity: 1;
     background-color: #282A3E;
-    color: #fcfdff;
-    border: 1px solid #fcfdff
+    color: #E4E8F1;
+    border: 1px solid #E4E8F1
+}
+.btn-secondary-white{
+    display: inline-flex;
+    height: 3rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: .5rem;
+    column-gap: .5rem;
+    border-radius: 9999px;
+    border: 1px solid #282A3E;
+    --tw-bg-opacity: 1;
+    padding: 1.25rem 2rem;
+    min-height: 4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: #282A3E;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s;
+}
+.btn-secondary-white:hover {
+    --tw-bg-opacity: 1;
+    background-color: #282A3E;
+    color: #E4E8F1;
+    border: 1px solid #E4E8F1
+}
+
+.btn-primary-header {
+    display: inline-flex;
+    height: 3rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: .5rem;
+    column-gap: .5rem;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: #282A3E;
+    border: .25rem;
+    padding: 1.25rem 2rem;
+    min-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(244 244 245 / var(--tw-text-opacity));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s
+}
+.btn-primary-header:hover {
+    --tw-bg-opacity: 1;
+    background-color: #E4E8F1;
+    color: #282A3E;
+    border: 1px solid #282A3E;
 }
 
 .hover-underline-animation {
@@ -1328,15 +1390,15 @@ img {
 
 .text-secondary {
     --tw-text-opacity: 1;
-    color: #cfd5e1;
+    color: #E4E8F1;
 }
 
 .text-secondary-50 {
-    color: #ededf2;
+    color: #E4E8F1;
 }
 
-.bg-bege {
-    background-color: #f8f4c4
+.bg-ice {
+    background-color: #E4E8F1;
 }
 
 .opacity-0 {
@@ -1532,13 +1594,14 @@ img {
 
 
 @media (min-width: 992px) {
-.container {
-    padding-block: 4rem ;
-    height: 110vh;
-}       
-.hero-container {
-    padding-block: 4rem;
-    height: 100vh;
-}
+    .container {
+        padding-block: 4rem;
+        height: 80vh;
+    }
+
+    .hero-container {
+        padding-block: 4rem;
+        height: 100vh;
+    }
 
 }

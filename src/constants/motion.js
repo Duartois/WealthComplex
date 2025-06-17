@@ -1,11 +1,11 @@
 export const navbarVariants = {
     default: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#E4E8F1",
         boxShadow: "0px 3px 5px rgba(0,0,0,0)",
         height: "80px",
     },
     active: {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#E4E8F1",
         boxShadow: "0px 3px 5px rgba(0,0,0,0.1)",
         height: "56px",
     },

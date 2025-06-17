@@ -85,7 +85,7 @@ const Hero = () => {
                 I'm an independent creative developer from Brasil, South America.
               </p>
             </div>
-            <div className="flex justify-between gap-x-4 pt-4">
+            <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
               <Link to={"/contact"} className="btn-primary w-fit">
                 Contact <Send />
               </Link>
@@ -93,6 +93,9 @@ const Hero = () => {
                 Learn More
               </Link>
             </div>
+            <p className="text-extra-sm font-normal text-secondary mt-8">
+                I'm always open to new opportunities and collaborations.
+              </p>
             {/* <motion.img
             variants={leftSideVariants}
             initial="hidden"

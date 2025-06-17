@@ -31,7 +31,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
           inset: 0,
           width: "100vw",
           height: "100vh",
-          background: "#fff",
+          background: "#E4E8F1",
           zIndex: 9999,
           display: "flex",
           alignItems: "center",
@@ -43,7 +43,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
             width: 300,
             height: 8,
             borderRadius: 6,
-            background: "#eee",
+            background: "#E4E8F1",
             boxShadow: "0 2px 16px #0001",
             overflow: "hidden",
             position: "relative"
@@ -55,7 +55,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
             transition={{ duration: 0.42, ease: "easeInOut" }}
             style={{
               height: "100%",
-              background: "linear-gradient(90deg, #6c788e 20%, #cfd5e1 80%)"
+              background: "linear-gradient(90deg, #3b405a 20%, #7f8699 80%)",
             }}
           />
         </div>

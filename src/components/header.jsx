@@ -51,8 +51,7 @@ const Header = () => {
             const element = document.querySelector(location.hash);
             if (element) {
                 const id = location.hash.replace("#", "");
-                const yOffset = -80; // altura do header fixo + hero reduzido
-                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                const y = element.getBoundingClientRect().top + window.pageYOffset;
 
                 window.scrollTo({ top: y, behavior: "smooth" });
                 setActiveSection(id);
@@ -65,7 +64,7 @@ const Header = () => {
     return (
         <>
             <motion.header
-                className="fixed z-[1000] flex w-full items-center"
+                className="fixed z-[1000] flex w-full bg-ice items-center"
                 variants={navbarVariants}
                 initial={['default', 'slideStart']}
                 animate={[scrolledY ? 'active' : 'default', 'slideEnd']}
@@ -114,7 +113,7 @@ const Header = () => {
                     </nav>
                     <Link
                         to={'/contact'}
-                        className="btn-primary hidden md:inline-flex"
+                        className="btn-primary-header hidden md:inline-flex"
                     >
                         Contact
                     </Link>
