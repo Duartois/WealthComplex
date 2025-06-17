@@ -3,6 +3,7 @@ import { Header, Footer } from "./components";
 import LoaderProgressBar from "./components/LoaderProgressBar";
 import { useFakeProgress } from "./components/useFakeProgress";
 import './app.scss';
+import './styles/fonts.css'; 
 
 
 const App = () => {

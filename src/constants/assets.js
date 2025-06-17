@@ -22,6 +22,7 @@ import doubleQoutes from "../assets/svg/double-qoutes.svg";
 import draw from "../assets/svg/draw.svg";
 import lines from "../assets/svg/lines.svg";
 import rhombus from "../assets/svg/rhombus.svg";
+import heroImage from "../assets/heroImage.png";
 
 export {
     logo,
@@ -48,4 +49,5 @@ export {
     draw,
     lines,
     rhombus,
+    heroImage,
 };

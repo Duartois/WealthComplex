@@ -5,9 +5,9 @@ export default {
         screens: {
             exs: "320px",
             es: "425px",
-            sm: "640px",
+            sm: "500px",
             md: "768px",
-            lg: "992px",
+            lg: "1024px",
             xl: "1300px",
         },
         container: {

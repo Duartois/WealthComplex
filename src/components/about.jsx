@@ -20,8 +20,8 @@ const About = () => {
   useClickOutside(modalRef, () => setShowModal(false));
 
   return (
-    <section id="about" className="mt-24">
-      <div className="container relative flex flex-col items-center gap-y-9 py-12 md:py-24 h-full">
+    <section id="about" className="mt-24 md:mt-0 py-12 md:py-24">
+      <div className="container relative flex flex-col items-center gap-y-9  h-full">
         <SectionTitle
           title="About Me"
           subtitle="A brief introduction about myself."

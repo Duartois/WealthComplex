@@ -2,9 +2,15 @@
 @tailwind base;
 @tailwind components;
 
+
 @layer base {
     * {
-        @apply box-border scroll-smooth border-red-500 p-0 font-inter;
+        @apply box-border scroll-smooth border-red-500 p-0;
+        font-family: 'Futura', sans-serif;
+    }
+
+    html {
+        font-family: 'Futura', sans-serif;
     }
 
     section {
@@ -14,6 +20,7 @@
     img {
         @apply select-none object-cover;
     }
+
 }
 
 @layer components {
@@ -37,7 +44,12 @@
     .input {
         @apply h-12 w-full rounded-lg border-[1.5px] border-solid border-gray-30 px-2 text-gray-90 outline-0 placeholder:text-sm placeholder:font-normal placeholder:text-gray-50 focus:border-primary-50;
     }
+
+    .ws-balance {
+        text-wrap: balance;
+    }
 }
+
 
 *,
 :before,
@@ -77,7 +89,6 @@ html,
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     font-feature-settings: normal;
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
@@ -85,9 +96,17 @@ html,
     scroll-behavior: smooth;
 }
 
-body {
+html body {
+    background: var(--background, #fcfcfc);
+    position: relative;
+    min-height: 100%;
     margin: 0;
-    line-height: inherit;
+    overflow-x: hidden;
+    font-weight: 400;
+    font-size: 1.125rem;
+    font-family: futura-pt, system-ui, Helvetica Neue, sans-serif;
+    line-height: 1.4;
+    text-wrap: pretty;
 }
 
 hr {
@@ -315,7 +334,6 @@ video {
     --tw-border-opacity: 1;
     border-color: rgb(239 68 68 / var(--tw-border-opacity));
     padding: 0;
-    font-family: Inter, sans-serif
 }
 
 img {
@@ -436,62 +454,36 @@ img {
     --tw-contain-style:
 }
 
+.hero-section {
+    margin-top: -4.5rem;
+    padding-top: 4.5rem;
+}
+
+.hero {
+    padding-block: 4rem 14.75rem;
+}
+.hero-image {
+    
+}
+
 .container {
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 1100px;
-
+    padding-block: 5rem;
 }
+
 .section {
-    height: 96vh;
-}
-/* section[id] {
-  scroll-margin-top: 50px;
-} */
-
-@media (min-width: 425px) {
-    .container {
-        max-width: 425px
-    }
+    min-height: 100vh;
 }
 
-@media (min-width: 640px) {
-    .container {
-        max-width: 640px
-    }
-}
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 992px
-    }
-}
-
-@media (min-width: 1300px) {
-    .container {
-        max-width: 1300px
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1400px
-    }
-}
 .bg-hero {
-     background: linear-gradient(90deg, #282A3E, #5f739e 50%, #5f739e);
+    background: linear-gradient(90deg, #282A3E, #5f739e 50%, #5f739e);
 }
 
 .bg-services {
-   
+
     background: linear-gradient(116deg, #445374 36.86%, #BF8F85 71.32%);
 }
 
@@ -552,7 +544,7 @@ img {
     --tw-bg-opacity: 1;
     background-color: #fcfdff;
     color: #282A3E;
-    border: 1px solid #282A3E; 
+    border: 1px solid #282A3E;
 }
 
 .btn-secondary {
@@ -644,15 +636,16 @@ img {
     line-height: 60px;
     pointer-events: none;
     z-index: 0;
-  }
-  .modal-quote::after {
-  font-size: 120px;
-  width: 36px;
-  height: 150px;
-  line-height: 60px;
-  top: 0;
-  left: 0;
-  z-index: -1;
+}
+
+.modal-quote::after {
+    font-size: 120px;
+    width: 36px;
+    height: 150px;
+    line-height: 60px;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 
@@ -1201,21 +1194,17 @@ img {
     font-family: 'Test Tiempos Headline Regular', serif;
 }
 
-.text-base {
-    font-size: 1rem;
-    line-height: 1.5rem
-}
 
 .text-h1 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: clamp(2.25rem, 4vw, 3.75rem);
-    line-height: normal;
-    font-weight: 900
+    font-size: clamp(2.5rem, 4.14vw + 1.69rem, 5.25rem);
+    line-height: 116%;
+    font-weight: 400
 }
 
 .text-h2 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 40px;
     line-height: normal;
     font-weight: 900
 }
@@ -1233,9 +1222,19 @@ img {
     line-height: normal;
     font-weight: 900
 }
+
 .text-h5 {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: 22px;
+    line-height: normal;
+    font-weight: 700;
+    z-index: 1;
+}
+
+
+.text-headline {
+    font-family: 'Test Tiempos Headline Regular', serif;
+    font-size: 20px;
     line-height: normal;
     font-weight: 700;
     z-index: 1;
@@ -1246,9 +1245,18 @@ img {
     line-height: 1.75rem
 }
 
-.text-sm {
-    font-size: .875rem;
-    line-height: 1.25rem
+.text-md {
+    font-size: clamp(.875rem, .38vw + .8rem, 1.125rem);
+    line-height: 1.15rem;
+}
+
+.text-head {
+    font-size: clamp(.875rem, .38vw + .8rem, 1.125rem);
+    font-weight: 400 !important;
+    letter-spacing: .08em !important;
+    font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif" !important;
+    line-height: 124% !important;
+    text-transform: uppercase
 }
 
 .text-extra-sm {
@@ -1324,7 +1332,7 @@ img {
 }
 
 .text-secondary-50 {
-    color:#ededf2;
+    color: #ededf2;
 }
 
 .bg-bege {
