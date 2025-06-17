@@ -10,8 +10,6 @@ const Services = () => {
     >
       <div className="container relative flex flex-col items-center gap-4 h-full">
 
-        <SectionTitle title="SERVICES" subtitle="What I Offer" />
-
         <div className="w-full md:max-w-5xl md:scale-100">
           <div className="bg-services rounded-2xl px-12 pt-4 lg:py-0 text-white flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[450px] md:min-h-[500px]">
             {/* Texto */}
