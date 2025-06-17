@@ -26,19 +26,19 @@
 
 @layer components {
     .link {
-        @apply font-medium text-primary transition-colors ;
+        @apply text-base font-medium text-primary transition-colors ;
     }
 
     .btn-primary {
-        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 text-base font-normal text-secondary transition-colors hover:bg-primary-60;
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 text-base font-normal text-secondary transition-colors hover:bg-primary-60;
     }
 
     .btn-secondary {
-        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
     .btn-secondary-white {
-        @apply inline-flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base bg-[#E4E8F1] font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base bg-[#E4E8F1] font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
     .label {
@@ -539,7 +539,7 @@ img {
     line-height: 1.5rem;
     font-weight: 400;
     --tw-text-opacity: 1;
-    color: #E4E8F1;
+    color: rgb(244 244 245 / var(--tw-text-opacity));
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s
