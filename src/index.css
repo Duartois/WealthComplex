@@ -459,11 +459,12 @@ img {
     padding-top: 4.5rem;
 }
 
-.hero {
+.hero-container {
     padding-block: 4rem 14.75rem;
+    height: 80vh;
 }
 .hero-image {
-    
+    width: 140%;
 }
 
 .container {

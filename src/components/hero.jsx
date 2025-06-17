@@ -30,18 +30,18 @@ const Hero = () => {
 
 
   return (
-    <section id="home" className="section relative min-h-screen lg:py-20 w-full">
+    <section id="home" className="hero-section relative lg:min-h-screen w-full">
       <motion.div
         style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
         className="relative lg:absolute inset-0 z-10 flex items-center  bg-hero rounded-b-2xl overflow-hidden"
       >
-        <div className="container hero flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between ">
+        <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between ">
           {/* Hero Lado Esquerdo */}
           <motion.div
             variants={leftSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center max-w-[700px] md:w-2/3 lg:items-start lg:text-start"
+            className="relative flex flex-col items-center text-center max-w-[700px] bottom-16 md:w-2/3 lg:items-start lg:text-start"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -117,11 +117,14 @@ const Hero = () => {
                 src={heroImage}
                 alt="Falcon silhouette"
                 className="hero-image
-  absolute w-[80%] max-w-[400px] 
+  absolute w-[100%] max-w-[500px] 
   object-contain opacity-90 z-[-1] drop-shadow-2xl
-  translate-y-20 scale-[1.3]
+  translate-y-48 scale-[1.6]
+  sm:translate-y-60 sm:scale-[1.4]
+  md:w-[80%] md:max-w-[600px] md:translate-y-40 md:scale-[1.2]
   lg:w-full lg:max-w-none lg:translate-y-28 lg:scale-[1.4]
 "
+
               />
             </div>
           </motion.div>
