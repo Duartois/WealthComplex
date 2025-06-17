@@ -30,12 +30,13 @@ const Hero = () => {
 
 
   return (
-    <section id="home" className="md:min-h-[1000px] relative">
+    <section id="home" className="section w-full relative">
   <motion.div
     style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-    className="absolute inset-0 z-10 flex items-center bg-[#6c788e] bg-gradient-to-br from-[#6c788e] to-[#cfd5e1] rounded-b-2xl overflow-hidden"
+    className="absolute inset-0 z-10 flex items-center  bg-hero rounded-b-2xl overflow-hidden"
   >
-      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[300px] md:h-[800px]">
+      <div className="container flex flex-col-reverse items-center md:justify-between md:flex-row h-[200px] md:h-[800px]">
+        
         <motion.div
           variants={leftSideVariants}
           initial="hidden"
@@ -52,15 +53,18 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           />
           <div className="flex flex-col">
-            <h1 className="es:text-h3 text-xxl font-Supabold text-secondary-50">
+            <p className="uppercase text-sm font-normal md:hidden text-secondary-50 mb-20">
+                One Dev. Many Flows Presents
+              </p>
+            <h1 className="exs:text-h3 text-xxl font-Supabold text-secondary-50">
               Hi, I’m{" "}
-              <span className="es:text-h3 text-xxl font-bold text-[#fcfdff] text-shadow-lg">
+              <span className="exs:text-h3 text-xxl font-bold text-[#fcfdff] text-shadow-lg">
                 Matheus Duarte
               </span>
             </h1>
-            <h2 className="es:text-h2 text-xxl text-secondary-50">
+            <h2 className="exs:text-h2 text-xxl text-secondary-50">
               I’m{" "}
-              <span className="text-secondary-50 es:text-h2 text-xxl typewriter-wrapper">
+              <span className="text-secondary-50 exs:text-h2 text-xxl typewriter-wrapper">
                 <Typewriter
                   cursor
                   cursorBlinking
@@ -79,10 +83,10 @@ const Hero = () => {
                 />
               </span>
             </h2>
-            <h3 className="es:text-h1 text-xxl font-Supabold text-secondary-50 mb-1">
+            <h3 className="exs:text-h1 text-xxl font-Supabold text-secondary-50 mb-1">
               Do you need some help?
             </h3>
-            <p className="text-lg es:text-xl font-normal text-secondary-50 mb-1">
+            <p className="text-lg font-normal text-secondary-50 mb-1">
               I'm an independent creative developer from Brasil, South America.
             </p>
           </div>

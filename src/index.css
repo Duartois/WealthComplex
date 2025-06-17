@@ -4,7 +4,7 @@
 
 @layer base {
     * {
-        @apply m-0 box-border scroll-smooth border-red-500 p-0 font-inter;
+        @apply box-border scroll-smooth border-red-500 p-0 font-inter;
     }
 
     section {
@@ -438,15 +438,18 @@ img {
 
 .container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 1100px;
 
 }
-section[id] {
-  scroll-margin-top: 50px;
+.section {
+    height: 95vh;
 }
+/* section[id] {
+  scroll-margin-top: 50px;
+} */
 
 @media (min-width: 425px) {
     .container {
@@ -483,6 +486,15 @@ section[id] {
         max-width: 1400px
     }
 }
+.bg-hero {
+     background: linear-gradient(90deg, #282A3E, #5f739e 50%, #5f739e);
+}
+
+.bg-services {
+   
+    background: linear-gradient(116deg, #445374 36.86%, #BF8F85 71.32%);
+}
+
 
 .hero-lucky {
     transform: scale(2);
@@ -501,7 +513,7 @@ section[id] {
     line-height: 1.5rem;
     font-weight: 500;
     --tw-text-opacity: 1;
-    color: #6c788e;
+    color: #101119;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s
@@ -522,7 +534,7 @@ section[id] {
     column-gap: .5rem;
     border-radius: 9999px;
     --tw-bg-opacity: 1;
-    background-color: #6c788e;
+    background-color: #282A3E;
     border: 1px solid #fcfdff;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -539,8 +551,8 @@ section[id] {
 .btn-primary:hover {
     --tw-bg-opacity: 1;
     background-color: #fcfdff;
-    color: #6c788e;
-    border: 1px solid #6c788e; 
+    color: #282A3E;
+    border: 1px solid #282A3E; 
 }
 
 .btn-secondary {
@@ -552,7 +564,7 @@ section[id] {
     -moz-column-gap: .5rem;
     column-gap: .5rem;
     border-radius: 9999px;
-    border: 1px solid #6c788e;
+    border: 1px solid #282A3E;
     --tw-bg-opacity: 1;
     background-color: #ffffff;
     padding-left: 1.5rem;
@@ -561,7 +573,7 @@ section[id] {
     line-height: 1.5rem;
     font-weight: 400;
     --tw-text-opacity: 1;
-    color: #6c788e;
+    color: #282A3E;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s;
@@ -569,7 +581,7 @@ section[id] {
 
 .btn-secondary:hover {
     --tw-bg-opacity: 1;
-    background-color: #6c788e;
+    background-color: #282A3E;
     color: #fcfdff;
     border: 1px solid #fcfdff
 }
@@ -588,7 +600,7 @@ section[id] {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #6c788e;
+    background-color: #282A3E;
     /* ou #0087ca */
     transition: transform 0.25s ease-out;
 }
@@ -1198,28 +1210,28 @@ section[id] {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: clamp(2.25rem, 4vw, 3.75rem);
     line-height: normal;
-    font-weight: 700
+    font-weight: 900
 }
 
 .text-h2 {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: normal;
-    font-weight: 700
+    font-weight: 900
 }
 
 .text-h3 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-size: 30px;
     line-height: normal;
-    font-weight: 700
+    font-weight: 900
 }
 
 .text-h4 {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: 27px;
     line-height: normal;
-    font-weight: 700
+    font-weight: 900
 }
 .text-h5 {
     font-family: 'Test Tiempos Headline Regular', serif;
@@ -1298,7 +1310,7 @@ section[id] {
 
 .text-primary {
     --tw-text-opacity: 1;
-    color: #6c788e
+    color: #282A3E
 }
 
 .text-primary-50 {
