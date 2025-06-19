@@ -551,6 +551,37 @@ img {
     border: 1px solid #282A3E;
 }
 
+
+.btn-primary-white {
+    display: inline-flex;
+    height: 3rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: .5rem;
+    column-gap: .5rem;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    border: 1px solid #E4E8F1 ;
+    padding: 1.25rem 2rem;
+    min-height: 4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: #E4E8F1;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .3s
+}
+
+.btn-primary-white:hover {
+    --tw-bg-opacity: 1;
+    background-color: #282A3E ;
+    color: #E4E8F1;
+    border: 1px solid #E4E8F1 ;
+}
+
 .btn-secondary {
     display: inline-flex;
     height: 3rem;
@@ -1279,9 +1310,9 @@ img {
 
 .text-h4 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: 27px;
+    font-size: 24px;
     line-height: normal;
-    font-weight: 900
+    font-weight: 600
 }
 
 .text-h5 {
@@ -1303,7 +1334,7 @@ img {
 
 .text-lg {
     font-size: 1.125rem;
-    line-height: 1.75rem
+    line-height: 1.45rem
 }
 
 .text-md {

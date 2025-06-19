@@ -56,10 +56,10 @@ const Hero = () => {
               <p className="uppercase text-head font-normal text-secondary-50">
                 Duartois Presents
               </p>
-              <h1 className="text-h1 text-wrap my-2 font-Supabold text-secondary-50">
+              <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">
                 Bringing ideas to life frame by frame
               </h1>
-              <h2 className="text-h4 text-secondary-50">
+              <h2 className="text-h4 text-secondary-50 mb-2">
                 I’m{" "}
                 <span className="text-secondary-50 text-h4 typewriter-wrapper">
                   <Typewriter
@@ -82,12 +82,12 @@ const Hero = () => {
               </h2>
 
               <p className="text-lg font-normal text-secondary-50 mb-1">
-                I'm an independent creative developer from Brasil, South America.
+                Whether it’s a personal brand or a growing business, craft seamless digital experiences using the same tools behind platforms valued at $2,400M — like Netflix, Shopify, Apple, and HTC.
               </p>
             </div>
             <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
               <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">Contact <Send /></Link>
-              <Link to={"/learn-more"} className="btn-secondary font-bold min-w-[165.27px] justify-center">Learn More</Link>
+              <Link to={"/learn-more"} className="btn-primary-white font-bold min-w-[165.27px] justify-center">Learn More</Link>
             </div>
             <p className="text-extra-sm font-normal text-secondary mt-8">
               I'm always open to new opportunities and collaborations.
