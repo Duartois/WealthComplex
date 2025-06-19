@@ -1,26 +1,23 @@
 import { motion } from 'framer-motion';
-import SectionTitle from './sectionTitle';
-import LuckyBlock from './luckyBlock';
+import SectionTitle from '../sectionTitle/sectionTitle.jsx';
+import LuckyBlock from '../luckyblock/luckyBlock.jsx';
 
 const Services = () => {
   return (
     <motion.section
       id="services"
-      className="py-10"
+      className="py-10 "
     >
       <div className="container relative flex flex-col items-center gap-4 h-full">
 
-        <div className="w-full md:max-w-6xl md:scale-100">
-          <div className="bg-services rounded-2xl px-12 pt-4 lg:py-0 text-secondary flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[500px] md:min-h-[600px]">
+        <div className="w-full md:max-w-6xl md:scale-100 z--2">
+          <div className="bg-services rounded-2xl md:px-12 pt-4 lg:py-0 text-secondary flex flex-col lg:flex-row items-center md:gap-8 shadow-lg h-[500px] md:min-h-[600px]">
             {/* Texto */}
-            <div className="w-[250px] sm:w-[350px] lg:w-1/2">
-              <p className="uppercase text-extra-sm tracking-widest mb-2">
-                One Dev. Many Flows Presents
-              </p>
+            <div className="lg:w-1/2 items-center text-center lg:items-start lg:text-start">
               <h2 className="text-xxl md:text-4xl font-bold text-h3 leading-tight mb-4">
                 Feels Kinda Alive, Right?
               </h2>
-              <p className="text-extra-sm md:text-lg mb-6">
+              <p className="text-services-description md:text-lg text-wrap mb-6">
                 Dynamic interfaces respond, adapt, and evolve in real time. They’re changing the web, making it more interactive and engaging.
               </p>
               <a

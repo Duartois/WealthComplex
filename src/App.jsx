@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { Header, Footer } from "./components";
-import LoaderProgressBar from "./components/LoaderProgressBar";
+import LoaderProgressBar from "./components/loader/LoaderProgressBar";
 import { useFakeProgress } from "./components/useFakeProgress";
 import './app.scss';
 import './styles/fonts.css'; 

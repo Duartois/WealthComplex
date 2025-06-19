@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { about } from "../constants/assets";
-import SectionTitle from "./sectionTitle";
-import { useClickOutside } from "../hook";
+import { about } from "../../constants/assets";
+import SectionTitle from "../sectionTitle/sectionTitle";
+import { useClickOutside } from "../../hook";
 
 const About = () => {
   const [showModal, setShowModal] = useState(false);
@@ -11,7 +11,7 @@ const About = () => {
       <h4 className="text-h5 text-primary mb-4 z-20">
         Matheus Duarte G.
       </h4>
-      <p className="text-sm md:text-lg font-normal text-primary-50">
+      <p className="md:text-lg font-normal text-primary-50">
         As a skilled web developer and designer, I've honed my craft since 2022, focusing on delivering top-notch digital solutions. My expertise lies in managing end-to-end website development projects, from inception to delivery. I specialize in creating user-friendly websites tailored to specific needs, ensuring seamless functionality across platforms and industries. With a broad skill set and commitment to quality, I aim to be a valuable addition to any web development team.
       </p>
     </blockquote>

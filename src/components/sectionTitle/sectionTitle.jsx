@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { centerVariants } from '../constants/motion';
+import { centerVariants } from '../../constants/motion';
 import PropTypes from 'prop-types';
 
 const SectionTitle = ({ title, subtitle }) => {

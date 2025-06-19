@@ -1,8 +1,8 @@
 import React from "react"
 import { motion, AnimatePresence } from "framer-motion";
-import { navbarLinks } from "../constants";
+import { navbarLinks } from "../../constants";
 import { Link, useLocation } from "react-router-dom";
-import { mobileNavbarVariants } from "../constants/motion";
+import { mobileNavbarVariants } from "../../constants/motion";
 import Proptypes from "prop-types";
 
 const Path = motion.path;

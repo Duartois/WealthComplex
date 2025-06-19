@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import MobileNavbar from './mobileNavbar';
-import { useClickOutside, useResize, useScroll } from '../hook';
-import { navbarLinks } from '../constants';
-import { logo } from "../constants/assets";
+import MobileNavbar from '../mobileNavbar/mobileNavbar';
+import { useClickOutside, useResize, useScroll } from '../../hook';
+import { navbarLinks } from '../../constants';
+import { logo } from "../../constants/assets";
 import { Menu } from 'lucide-react';
-import { navbarVariants } from '../constants/motion';
+import { navbarVariants } from '../../constants/motion';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);

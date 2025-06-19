@@ -6,12 +6,12 @@
 @layer base {
     * {
         @apply box-border scroll-smooth border-red-500 p-0;
-        font-family: 'Futura', sans-serif;
+        font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif";
     }
 
     html {
         @apply bg-ice scroll-smooth;
-        font-family: 'Futura', sans-serif;
+        font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif";
     }
 
     section {
@@ -26,23 +26,23 @@
 
 @layer components {
     .link {
-        @apply text-base font-medium text-primary transition-colors ;
+        @apply font-medium text-primary transition-colors ;
     }
 
     .btn-primary {
-        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 text-base font-normal text-secondary transition-colors hover:bg-primary-60;
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 font-normal text-secondary transition-colors hover:bg-primary-60;
     }
 
     .btn-secondary {
-        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6  font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
     .btn-secondary-white {
-        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 text-base bg-[#E4E8F1] font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 bg-[#E4E8F1] font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
     .label {
-        @apply w-full text-base font-normal text-gray-90;
+        @apply w-full font-normal text-gray-90;
     }
 
     .input {
@@ -719,15 +719,16 @@ img {
     left: 0;
     top: 0;
     border-radius: 50%;
-    width: 40px;
-    height: 200px;
+    width: 36px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 150px;
+    font-size: 120px;
     line-height: 60px;
     pointer-events: none;
     z-index: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .modal-quote::after {
@@ -738,6 +739,9 @@ img {
     top: 0;
     left: 0;
     z-index: -1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    
 }
 
 
@@ -1333,8 +1337,10 @@ img {
 }
 
 .text-lg {
-    font-size: 1.125rem;
-    line-height: 1.45rem
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif";
 }
 
 .text-md {
@@ -1353,7 +1359,12 @@ img {
 
 .text-extra-sm {
     font-size: .75rem;
-    line-height: 1.25rem
+    line-height: 1.25rem;
+}
+
+.text-sm {
+    font-size: 19px;
+    line-height: 24px;
 }
 
 .text-xl {
@@ -1367,6 +1378,23 @@ img {
     line-height: normal;
     font-weight: 700
 }
+
+.text-hero-description{
+    font-weight: 400 !important;
+    letter-spacing: -.005em !important;
+    font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif" !important;
+    line-height: 124% !important;
+    font-size: clamp(1.125rem, .56vw + 1.02rem, 1.5rem) !important;
+}
+.text-services-description{
+    font-weight: 400 !important;
+    letter-spacing: -.005em !important;
+    font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif" !important;
+    line-height: 124% !important;
+    font-size: clamp(1.125rem, .56vw + 1.02rem, 1.5rem) !important;
+    z-index: 1;
+}
+
 
 .font-SupaBold {
     font-weight: 900

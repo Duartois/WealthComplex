@@ -1,9 +1,9 @@
-export { default as Header } from "./header";
-export { default as Hero } from "./hero";
-export { default as Services } from "./services";
-export { default as About } from "./about";
-export { default as Portfolio } from "./portfolio";
-export { default as Projects} from "./projects";
-export { default as CTA } from "./cta";
-export { default as Footer } from "./footer";
-export { default as SectionTitle } from "./sectionTitle";
+export { default as Header } from "./header/header";
+export { default as Hero } from "./hero/hero";
+export { default as Services } from "./services/services";
+export { default as About } from "./about/about";
+export { default as Portfolio } from "./portfolio/portfolio";
+export { default as Projects} from "./projects/projects";
+export { default as CTA } from "./cta/cta";
+export { default as Footer } from "./footer/footer";
+export { default as SectionTitle } from "./sectionTitle/sectionTitle";

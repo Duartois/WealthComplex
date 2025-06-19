@@ -15,7 +15,8 @@ export default {
             padding: "1rem",
         },
         fontFamily: {
-            inter: ["Inter", "sans-serif"],
+            futura: ['futura-pt', 'system-ui', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
         },
         extend: {
             padding: {

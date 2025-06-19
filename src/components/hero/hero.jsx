@@ -3,9 +3,9 @@ import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { useRef, useState } from "react";
 import { Send } from "lucide-react";
-import { arrow01, arrow02, heroImage } from "../constants/assets";
-import { leftSideVariants, rightSideVariants } from "../constants/motion";
-import LuckyBlock from "./luckyBlock";
+import { arrow01, arrow02, heroImage } from "../../constants/assets";
+import { leftSideVariants, rightSideVariants } from "../../constants/motion";
+import LuckyBlock from "../luckyblock/luckyBlock";
 
 
 const Hero = () => {
@@ -81,7 +81,7 @@ const Hero = () => {
                 </span>
               </h2>
 
-              <p className="text-lg font-normal text-secondary-50 mb-1">
+              <p className="text-hero-description font-normal text-secondary-50 mb-1">
                 Whether it’s a personal brand or a growing business, craft seamless digital experiences using the same tools behind platforms valued at $2,400M — like Netflix, Shopify, Apple, and HTC.
               </p>
             </div>
