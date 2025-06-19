@@ -478,7 +478,7 @@ img {
 }
 
 .section {
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 
@@ -1596,12 +1596,12 @@ img {
 @media (min-width: 992px) {
     .container {
         padding-block: 4rem;
-        height: 80vh;
+        height: 85vh;
     }
 
     .hero-container {
         padding-block: 4rem;
-        height: 100vh;
+        height: 140vh;
     }
 
 }
