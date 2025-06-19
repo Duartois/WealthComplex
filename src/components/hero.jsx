@@ -86,16 +86,12 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
-              <Link to={"/contact"} className="btn-primary font-bold w-fit">
-                Contact <Send />
-              </Link>
-              <Link to={"/learn-more"} className="btn-secondary font-bold w-fit">
-                Learn More
-              </Link>
+              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">Contact <Send /></Link>
+              <Link to={"/learn-more"} className="btn-secondary font-bold min-w-[165.27px] justify-center">Learn More</Link>
             </div>
             <p className="text-extra-sm font-normal text-secondary mt-8">
-                I'm always open to new opportunities and collaborations.
-              </p>
+              I'm always open to new opportunities and collaborations.
+            </p>
             {/* <motion.img
             variants={leftSideVariants}
             initial="hidden"
