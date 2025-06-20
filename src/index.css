@@ -1288,7 +1288,7 @@ img {
 
 .text-h1 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: clamp(2.5rem, 4.14vw + 1.69rem, 5.25rem);
+    font-size: clamp(2.5rem, 3.14vw + 1.69rem, 5.25rem);
     line-height: 116%;
     font-weight: 400!important;
     letter-spacing: .01em !important;
