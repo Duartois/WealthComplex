@@ -138,7 +138,7 @@ export default function LuckyBlock() {
                 left: 0,
                 zIndex: 50,
                 pointerEvents: 'auto',
-                touchAction: 'none',
+                touchAction: 'pan-y',
             }}
         />
     );
