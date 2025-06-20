@@ -4,7 +4,7 @@ import LuckyBlock from '../luckyblock/luckyBlock.jsx';
 
 const Services = () => {
   return (
-    <motion.section id="services" className="py-10 bg-[#fcfcfc]">
+    <motion.section id="services" className="py-10">
       <div className="container relative flex flex-col items-center justify-center h-full">
 
         <div className="w-full max-w-6xl">
