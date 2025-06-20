@@ -24,6 +24,7 @@ const Header = () => {
         }
     }, [resizedX]);
 
+
     React.useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll("section[id]");
@@ -64,64 +65,75 @@ const Header = () => {
     return (
         <>
             <motion.header
-                className="fixed z-[1000] flex w-full bg-ice items-center"
+                className="fixed z-[100] w-full bg-ice"
                 variants={navbarVariants}
                 initial={['default', 'slideStart']}
-                animate={[scrolledY ? 'active' : 'default', 'slideEnd']}
+                animate={[scrolledY ? 'active' : 'default']}
                 transition={{ duration: 0.3 }}
             >
-                <div className="container flex h-full items-center justify-between">
-                    <Link
-                        to={'/'}
-                        className='flex h-3/4 items-center gap-x-2'
-                    >
-                        <motion.p
-                            className="text-logo font-bold text-primary tracking-tight"
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            Matheus Duarte Co.
-                        </motion.p>
-                    </Link>
-                    <nav className="hidden md:block">
-                        <ul className="flex gap-x-4">
-                            {navbarLinks.map((link) => (
-                                <li key={link.id}>
-                                    <Link
-                                        to={link.path}
-                                        onClick={(e) => {
-                                            if (location.hash === link.path) {
-                                                e.preventDefault(); // impede o comportamento padrão
-                                                const element = document.querySelector(link.path);
-                                                if (element) {
-                                                    element.scrollIntoView({ behavior: "smooth" });
+                <div className="container h-full flex items-center justify-between py-2 md:py-4">
+                    {/* Esquerda: Logo + Nav */}
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-y-2 md:gap-x-8 mt-2">
+                        {/* Logo */}
+                        <Link to={'/'}>
+                            <motion.img
+                                src={logo}
+                                alt="Matheus Duarte Logo"
+                                className="h-8 w-auto object-contain"
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                            />
+                        </Link>
+
+                        {/* Links */}
+                        <nav className="hidden md:block mt-2">
+                            <ul className="flex gap-x-6 ">
+                                {navbarLinks.map((link) => (
+                                    <li key={link.id}>
+                                        <Link
+                                            to={link.path}
+                                            onClick={(e) => {
+                                                if (location.hash === link.path) {
+                                                    e.preventDefault();
+                                                    const element = document.querySelector(link.path);
+                                                    if (element) {
+                                                        element.scrollIntoView({ behavior: "smooth" });
+                                                        setActiveSection(link.id);
+                                                    }
+                                                } else {
                                                     setActiveSection(link.id);
                                                 }
-                                            } else {
-                                                setActiveSection(link.id);
-                                            }
-                                        }}
-                                        className={`text-base font-medium text-primary hover-underline-animation left ${activeSection === link.id && activeSection !== "" ? "active" : ""}`}
-                                    >
-                                        {link.label}
-                                    </Link>
+                                            }}
+                                            className={`text-base font-medium text-primary hover-underline-animation left ${activeSection === link.id && activeSection !== "" ? "active" : ""
+                                                }`}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
 
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                    <Link
-                        to={'/contact'}
-                        className="btn-primary-header hidden md:inline-flex"
-                    >
-                        Contact
-                    </Link>
-                    <button className="cursor-pointer text-primary md:hidden" onClick={() => setToggleMenu(true)}>
-                        <Menu />
-                    </button>
+                    {/* Direita: Botão + Menu mobile */}
+                    <div className="flex flex-col items-end mt-1">
+                        <Link
+                            to={'/contact'}
+                            className="btn-primary-header hidden md:inline-flex"
+                        >
+                            Contact
+                        </Link>
+                        <button
+                            className="cursor-pointer text-primary md:hidden mt-1"
+                            onClick={() => setToggleMenu(true)}
+                        >
+                            <Menu />
+                        </button>
+                    </div>
                 </div>
             </motion.header>
+
             <AnimatePresence>
                 {toggleMenu && (
                     <MobileNavbar

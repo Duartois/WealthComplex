@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg";
+import logo from "../assets/svg/logo.svg";
 import home from "../assets/gif/home.gif";
 import about from "../assets/about-01.jpg";
 import project01 from "../assets/project-01.jpg";

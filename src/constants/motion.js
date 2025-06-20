@@ -1,24 +1,29 @@
 export const navbarVariants = {
     default: {
+        y: 0,
         backgroundColor: "#E4E8F1",
         boxShadow: "0px 3px 5px rgba(0,0,0,0)",
         height: "80px",
+        transition: {
+            duration: 0.4,
+            type: "spring",
+            bounce: 0.2,
+        },
     },
     active: {
+        y: 0,
         backgroundColor: "#E4E8F1",
         boxShadow: "0px 3px 5px rgba(0,0,0,0.1)",
         height: "56px",
-    },
-    slideStart: {
-        y: -100,
-    },
-    slideEnd: {
-        y: 0,
         transition: {
-            duration: 2,
+            duration: 0.4,
             type: "spring",
-            bounce: 0.3,
+            bounce: 0.2,
         },
+    },
+    hidden: {
+        y: -100,
+        opacity: 0,
     },
 };
 
