@@ -53,7 +53,7 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           /> */}
             <div className="flex flex-col">
-              <p className="uppercase text-head font-normal text-secondary-50">
+              <p className="uppercase text-md font-medium text-secondary-50">
                 Duartois Presents
               </p>
               <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">

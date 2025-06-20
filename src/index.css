@@ -498,11 +498,6 @@ img {
     transform-origin: center;
 }
 
-.scale-lucky {
-    transform: scale(1);
-    /* ou 1.2, 1.4 — ajuste como preferir */
-    transform-origin: center;
-}
 
 .link {
     font-size: 1rem;
@@ -1295,14 +1290,18 @@ img {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: clamp(2.5rem, 4.14vw + 1.69rem, 5.25rem);
     line-height: 116%;
-    font-weight: 400
+    font-weight: 400!important;
+    letter-spacing: .01em !important;
+    text-wrap: balance;
 }
 
 .text-h2 {
     font-family: 'Test Tiempos Headline Regular', serif;
-    font-size: 40px;
-    line-height: normal;
-    font-weight: 900
+    font-size: clamp(2.25rem, 1.88vw + 1.88rem, 3.5rem) !important;
+    line-height: 116% !important;
+    font-weight: 400 !important;
+    letter-spacing: .01em !important;
+    text-wrap: balance;
 }
 
 .text-h3 {
@@ -1393,6 +1392,15 @@ img {
     line-height: 124% !important;
     font-size: clamp(1.125rem, .56vw + 1.02rem, 1.5rem) !important;
     z-index: 1;
+}
+
+.services-card {
+    padding: 2rem 2rem 0rem 2rem;
+    align-self: center;
+}
+
+.services-three {
+    align-self: center;
 }
 
 
@@ -1651,15 +1659,5 @@ img {
 }
 
 
-@media (min-width: 992px) {
-    .container {
-        padding-block: 4rem;
-        height: 85vh;
-    }
 
-    .hero-container {
-        padding-block: 4rem;
-        height: 140vh;
-    }
 
-}

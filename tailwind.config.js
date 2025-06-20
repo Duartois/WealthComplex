@@ -10,6 +10,7 @@ export default {
             lg: "1024px",
             xl: "1300px",
         },
+        darkMode: 'class',
         container: {
             center: true,
             padding: "1rem",

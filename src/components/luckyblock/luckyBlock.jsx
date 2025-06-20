@@ -15,9 +15,8 @@ export default function LuckyBlock() {
         const height = mount.clientHeight;
 
         const scene = new THREE.Scene();
-        const isMobile = window.innerWidth <= 768;
         const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 100);
-        camera.position.z = 5;
+        camera.position.z = 4.5;
 
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(width, height);
@@ -134,7 +133,7 @@ export default function LuckyBlock() {
             style={{
                 width: '100%',
                 height: '100%',
-                position: 'absolute',
+                position: 'relative',
                 top: 0,
                 left: 0,
                 zIndex: 50,
