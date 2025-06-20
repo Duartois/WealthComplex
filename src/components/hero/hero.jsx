@@ -33,7 +33,7 @@ const Hero = () => {
     <section id="home" className="hero-section relative lg:min-h-screen w-full">
       <motion.div
         style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-        className="relative lg:absolute inset-0 z-10 flex items-center lg:top-20 bg-hero rounded-b-2xl overflow-hidden"
+        className="relative lg:absolute inset-0 z-10 flex items-center lg:mt-40 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
           {/* Hero Lado Esquerdo */}
@@ -53,7 +53,7 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           /> */}
             <div className="flex flex-col">
-              <p className="uppercase text-md font-medium text-secondary-50">
+              <p className="uppercase text-md font-normal text-secondary-50">
                 Duartois Presents
               </p>
               <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">
