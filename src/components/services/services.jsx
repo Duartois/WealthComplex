@@ -13,7 +13,7 @@ const Services = () => {
             {/* Bloco de texto */}
             <div className="services-card relative flex flex-col items-start text-left">
               <div>
-                <p className="uppercase text-md font-medium text-secondary-50">
+                <p className="uppercase text-md font-normal text-secondary-50">
                   get in touch
                 </p>
               </div>
