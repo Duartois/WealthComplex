@@ -15,8 +15,15 @@ const Header = () => {
     const { resizedX } = useResize({ targetX: 768 });
     const { scrolledY } = useScroll({ targetY: 50 });
     const location = useLocation();
+    const headerRef = React.useRef();
 
     useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
+
+
+    React.useLayoutEffect(() => {
+        const h = headerRef.current?.offsetHeight || 80;
+        document.documentElement.style.setProperty('--header-h', `${h}px`);
+    }, []);
 
     React.useEffect(() => {
         if (resizedX) {
@@ -70,6 +77,7 @@ const Header = () => {
                 initial={['default', 'slideStart']}
                 animate={[scrolledY ? 'active' : 'default']}
                 transition={{ duration: 0.3 }}
+                ref={headerRef}
             >
                 <div className="container h-full flex items-center justify-between py-2 md:py-4">
                     {/* Esquerda: Logo + Nav */}

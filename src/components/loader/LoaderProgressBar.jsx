@@ -43,7 +43,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
             width: 300,
             height: 8,
             borderRadius: 6,
-            background: "#E4E8F1",
+            background: "#ffffff",
             boxShadow: "0 2px 16px #0001",
             overflow: "hidden",
             position: "relative"

@@ -8,10 +8,10 @@ const About = () => {
 
   const aboutContent = (
     <blockquote className="relative pl-6 border-l-4 border-primary text-primary-50 italic fancy-quote whitespace-pre-wrap">
-      <h4 className="text-h5 text-primary mb-4 z-20">
+      <h4 className="text-h5 text-primary mb-4 z-10 relative">
         Matheus Duarte G.
       </h4>
-      <p className="md:text-lg font-normal text-primary-50">
+      <p className="md:text-lg font-normal text-primary-50 z-10 relative">
         As a skilled web developer and designer, I've honed my craft since 2022, focusing on delivering top-notch digital solutions. My expertise lies in managing end-to-end website development projects, from inception to delivery. I specialize in creating user-friendly websites tailored to specific needs, ensuring seamless functionality across platforms and industries. With a broad skill set and commitment to quality, I aim to be a valuable addition to any web development team.
       </p>
     </blockquote>
@@ -20,7 +20,7 @@ const About = () => {
   useClickOutside(modalRef, () => setShowModal(false));
 
   return (
-    <section id="about" className="md:mt-0">
+    <section id="about" className="about-section py-10 md:py-20 lg:py-36">
       <div className="container relative flex flex-col items-center gap-y-9  h-full">
         <SectionTitle
           title="About Me"

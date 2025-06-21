@@ -26,15 +26,15 @@
 
 @layer components {
     .link {
-        @apply font-medium text-primary transition-colors ;
+        @apply font-medium text-primary transition-colors;
     }
 
     .btn-primary {
-        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full  px-6 font-normal text-secondary transition-colors hover:bg-primary-60;
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 font-normal text-secondary transition-colors hover:bg-primary-60;
     }
 
     .btn-secondary {
-        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6  font-normal text-primary transition-colors hover:bg-[#E4E8F1];
+        @apply inline-flex h-12 w-fit shrink-0 items-center justify-center gap-x-2 rounded-full px-6 font-normal text-primary transition-colors hover:bg-[#E4E8F1];
     }
 
     .btn-secondary-white {
@@ -458,6 +458,12 @@ img {
     --tw-contain-style:
 }
 
+.about-section {
+    background-color: #E4E8F1;
+    position: relative;
+    z-index: 2 !important;
+}
+
 .hero-section {
     margin-top: -4.5rem;
     padding-top: 4.5rem;
@@ -470,6 +476,10 @@ img {
 
 .hero-image {
     width: 140%;
+}
+.services-section {
+    z-index: 10;
+    background-color: #E4E8F1;
 }
 
 .container {
@@ -557,7 +567,7 @@ img {
     column-gap: .5rem;
     border-radius: 9999px;
     --tw-bg-opacity: 1;
-    border: 1px solid #E4E8F1 ;
+    border: 1px solid #E4E8F1;
     padding: 1.25rem 2rem;
     min-height: 4rem;
     font-size: 1rem;
@@ -572,9 +582,9 @@ img {
 
 .btn-primary-white:hover {
     --tw-bg-opacity: 1;
-    background-color: #282A3E ;
+    background-color: #282A3E;
     color: #E4E8F1;
-    border: 1px solid #E4E8F1 ;
+    border: 1px solid #E4E8F1;
 }
 
 .btn-secondary {
@@ -606,7 +616,8 @@ img {
     color: #E4E8F1;
     border: 1px solid #E4E8F1
 }
-.btn-secondary-white{
+
+.btn-secondary-white {
     display: inline-flex;
     height: 3rem;
     flex-shrink: 0;
@@ -628,6 +639,7 @@ img {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s;
 }
+
 .btn-secondary-white:hover {
     --tw-bg-opacity: 1;
     background-color: #282A3E;
@@ -658,6 +670,7 @@ img {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .3s
 }
+
 .btn-primary-header:hover {
     --tw-bg-opacity: 1;
     background-color: #E4E8F1;
@@ -736,7 +749,7 @@ img {
     z-index: -1;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-    
+
 }
 
 
@@ -1290,7 +1303,7 @@ img {
     font-family: 'Test Tiempos Headline Regular', serif;
     font-size: clamp(2.5rem, 3.14vw + 1.69rem, 5.25rem);
     line-height: 116%;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     letter-spacing: .01em !important;
     text-wrap: balance;
 }
@@ -1378,14 +1391,15 @@ img {
     font-weight: 700
 }
 
-.text-hero-description{
+.text-hero-description {
     font-weight: 400 !important;
     letter-spacing: -.005em !important;
     font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif" !important;
     line-height: 124% !important;
     font-size: clamp(1.125rem, .56vw + 1.02rem, 1.5rem) !important;
 }
-.text-services-description{
+
+.text-services-description {
     font-weight: 400 !important;
     letter-spacing: -.005em !important;
     font-family: futura-pt, "system-ui", Helvetica Neue, "sans-serif" !important;
@@ -1397,6 +1411,7 @@ img {
 .services-card {
     padding: 2rem 2rem 0rem 2rem;
     align-self: center;
+    z-index: 2;
 }
 
 .services-three {
@@ -1451,7 +1466,7 @@ img {
 
 .text-primary-50 {
     --tw-text-opacity: 1;
-    color: #a6aec1
+    color: #445374
 }
 
 .text-secondary {
@@ -1657,7 +1672,3 @@ img {
         grid-template-columns: repeat(3, minmax(0, 1fr))
     }
 }
-
-
-
-

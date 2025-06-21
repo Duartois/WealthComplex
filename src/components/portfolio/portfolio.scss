@@ -1,0 +1,93 @@
+.portfolio {
+  position: relative;
+  background: #282A3E;
+  min-height: 100vh;
+  
+  z-index: 0;
+
+  .portfolio-header {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: center;
+    background:#282A3E ;
+    padding: 1rem 0;
+
+    h2 {
+      font-size: clamp(2rem, 1.8vw + 1rem, 3rem);
+      color: #E4E8F1;
+      margin-bottom: 0.5rem;
+    }
+
+    .progressBar {
+      width: 60%;
+      height: 6px;
+      background: #E4E8F1;
+      border-radius: 9999px;
+      margin: 0 auto;
+      transform-origin: left;
+    }
+  }
+
+  .portfolio-static {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .portfolio-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .slide-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    padding: 0 2rem;
+
+    img {
+      width: 50%;
+      border-radius: 1rem;
+      object-fit: cover;
+      max-height: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .textContainer {
+      flex: 1;
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #282A3E;
+      }
+      p {
+        color: #445374;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+      button {
+        background: #282A3E;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.05);
+          background: #1f1f2e;
+        }
+      }
+    }
+  }
+}
