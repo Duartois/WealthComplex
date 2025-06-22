@@ -1,11 +1,11 @@
-.portfolio {
+.projects {
   position: relative;
   background: #282A3E;
   min-height: 100vh;
   
   z-index: 0;
 
-  .portfolio-header {
+  .projects-header {
     position: fixed;
     top: 55px;
     left: 0;
@@ -31,13 +31,13 @@
     }
   }
 
-  .portfolio-static {
+  .projects-static {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
 
-  .portfolio-slide {
+  .projects-slide {
     display: flex;
     justify-content: center;
     align-items: center;
