@@ -1,112 +1,133 @@
-import React from "react"
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { navbarLinks } from "../../constants";
-import { Link, useLocation } from "react-router-dom";
-import { mobileNavbarVariants } from "../../constants/motion";
 import Proptypes from "prop-types";
+import AboutDropdown from '../dropdowns/AboutDropdown';
+import ServicesDropdown from '../dropdowns/ServicesDropdown';
+import ResourcesDropdown from '../dropdowns/ResourcesDropdown';
+import { AnimatedCaret } from "../ui/AnimatedCaret";
 
-const Path = motion.path;
+const mobileNavbarVariants = {
+    hidden: { x: "100%" },
+    visible: { x: 0, transition: { duration: 0.3 } },
+    exit: { x: "100%", transition: { duration: 0.2 } },
+};
 
-const MenuToggle = ({ toggle, isOpen }) => (
-    <button
-        className="absolute right-0 top-0 m-4 text-gray-90"
-        onClick={toggle}
-    >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+const drawerVariants = {
+    initial: { x: "100%" },
+    animate: { x: 0, transition: { duration: 0.3 } },
+    exit: { x: "100%", transition: { duration: 0.2 } },
+};
+
+// === MENU TOGGLE inline ===
+const MenuToggle = ({ toggle, isOpen }) => {
+    const Path = ({ d }) => (
+        <motion.path
+            d={d}
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-menu"
-        >
-            <Path
-                initial={false}
-                animate={{ d: isOpen ? "M3 17L17 3" : "M4 6h16" }}
-                d={isOpen ? "M3 17L17 3" : "M4 6h16"}
-                transition={{ duration: 0.3 }}
-            />
-            <Path
-                initial={false}
-                animate={{ opacity: isOpen ? 0 : 1 }}
-                opacity={isOpen ? 0 : 1}
-                d="M4 12h16"
-                transition={{ duration: 0.2 }}
-            />
-            <Path
-                initial={false}
-                animate={{ d: isOpen ? "M3 3L17 17" : "M4 18h16" }}
-                d={isOpen ? "M3 3L17 17" : "M4 18h16"}
-                transition={{ duration: 0.3 }}
-            />
-        </svg>
-    </button>
-);
+        />
+    );
 
-const MobileNavbar = React.forwardRef(({ setToggleMenu, activeSection }, ref) => {
+    return (
+        <button
+            className="absolute right-4 top-4 z-50 p-2"
+            onClick={toggle}
+            aria-label="Toggle menu"
+        >
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <Path d={isOpen ? "M3 3L21 21" : "M3 6h18"} />
+                {!isOpen && <Path d="M3 12h18" />}
+                <Path d={isOpen ? "M3 21L21 3" : "M3 18h18"} />
+            </svg>
+        </button>
+    );
+};
+const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
     const [isOpen, setIsOpen] = React.useState(true);
-    const location = useLocation();
+    const [activeDrawer, setActiveDrawer] = React.useState(null);
 
     const toggleMenu = () => {
         setIsOpen((prev) => !prev);
         setToggleMenu((prev) => !prev);
     };
 
+    const goBack = () => setActiveDrawer(null);
+
+    const drawerContent = {
+        about: <AboutDropdown />,
+        services: <ServicesDropdown />,
+        projects: <ResourcesDropdown />,
+    };
+
     return (
-        <motion.div
-            ref={ref}
-            className="fixed right-0 top-0 z-[100000] h-dvh w-full max-w-72 bg-ice backdrop-blur-lg px-4 py-[50px] shadow-lg"
-            variants={mobileNavbarVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-        >
-            <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
-            <nav className="flex h-full flex-col justify-between gap-y-4" style={{ right: '0px', opacity: '1' }}>
-                <ul className="flex w-full flex-col gap-y-5">
-                    {navbarLinks.map((link, index) => (
-                        <motion.li
-                            key={index}
-                            custom={index}
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 50 }}
-                            transition={{ delay: index * 0.05 }}
-                        >
-                            <Link
-                                to={link.path}
-                                className={`link text-lg ${activeSection === link.id ? "text-primary-50" : ""}`}
-                                onClick={toggleMenu}
+        <AnimatePresence mode="wait">
+            <motion.div
+                key="main-drawer"
+                ref={ref}
+                className="fixed inset-0 z-[100000] h-screen w-full bg-ice px-6 py-10 overflow-y-auto"
+                variants={mobileNavbarVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+            >
+                <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
+
+                {!activeDrawer && (
+                    <nav className="flex flex-col gap-6 mt-10">
+                        {["about", "services", "projects"].map((key) => (
+                            <button
+                                key={key}
+                                onClick={() => setActiveDrawer((prev) => (prev === key ? null : key))}
+                                className="flex items-center justify-between text-left text-lg font-medium text-primary w-full"
                             >
-                                {link.label}
-                            </Link>
-                        </motion.li>
-                    ))}
-                </ul>
-                <Link
-                    to={'/contact'}
-                    className="btn-primary"
-                    onClick={toggleMenu}
-                >
-                    Contact
-                </Link>
-                <div className="mt-10 flex items-center justify-around gap-4 text-primary-50">
-                    <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.instagram.com/matheus.duarteg/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://www.linkedin.com/in/matheusduartegoncalves/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
-            </nav>
-        </motion.div>
+                                <span className="capitalize">{key}</span>
+                                <AnimatedCaret open={activeDrawer === key} />
+                            </button>
+                        ))}
+                        <a
+                            href="/contact"
+                            className="btn-primary mt-4"
+                            onClick={toggleMenu}
+                        >
+                            Contact
+                        </a>
+                        <div className="mt-10 flex flex-col gap-3 text-primary text-sm">
+                            <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://www.instagram.com/matheus.duarteg/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.linkedin.com/in/matheusduartegoncalves/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                    </nav>
+                )}
+
+                <AnimatePresence mode="wait">
+                    {activeDrawer !== null && (
+                        <motion.div
+                            key={activeDrawer}
+                            className="absolute inset-0 z-10 bg-white px-6 py-8"
+                            variants={drawerVariants}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                        >
+                            <button
+                                onClick={goBack}
+                                className="text-sm font-medium text-primary underline mb-6"
+                            >
+                                ← Back
+                            </button>
+                            {drawerContent[activeDrawer]}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </motion.div>
+        </AnimatePresence>
     );
 });
 
 MobileNavbar.propTypes = {
     setToggleMenu: Proptypes.func,
-    activeSection: Proptypes.string
 };
 
 MobileNavbar.displayName = "MobileNavbar";

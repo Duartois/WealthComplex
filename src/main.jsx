@@ -7,6 +7,53 @@ import App from './App.jsx'
 import Home from './pages/home.jsx'
 import Contact from './pages/contact.jsx'
 
+console.log(`
+                            . .  ,  ,
+                            |⠈⣆/ ⣆/ ⣆,',
+                            ;          ⠈⣆/⣆,.
+                           :               ⠈⣆,/
+                           |                  /
+                           ;                 :
+                          :                  ;
+                          |      ,---.      /
+                         :     ,'     ⠈,-._ ⣆
+                         ;    (   o    ⣆    '
+                       _:      .      ,'  o ;
+                      /,.⣠      .__,''-.__,
+                      ⣆_  _               ⣆
+                     ,'  / ⠈           ⠈.,'
+               ___,'⠈-._ ⠈_/ ',._        ;
+            __;_,'      ⠈-.'-'./ '--.____)
+         ,-'           _,--⣆^-'
+       ,⠈:_____      ,-'     ⣆
+      (,'     ⠈--.  ⣆;-._    ;
+      :    Y      ⠈-/    ⠈,  :
+      :    :       :     /_;'
+      :    :       |    :
+       ⣆    ⣆      :    :
+        ⠈-._ ⠈-.__, ⣆    '.
+           ⣆   ⣆  '. ⣆     '.
+         ,-;    ⣆---)_⣆ ,','/
+         ⣆_ ⠈---'--'⠈ ,'^-;'
+         (⠈     ---'⠈ ,-'⠈⠈
+         / ⠈--.__,. ,-'    ⣆
+-Gotcha-    )-.__,-- ||___,--' '-.
+        /._______,|__________,'⣆
+        '--.____,'|_________,-'
+   ||                                              ||      
+   ||   Hey there, curious one!                    ||      
+   ||                                              ||      
+   ||   You're probably wondering how cool         ||      
+   ||   this site is.                              ||      
+   ||   Bart is guarding the secrets of            || 
+   ||   the source.                                || 
+   ||                                              ||      
+   ||   🔍 Want to unveil the code?               ||      
+   ||   Feel free to check it out!                 ||      
+   ||   👉 https://github.com/Duartois            ||      
+   ||______________________________________________||
+
+`);
 
 const router = createBrowserRouter([
   {

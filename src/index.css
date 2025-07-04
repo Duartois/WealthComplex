@@ -467,11 +467,13 @@ img {
 .hero-section {
     margin-top: -4.5rem;
     padding-top: 4.5rem;
+    position: relative;
 }
 
 .hero-container {
     padding-block: 4rem 14.75rem;
     height: 80vh;
+    position: relative;
 }
 
 .hero-image {
@@ -485,6 +487,7 @@ img {
 .container {
     width: 100%;
     max-width: 1200px;
+    position: relative;
 }
 
 .section {

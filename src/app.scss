@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+}
+
+.hover-underline-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover::after,
+.hover-underline-animation.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

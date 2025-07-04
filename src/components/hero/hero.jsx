@@ -7,11 +7,10 @@ import { arrow01, arrow02, heroImage } from "../../constants/assets";
 import { leftSideVariants, rightSideVariants } from "../../constants/motion";
 import LuckyBlock from "../luckyblock/luckyBlock";
 
-
 const Hero = () => {
   const { scrollY } = useScroll();
   const location = useLocation();
-  const isHome = location.hash === "#home" || location.hash === "" || location.pathname === "/";
+  const isHome = location.hash === ".home" || location.hash === "" || location.pathname === "/";
 
 
   const scale = isHome
@@ -28,12 +27,14 @@ const Hero = () => {
     })
     : 60;
 
-
   return (
-    <section id="home" className="hero-section relative lg:min-h-screen w-full">
+    <section
+      id="home"
+      className="hero-section relative min-h-[100vh] w-full pointer-events-none"
+    >
       <motion.div
         style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-        className="relative lg:absolute inset-0 z-10 flex items-center lg:mt-40 bg-hero rounded-b-2xl overflow-hidden"
+        className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-40 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
           {/* Hero Lado Esquerdo */}
