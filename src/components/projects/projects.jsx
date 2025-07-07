@@ -1,97 +1,155 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { fadeInVariants } from "../../constants/motion"; // ajuste path se necessário
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
+import { project01, project02, project03, project04, project05, project06, project07, project08 } from "../../constants/assets";
 
-const items = [
-    { id: 1, title: "Project One", img: "/img1.jpg", desc: "Description 1" },
-    { id: 2, title: "Project Two", img: "/img2.jpg", desc: "Description 2" },
-    { id: 3, title: "Project Three", img: "/img3.jpg", desc: "Description 3" },
+const projects = [
+  { id: 1, title: "act responsable", category: "Développement Web", img: project01, link: "#" },
+  { id: 2, title: "dua lipa", category: "Portrait", img: project02, link: "#" },
+  { id: 3, title: "cocolyze", category: "Design UX/UI", img: project03, link: "#" },
+  { id: 4, title: "les indécis", category: "Branding", img: project04, link: "#" },
+  { id: 5, title: "le jeu de l’oie", category: "Game Design", img: project05, link: "#" },
+  { id: 6, title: "l’équipe explore", category: "Illustration", img: project06, link: "#" },
+  { id: 7, title: "silhouette", category: "Portrait", img: project07, link: "#" },
+  { id: 8, title: "portraits", category: "Portrait", img: project08, link: "#" },
 ];
 
-const Single = ({ item, index }) => (
-    <section className="projects-slide">
-        <div className="slide-wrapper">
-            <motion.img
-                src={item.img}
-                alt={item.title}
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-            />
-            <div className="textContainer">
-                <h2>{item.title}</h2>
-                <p>{item.desc}</p>
-                <button>See Demo</button>
-            </div>
-        </div>
-    </section>
-);
-
 const Projects = () => {
-    const ref = useRef();
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
+  const [activeIndex, setActiveIndex] = useState(null);
 
-    const headerOpacity = useTransform(
-        scrollYProgress,
-        [0, 0.04],   // Fica 0% até 4% da section entrar (ajuste esse .04 se quiser antes/depois)
-        [0, 1]
-    );
+  useEffect(() => {
+    const cursor = document.getElementById("custom-cursor");
+    const section = document.getElementById("Projects");
+    if (!cursor || !section) return;
 
-    const headerY = useTransform(
-        scrollYProgress,
-        [0, 0.04],
-        [-30, 0]
-    );
+    let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+    const speed = 0.1;
 
-    const headerFadeOut = useTransform(
-        scrollYProgress,
-        [0.96, 1],
-        [1, 0]
-    );
+    const animate = () => {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top = `${currentY}px`;
+      requestAnimationFrame(animate);
+    };
 
-    const finalOpacity = useTransform(
-        [headerOpacity, headerFadeOut],
-        ([fadeIn, fadeOut]) => fadeIn * fadeOut
-    );
+    const handleMouseMove = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
 
-    const progressScaleX = useTransform(scrollYProgress, [0.15, 0.95], [0, 1]);
+    const showCursor = () => {
+      document.body.classList.add("cursor-active");
+      cursor.style.display = "block";
+      cursor.style.left = "-100px";
+      cursor.style.top = "-100px";
+      requestAnimationFrame(() => {
+        cursor.style.opacity = "1";
+      });
+    };
 
-    return (
-        <section id="projects" className="projects" ref={ref}>
-            <motion.div
-                className="projects-header"
-                style={{
-                    opacity: finalOpacity,
-                    y: headerY,
-                    zIndex: 1
-                }}
-            >
-                <h2>Featured Works</h2>
-                <motion.div
-                    className="progressBar"
-                    style={{
-                        scaleX: progressScaleX,
-                        transformOrigin: "left",
-                        height: "6px",
-                        borderRadius: "4px",
-                        background: "linear-gradient(90deg, #3b405a 20%, #E4E8F1 80%)",
-                        boxShadow: "0 2px 8px #0001",
-                        transition: "all 0.4s ease-in-out",
-                    }}
-                />
-            </motion.div>
+    const hideCursor = () => {
+      document.body.classList.remove("cursor-active");
+      cursor.style.opacity = "0";
+    };
 
-            <div className="projects-static">
-                {items.map((item, index) => (
-                    <Single key={item.id} item={item} index={index} />
-                ))}
-            </div>
-        </section>
-    );
+    section.addEventListener("mousemove", handleMouseMove);
+    section.addEventListener("mouseenter", showCursor);
+    section.addEventListener("mouseleave", hideCursor);
+
+    animate();
+
+    return () => {
+      section.removeEventListener("mousemove", handleMouseMove);
+      section.removeEventListener("mouseenter", showCursor);
+      section.removeEventListener("mouseleave", hideCursor);
+      document.body.classList.remove("cursor-active");
+    };
+  }, []);
+
+  return (
+    <section id="Projects" className="projects-section min-h-screen py-24 px-4 sm:px-6 bg-[#282A3E] text-secondary relative">
+      <div className="w-full max-w-[1440px] mx-auto mt-[100px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="relative w-full h-full rounded-tr-[48px] overflow-hidden hidden md:block">
+          <AnimatePresence mode="wait">
+            {activeIndex !== null && (
+              <motion.img
+                key={projects[activeIndex].id}
+                src={projects[activeIndex].img}
+                alt={projects[activeIndex].title}
+                initial={{ opacity: 0, scale: 1.02 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+          </AnimatePresence>
+        </div>
+
+        <div className="w-full">
+          <div className="flex justify-between items-end mb-4">
+            <h2 className="text-h2 text-secondary-50 tracking-wide">PROJECTS</h2>
+            <span className="text-md text-white">{projects.length}</span>
+          </div>
+
+          <motion.hr
+            className="border-t border-white/40 mb-6 origin-left"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
+          />
+
+          <ul className="divide-y divide-white/20">
+            {projects.map((project, index) => {
+              const isActive = activeIndex === index;
+              return (
+                <li key={project.id} className="overflow-hidden">
+                  <a
+                    href={project.link}
+                    className="flex justify-between items-center py-4 cursor-pointer group"
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onMouseLeave={() => setActiveIndex(null)}
+                  >
+                    <div className="flex items-center gap-x-2 overflow-hidden">
+                      <div className="relative flex items-center gap-x-2">
+                        <motion.span
+                          initial={false}
+                          animate={{ x: isActive ? 0 : -12, opacity: isActive ? 1 : 0 }}
+                          transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
+                          className="text-white inline-block"
+                        >
+                          →
+                        </motion.span>
+                        <motion.h4
+                          initial={false}
+                          animate={{ x: isActive ? 0 : -10, opacity: isActive ? 1 : 1 }}
+                          transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
+                          className={`text-md font-medium tracking-wide ${isActive ? 'text-white' : 'text-secondary-50'}`}
+                        >
+                          {project.title}
+                        </motion.h4>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-x-2 transition-all duration-300">
+                      {isActive && <span className="w-3 h-3 bg-white rounded-full"></span>}
+                      <p className="text-sm text-secondary-50 group-hover:text-white transition-colors">
+                        {project.category}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+
+      {typeof window !== 'undefined' && (
+        <div id="custom-cursor" className="cursor z-[999] hidden lg:block"></div>
+      )}
+    </section>
+  );
 };
 
 export default Projects;

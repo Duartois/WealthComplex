@@ -7,6 +7,8 @@ import project03 from "../assets/project-03.jpg";
 import project04 from "../assets/project-04.jpg";
 import project05 from "../assets/project-05.jpg";
 import project06 from "../assets/project-06.jpg";
+import project07 from "../assets/project-07.jpg";
+import project08 from "../assets/project-08.jpg";
 import testimonial01 from "../assets/testimonial-01.jpg";
 import testimonial02 from "../assets/testimonial-02.jpg";
 import testimonial03 from "../assets/testimonial-03.jpg";
@@ -34,6 +36,8 @@ export {
     project04,
     project05,
     project06,
+    project07,
+    project08,
     testimonial01,
     testimonial02,
     testimonial03,

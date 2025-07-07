@@ -1,74 +1,82 @@
-import { useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { about } from "../../constants/assets";
-import SectionTitle from "../sectionTitle/sectionTitle";
-import { useClickOutside } from "../../hook";
 
 const About = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const aboutContent = (
-    <blockquote className="relative pl-6 border-l-4 border-primary text-primary-50 italic fancy-quote whitespace-pre-wrap">
-      <h4 className="text-h5 text-primary mb-4 z-10 relative">
-        Matheus Duarte G.
-      </h4>
-      <p className="md:text-lg font-normal text-primary-50 z-10 relative">
-        As a skilled web developer and designer, I've honed my craft since 2022, focusing on delivering top-notch digital solutions. My expertise lies in managing end-to-end website development projects, from inception to delivery. I specialize in creating user-friendly websites tailored to specific needs, ensuring seamless functionality across platforms and industries. With a broad skill set and commitment to quality, I aim to be a valuable addition to any web development team.
-      </p>
-    </blockquote>
-  );
-  const modalRef = useRef(null);
-  useClickOutside(modalRef, () => setShowModal(false));
-
   return (
-    <section id="about" className="about-section py-10 md:py-20 lg:py-36">
-      <div className="container relative flex flex-col items-center gap-y-9  h-full">
-        <SectionTitle
-          title="About Me"
-          subtitle="A brief introduction about myself."
-        />
-        <div className="flex w-full flex-col items-center justify-between gap-12 md:flex-row">
-          {/* Left Side */}
-          <div className="flex w-full justify-center md:justify-start md:w-5/12">
-            <img
-              src={about}
-              alt="Matheus Duarte"
-              className="aspect-square w-3/4 md:w-full max-w-[450px] rounded-xl"
-            />
-          </div>
+    <motion.section
+      id="about"
+      className="py-20 lg:py-36 bg-white text-primary"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Imagem + legenda */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-center lg:items-start"
+        >
+          <img
+            src={about}
+            alt="Matheus Duarte"
+            className="w-full max-w-md rounded-xl shadow-lg"
+          />
+          <p className="text-extra-sm text-gray-500 mt-4 tracking-wide uppercase text-center lg:text-left">
+            MATHEUS DUARTE, FULL-STACK DEVELOPER, UI/UX SPECIALIST
+          </p>
+        </motion.div>
 
-          {/* Right Side */}
-          <div className="flex flex-col items-center gap-y-7 text-center md:w-1/2 md:items-end md:text-start">
-            {/* Mobile: botão para abrir modal */}
-            <button
-              onClick={() => setShowModal(true)}
-              className="md:hidden btn-primary w-fit text-lg font-semibold"
-            >
-              see more
-            </button>
+        {/* Texto */}
+        <motion.div
+          className="flex flex-col gap-y-8 lg:pr-10"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-h2 text-balance leading-tight text-primary">
+            Meeting your <br className="hidden md:block" />
+            digital expectations
+          </h2>
 
-            {/* Desktop: conteúdo direto */}
-            <div className="hidden md:block w-full h-full text-left">{aboutContent}</div>
-          </div>
-        </div>
-      </div>
+          <div className="space-y-6 text-primary text-services-description">
+            <div>
+              <h4 className="text-headline font-semibold text-primary mb-1">
+                Bridging creativity and code
+              </h4>
+              <p>
+                I’m a full-stack developer passionate about building dynamic,
+                responsive, and accessible web experiences — always with a sharp
+                eye for design and performance.
+              </p>
+            </div>
 
-      {/* Modal para mobile */}
-      {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center p-4 md:hidden">
-          <div ref={modalRef} className="bg-white text-gray-90 rounded-xl p-4 w-[80%] max-w-sm relative shadow-lg z-10">
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-2 right-3 text-gray-500 text-2xl hover:text-primary"
-            >
-              &times;
-            </button>
-            <div className="fancy-quote modal-quote relative pl-6 border-l-4 border-primary text-primary-50 italic whitespace-pre-wrap z-0">
-              {aboutContent.props.children}
+            <div>
+              <h4 className="text-headline font-semibold text-primary mb-1">
+                Working with impact
+              </h4>
+              <p>
+                From landing pages to complex platforms, I build scalable
+                solutions that prioritize usability, seamless API integration,
+                and a refined user experience.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-headline font-semibold text-primary mb-1">
+                Let’s build something great
+              </h4>
+              <p>
+                Open to new projects and collaborations. Whether it’s frontend,
+                backend or UI direction — I bring dedication and polish to every
+                line of code.
+              </p>
             </div>
           </div>
-        </div>
-      )}
-    </section>
+        </motion.div>
+      </div>
+    </motion.section>
   );
 };
 

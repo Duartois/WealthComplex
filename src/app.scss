@@ -25,3 +25,12 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.bullet-transition {
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bullet-transition:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px currentColor;
+}
