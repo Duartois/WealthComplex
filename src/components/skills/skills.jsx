@@ -44,10 +44,10 @@ const Skills = () => {
   return (
     <section id="Skills" className="relative section-skills bg-[#E4E8F1] text-primary">
       {/* WRAPPER EXTERNO */}
-      <div className="relative h-full py-16">
+      <div className="relative h-full py-16 overflow-hidden">
 
         {/* GRID INTERNO */}
-        <div className="container mx-auto h-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10 relative z-10 overflow-visible">
+        <div className="container mx-auto h-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10 relative z-10 overflow-hidden">
 
           {/* Texto */}
           <motion.div
