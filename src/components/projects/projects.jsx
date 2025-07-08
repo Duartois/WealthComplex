@@ -20,16 +20,19 @@ const Projects = () => {
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
     const section = document.getElementById("Projects");
-    if (!cursor || !section) return;
+
+    // Mobile check
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile || !cursor || !section) return;
 
     let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
-    const speed = 0.1;
+    const speed = 0.15;
 
     const animate = () => {
       currentX += (mouseX - currentX) * speed;
       currentY += (mouseY - currentY) * speed;
-      cursor.style.left = `${currentX}px`;
-      cursor.style.top = `${currentY}px`;
+      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+
       requestAnimationFrame(animate);
     };
 
@@ -41,16 +44,13 @@ const Projects = () => {
     const showCursor = () => {
       document.body.classList.add("cursor-active");
       cursor.style.display = "block";
-      cursor.style.left = "-100px";
-      cursor.style.top = "-100px";
-      requestAnimationFrame(() => {
-        cursor.style.opacity = "1";
-      });
+      cursor.style.opacity = "1";
     };
 
     const hideCursor = () => {
       document.body.classList.remove("cursor-active");
       cursor.style.opacity = "0";
+      cursor.style.display = "none";
     };
 
     section.addEventListener("mousemove", handleMouseMove);
@@ -63,9 +63,11 @@ const Projects = () => {
       section.removeEventListener("mousemove", handleMouseMove);
       section.removeEventListener("mouseenter", showCursor);
       section.removeEventListener("mouseleave", hideCursor);
-      document.body.classList.remove("cursor-active");
+      cursor.style.opacity = "0";
+      cursor.classList.add("hidden");
     };
   }, []);
+
 
   return (
     <section id="Projects" className="projects-section min-h-screen py-24 px-4 sm:px-6 bg-[#282A3E] text-secondary relative">
@@ -104,18 +106,22 @@ const Projects = () => {
             {projects.map((project, index) => {
               const isActive = activeIndex === index;
               return (
-                <li key={project.id} className="overflow-hidden">
+                <li key={project.id}>
                   <a
                     href={project.link}
                     className="flex justify-between items-center py-4 cursor-pointer group"
                     onMouseEnter={() => setActiveIndex(index)}
                     onMouseLeave={() => setActiveIndex(null)}
                   >
-                    <div className="flex items-center gap-x-2 overflow-hidden">
+                    <div className="flex items-center gap-x-2">
                       <div className="relative flex items-center gap-x-2">
                         <motion.span
                           initial={false}
-                          animate={{ x: isActive ? 0 : -12, opacity: isActive ? 1 : 0 }}
+                          animate={{
+                            x: isActive ? 0 : -12,
+                            opacity: isActive ? 1 : 0,
+                            scale: isActive ? 1.2 : 1,
+                          }}
                           transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
                           className="text-white inline-block"
                         >
@@ -123,7 +129,11 @@ const Projects = () => {
                         </motion.span>
                         <motion.h4
                           initial={false}
-                          animate={{ x: isActive ? 0 : -10, opacity: isActive ? 1 : 1 }}
+                          animate={{
+                            x: isActive ? 0 : -10,
+                            opacity: 1,
+                            scale: isActive ? 1.05 : 1,
+                          }}
                           transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
                           className={`text-md font-medium tracking-wide ${isActive ? 'text-white' : 'text-secondary-50'}`}
                         >
@@ -145,8 +155,8 @@ const Projects = () => {
         </div>
       </div>
 
-      {typeof window !== 'undefined' && (
-        <div id="custom-cursor" className="cursor z-[999] hidden lg:block"></div>
+      {typeof window !== 'undefined' && window.innerWidth >= 768 && (
+        <div id="custom-cursor" className="cursor"></div>
       )}
     </section>
   );
