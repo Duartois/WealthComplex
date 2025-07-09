@@ -7,7 +7,7 @@ const sections = [
   { id: "About", label: "About", theme: "light" },     
   { id: "Skills", label: "Skills", theme: "light" }, 
   { id: "Projects", label: "Projects", theme: "dark" },
-  { id: "CTA", label: "Contact", theme: "light" },
+  { id: "CTA", label: "Contact", theme: "dark" },
 ];
 
 const SectionNav = () => {

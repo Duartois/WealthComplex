@@ -1,0 +1,86 @@
+.footer-wrapper {
+  background-color: #E4E8F1;
+  color: #282A3E;
+  font-family: 'futura-pt', sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-link {
+  position: relative;
+  color: #282A3E;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #445374;
+  }
+}
+
+.footer-hover-underline-animation {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0%;
+    background-color: #282A3E;
+    transition: width 0.25s ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &.left::after {
+    transform-origin: bottom left;
+  }
+}
+
+.scroll-top-btn {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 20;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  .scroll-circle {
+    background-color: #ffffff50;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(6px);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+
+    svg {
+      color: #282A3E;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      background-color: #ffffff70;
+      transform: scale(1.05);
+
+      svg {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.social-icon {
+  color: #282A3E;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    color: #445374;
+  }
+}
