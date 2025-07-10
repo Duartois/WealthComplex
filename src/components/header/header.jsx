@@ -82,7 +82,7 @@ const Header = () => {
     return (
         <>
             <div ref={containerRef}>
-                <header ref={headerRef} className="fixed z-[100] w-full bg-ice shadow-sm">
+                <header ref={headerRef} className="fixed z-[100] w-full bg-ice shadow-sm top-0">
                     <div className="container h-full flex items-center justify-between py-2 md:py-4">
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-y-2 md:gap-x-8 mt-2">
                             <Link to="/">

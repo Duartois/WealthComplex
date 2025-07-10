@@ -21,7 +21,7 @@ const About = () => {
           <img
             src={about}
             alt="Matheus Duarte"
-            className="w-full max-w-md rounded-xl shadow-lg"
+            className="w-96 h-96 object-cover rounded-full shadow-lg"
           />
           <p className="text-extra-sm text-gray-500 mt-4 tracking-wide uppercase text-center lg:text-left">
             MATHEUS DUARTE, FULL-STACK DEVELOPER, UI/UX SPECIALIST

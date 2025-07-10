@@ -2,7 +2,7 @@ import { About, CTA, Hero, Skills, Services, Projects} from "../components";
 
 const Home = () => {
     return (
-    <main className="overflow-y-auto">
+    <main>
       <section id="hero"><Hero /></section>
       <section id="Services"><Services /></section>
       <section id="About"><About /></section>

@@ -25,10 +25,10 @@ const Footer = () => {
             <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
               <Github size={22} />
             </a>
-            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
               <Linkedin size={22} />
             </a>
-            <a href="https://instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
               <Instagram size={22} />
             </a>
           </div>
@@ -45,11 +45,11 @@ const Footer = () => {
 
       {/* Scroll top */}
       <button
-        className="scroll-top-btn"
+        className="scroll-top-btn hidden md:flex border-t-2 border-sky-950 bg-ice items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-gray-50 transition-colors duration-300"
         onClick={scrollToTop}
         aria-label="Scroll to top"
       >
-        <div className="scroll-circle">
+        <div className="scroll-circle border-t-2 border-sky-950 bg-ice flex items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-gray-50 transition-colors duration-300">
           <ChevronUp size={18} />
         </div>
       </button>

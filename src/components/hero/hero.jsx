@@ -34,7 +34,7 @@ const Hero = () => {
     >
       <motion.div
         style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
-        className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-40 bg-hero rounded-b-2xl overflow-hidden"
+        className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-36 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
           {/* Hero Lado Esquerdo */}
@@ -61,7 +61,7 @@ const Hero = () => {
                 Bringing ideas to life frame by frame
               </h1>
               <h2 className="text-h4 text-secondary-50 mb-2">
-                I’m{" "}
+                I’m a {" "}
                 <span className="text-secondary-50 text-h4 typewriter-wrapper">
                   <Typewriter
                     cursor
@@ -76,14 +76,14 @@ const Hero = () => {
                       "Full-Stack Developer",
                       "Web Developer",
                       "Creative Developer",
-                      "Web Designer",
+                      "UI/UX Enthusiast",
                     ]}
                   />
                 </span>
               </h2>
 
               <p className="text-hero-description font-normal text-secondary-50 mb-1">
-                Whether it’s a personal brand or a growing business, craft seamless digital experiences using the same tools behind platforms valued at $2,400M — like Netflix, Shopify, Apple, and HTC.
+                Whether it’s a personal brand or a growing business, craft seamless digital experiences with same tools behind platforms valued at over $250 billion, including Netflix, Shopify, Airbnb and Google.
               </p>
             </div>
             <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">

@@ -25,7 +25,7 @@ const Services = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://app.wealthsimple.com/74rd/chequing"
+                  href="/contact"
                   className="btn-primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const Services = () => {
                   Make a free request
                 </a>
                 <a
-                  href="/en-ca/presents"
+                  href="/learn-more"
                   className="btn-secondary-white"
                 >
                   Learn more

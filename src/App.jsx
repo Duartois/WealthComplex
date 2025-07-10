@@ -13,8 +13,8 @@ const App = () => {
 
   return (
     <>
-      <LoaderProgressBar progress={progress} loading={loading} />
       <Header />
+      <LoaderProgressBar progress={progress} loading={loading} />
       <SectionNav />
       <Outlet />
       <Footer />
