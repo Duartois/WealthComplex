@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
-import { project01, project02, project03, project04, project05, project06, project07, project08 } from "../../constants/assets";
+import { project01, project02, project03, project04, project05, project06, project07, project08, noImage} from "../../constants/assets";
+
 
 const projects = [
   { id: 1, title: "act responsable", category: "Illustration", img: project01, link: "#" },
   { id: 2, title: "Biobloom AI", category: "Web Development", img: project02, link: "#" },
-  { id: 3, title: "Bichinhos Ousados", category: "Design UX/UI", img: project03, link: "#" },
+  { id: 3, title: "Bichinhos Ousados", category: "Design UX/UI", img: project03, link: "https://bichinhosousados.com" },
   { id: 4, title: "Lévi", category: "Branding", img: project04, link: "#" },
   { id: 5, title: "lucky Block", category: "Game Design", img: project05, link: "#" },
   { id: 6, title: "Saas Book", category: "Web Development", img: project06, link: "#" },
-  { id: 7, title: "Admin Dashboard", category: "Registration System", img: project07, link: "#" },
-  { id: 8, title: "API’s", category: "API Systems", img: project08, link: "#" },
+  { id: 7, title: "Admin Dashboard", category: "Registration System", img: noImage, link: "#" },
+  { id: 8, title: "API’s", category: "API Systems", img: noImage, link: "#" },
 ];
 
 const Projects = () => {

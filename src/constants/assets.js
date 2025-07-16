@@ -1,14 +1,15 @@
 import logo from "../assets/svg/logo.svg";
 import home from "../assets/gif/home.gif";
 import about from "../assets/about-01.jpg";
-import project01 from "../assets/project-01.jpg";
-import project02 from "../assets/project-02.jpg";
-import project03 from "../assets/project-03.jpg";
-import project04 from "../assets/project-04.jpg";
+import project01 from "../assets/project-01.pnsg";
+import project02 from "../assets/project-02.png";
+import project03 from "../assets/project-03.png";
+import project04 from "../assets/project-04.png";
 import project05 from "../assets/project-05.jpg";
-import project06 from "../assets/project-06.jpg";
+import project06 from "../assets/project-06.png";
 import project07 from "../assets/project-07.jpg";
 import project08 from "../assets/project-08.jpg";
+import noImage from "../assets/noimage.jpg";
 import testimonial01 from "../assets/testimonial-01.jpg";
 import testimonial02 from "../assets/testimonial-02.jpg";
 import testimonial03 from "../assets/testimonial-03.jpg";
@@ -38,6 +39,7 @@ export {
     project06,
     project07,
     project08,
+    noImage,
     testimonial01,
     testimonial02,
     testimonial03,
