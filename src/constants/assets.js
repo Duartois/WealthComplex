@@ -9,7 +9,7 @@ import project05 from "../assets/project-05.jpg";
 import project06 from "../assets/project-06.png";
 import project07 from "../assets/project-07.jpg";
 import project08 from "../assets/project-08.jpg";
-import noImage from "../assets/noimage.jpg";
+import noImage from "../assets/noImage.jpg";
 import testimonial01 from "../assets/testimonial-01.jpg";
 import testimonial02 from "../assets/testimonial-02.jpg";
 import testimonial03 from "../assets/testimonial-03.jpg";
