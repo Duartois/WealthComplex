@@ -1,7 +1,4 @@
 import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 export default function LuckyBlock() {
     const mountRef = useRef(null);
@@ -10,30 +7,39 @@ export default function LuckyBlock() {
         const mount = mountRef.current;
         if (!mount) return;
 
-            
-        const width = mount.clientWidth;
-        const height = mount.clientHeight;
+        let cleanup = () => {};
 
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 100);
-        camera.position.z = 4.5;
+        (async () => {
+            const [THREE, { OrbitControls }, { GLTFLoader }] = await Promise.all([
+                import('three'),
+                import('three/addons/controls/OrbitControls.js'),
+                import('three/addons/loaders/GLTFLoader.js'),
+            ]);
 
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(width, height);
-        renderer.setClearColor(0x000000, 0); // fundo transparente
-        mount.appendChild(renderer.domElement);
+            const width = mount.clientWidth;
+            const height = mount.clientHeight;
 
-        renderer.shadowMap.enabled = true;
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 100);
+            camera.position.z = 4.5;
 
-        const group = new THREE.Group();
-        const pivotGroup = new THREE.Group();
-        pivotGroup.add(group);
-        scene.add(pivotGroup);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+            renderer.setSize(width, height);
+            renderer.setClearColor(0x000000, 0); // fundo transparente
+            mount.appendChild(renderer.domElement);
 
-        const loader = new GLTFLoader();
-        loader.load('/lucky_block.glb', (gltf) => {
-            const model = gltf.scene;
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+            const group = new THREE.Group();
+            const pivotGroup = new THREE.Group();
+            pivotGroup.add(group);
+            scene.add(pivotGroup);
+
+            const loader = new GLTFLoader();
+            loader.load('/lucky_block.glb', (gltf) => {
+                const model = gltf.scene;
 
             model.traverse((child) => {
                 if (child.isMesh) {
@@ -84,7 +90,7 @@ export default function LuckyBlock() {
         directionalLight.position.set(2, 0, 5);
         directionalLight.target.position.set(0, 0, 0);
         directionalLight.castShadow = true;
-        directionalLight.shadow.mapSize.set(2048, 2048);
+        directionalLight.shadow.mapSize.set(1024, 1024);
         directionalLight.shadow.bias = -0.001;
         scene.add(directionalLight);
         scene.add(directionalLight.target);
@@ -114,16 +120,22 @@ export default function LuckyBlock() {
         const handleResize = () => {
             const newWidth = mount.clientWidth;
             const newHeight = mount.clientHeight;
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
             renderer.setSize(newWidth, newHeight);
             camera.aspect = newWidth / newHeight;
             camera.updateProjectionMatrix();
         };
         window.addEventListener('resize', handleResize);
 
-        return () => {
+        cleanup = () => {
             window.removeEventListener('resize', handleResize);
             renderer.dispose();
             while (mount.firstChild) mount.removeChild(mount.firstChild);
+        };
+        })();
+
+        return () => {
+            cleanup();
         };
     }, []);
 

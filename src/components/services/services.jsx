@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { lazy, Suspense } from 'react';
 import SectionTitle from '../sectionTitle/sectionTitle.jsx';
-import LuckyBlock from '../luckyblock/luckyBlock.jsx';
+
+const LuckyBlock = lazy(() => import('../luckyblock/luckyBlock.jsx'));
 
 const Services = () => {
   return (
@@ -44,7 +46,9 @@ const Services = () => {
             {/* Bloco de mídia (vídeo, LuckyBlock ou imagem) */}
             <div className="services-three flex-1 relative w-full min-h-[500px] overflow-hidden">
               <div className=" absolute inset-0 scale-100 pointer-events-none z-10">
-                <LuckyBlock />
+                <Suspense fallback={null}>
+                  <LuckyBlock />
+                </Suspense>
               </div>
             </div>
 
@@ -55,5 +59,4 @@ const Services = () => {
     </motion.section>
   );
 };
-
 export default Services;

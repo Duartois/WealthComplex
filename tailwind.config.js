@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'class',
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         screens: {
@@ -10,7 +11,6 @@ export default {
             lg: "1024px",
             xl: "1300px",
         },
-        darkMode: 'class',
         container: {
             center: true,
             padding: "1rem",
