@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
 import { project01, project02, project03, project04, project05, project06, project07, project08, noImage} from "../../constants/assets";
@@ -17,10 +17,12 @@ const projects = [
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const cursorRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const cursor = document.getElementById("custom-cursor");
-    const section = document.getElementById("Projects");
+    const cursor = cursorRef.current;
+    const section = sectionRef.current;
 
     // Mobile check
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
@@ -54,10 +56,9 @@ const Projects = () => {
       cursor.style.display = "none";
     };
 
-    section.addEventListener("mousemove", handleMouseMove);
-    section.addEventListener("mouseenter", showCursor);
-    section.addEventListener("mouseleave", hideCursor);
-
+    section.addEventListener("mousemove", handleMouseMove, { passive: true });
+    section.addEventListener("mouseenter", showCursor, { passive: true });
+    section.addEventListener("mouseleave", hideCursor, { passive: true });
     animate();
 
     return () => {
@@ -71,7 +72,11 @@ const Projects = () => {
 
 
   return (
-    <section id="Projects" className="projects-section min-h-screen py-24 px-4 sm:px-6 bg-[#282A3E] text-secondary relative">
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="projects-section min-h-screen py-24 px-4 sm:px-6 bg-[#282A3E] text-secondary relative"
+    >
       <div className="w-full max-w-[1440px] mx-auto mt-[100px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div className="relative w-full h-full rounded-tr-[48px] overflow-hidden hidden md:block">
           <AnimatePresence mode="wait">

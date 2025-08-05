@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const sections = [
   { id: "hero", label: "Home", theme: "dark" },
-  { id: "Services", label: "Services", theme: "light" },
-  { id: "About", label: "About", theme: "light" },     
-  { id: "Skills", label: "Skills", theme: "light" }, 
-  { id: "Projects", label: "Projects", theme: "dark" },
-  { id: "CTA", label: "Contact", theme: "dark" },
+  { id: "services", label: "Services", theme: "light" },
+  { id: "about", label: "About", theme: "light" },
+  { id: "skills", label: "Skills", theme: "light" },
+  { id: "projects", label: "Projects", theme: "dark" },
+  { id: "cta", label: "Contact", theme: "dark" },
 ];
 
 const SectionNav = () => {

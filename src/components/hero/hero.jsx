@@ -1,44 +1,42 @@
 import { Link, useLocation } from "react-router-dom";
-import { useScroll, useTransform, useSpring, motion } from "framer-motion";
+import { motion as Motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { useRef, useState } from "react";
 import { Send } from "lucide-react";
-import { arrow01, arrow02, heroImage } from "../../constants/assets";
+import { heroImage } from "../../constants/assets";
 import { leftSideVariants, rightSideVariants } from "../../constants/motion";
-import LuckyBlock from "../luckyblock/luckyBlock";
 
 const Hero = () => {
   const { scrollY } = useScroll();
   const location = useLocation();
   const isHome = location.hash === ".home" || location.hash === "" || location.pathname === "/";
 
+  const scaleTransform = useTransform(scrollY, [0, 300], [1, 0.94]);
+  const paddingTransform = useTransform(scrollY, [0, 300], [120, 60]);
 
-  const scale = isHome
-    ? useSpring(useTransform(scrollY, [0, 300], [1, 0.94]), {
-      stiffness: 120,
-      damping: 20,
-    })
-    : 0.94;
+  const scaleSpring = useSpring(scaleTransform, {
+    stiffness: 120,
+    damping: 20,
+  });
+  const paddingSpring = useSpring(paddingTransform, {
+    stiffness: 120,
+    damping: 20,
+  });
 
-  const paddingY = isHome
-    ? useSpring(useTransform(scrollY, [0, 300], [120, 60]), {
-      stiffness: 120,
-      damping: 20,
-    })
-    : 60;
+  const scale = isHome ? scaleSpring : 0.94;
+  const paddingY = isHome ? paddingSpring : 60;
 
   return (
     <section
       id="home"
       className="hero-section relative min-h-[100vh] w-full pointer-events-none"
     >
-      <motion.div
+      <Motion.div
         style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
         className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-36 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
           {/* Hero Lado Esquerdo */}
-          <motion.div
+          <Motion.div
             variants={leftSideVariants}
             initial="hidden"
             animate="visible"
@@ -102,10 +100,10 @@ const Hero = () => {
             alt="arrow"
             className="absolute bottom-[-50px] hidden -translate-y-full lg:block w-20"
           /> */}
-          </motion.div>
+          </Motion.div>
 
           {/* Hero Lado Direito */}
-          <motion.div
+          <Motion.div
             variants={rightSideVariants}
             initial="hidden"
             animate="visible"
@@ -127,9 +125,9 @@ const Hero = () => {
 
               />
             </div>
-          </motion.div>
+          </Motion.div>
         </div>
-      </motion.div>
+      </Motion.div>
     </section>
   );
 };

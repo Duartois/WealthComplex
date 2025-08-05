@@ -7,7 +7,8 @@ import App from './App.jsx'
 import Home from './pages/home.jsx'
 import Contact from './pages/contact.jsx'
 
-console.log(`
+if (import.meta.env.DEV) {
+  console.log(`
                             . .  ,  ,
                             |⠈⣆/ ⣆/ ⣆,',
                             ;          ⠈⣆/⣆,.
@@ -54,7 +55,7 @@ console.log(`
    ||______________________________________________||
 
 `);
-
+}
 const router = createBrowserRouter([
   {
     path: '/',

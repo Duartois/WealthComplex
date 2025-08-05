@@ -42,7 +42,7 @@ const Skills = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section id="Skills" className="relative section-skills bg-[#E4E8F1] text-primary">
+    <section id="skills" className="relative section-skills bg-[#E4E8F1] text-primary">
       {/* WRAPPER EXTERNO */}
       <div className="relative h-full py-14 overflow-hidden">
 

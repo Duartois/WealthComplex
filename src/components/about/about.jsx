@@ -16,14 +16,14 @@ const About = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center lg:items-start"
+          className="flex flex-col items-center"
         >
           <img
             src={about}
             alt="Matheus Duarte"
             className="w-96 h-96 object-cover rounded-full shadow-lg"
           />
-          <p className="text-extra-sm text-gray-500 mt-4 tracking-wide uppercase text-center lg:text-left">
+          <p className="text-extra-sm text-gray-500 mt-4 tracking-wide uppercase text-center">
             MATHEUS DUARTE, FULL-STACK DEVELOPER, UI/UX SPECIALIST
           </p>
         </motion.div>

@@ -4,11 +4,11 @@ const Home = () => {
     return (
     <main>
       <section id="hero"><Hero /></section>
-      <section id="Services"><Services /></section>
-      <section id="About"><About /></section>
-      <section id="Skills"><Skills /></section>
-      <section id="Projects"><Projects /></section>
-      <section id="CTA"><CTA /></section>
+      <section id="services"><Services /></section>
+      <section id="about"><About /></section>
+      <section id="skills"><Skills /></section>
+      <section id="projects"><Projects /></section>
+      <section id="cta"><CTA /></section>
     </main>
     );
 };

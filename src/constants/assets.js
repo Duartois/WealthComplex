@@ -21,7 +21,7 @@ import arrow02 from "../assets/svg/arrow-02.svg";
 import arrow03 from "../assets/svg/arrow-03.svg";
 import cir01 from "../assets/svg/cir-01.svg";
 import cir02 from "../assets/svg/cir-02.svg";
-import doubleQoutes from "../assets/svg/double-qoutes.svg";
+import doubleQuotes from "../assets/svg/double-quotes.svg";
 import draw from "../assets/svg/draw.svg";
 import lines from "../assets/svg/lines.svg";
 import rhombus from "../assets/svg/rhombus.svg";
@@ -51,7 +51,7 @@ export {
     arrow03,
     cir01,
     cir02,
-    doubleQoutes,
+    doubleQuotes,
     draw,
     lines,
     rhombus,

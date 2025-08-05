@@ -1,214 +1,26 @@
-/* Test Tiempos Text */
-@font-face {
-    font-family: 'Test Tiempos Text Regular';
-    src: url('../assets/fonts/TestTiemposText-Regular.otf') format('opentype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Test Tiempos Text Bold';
-    src: url('../assets/fonts/TestTiemposText-Bold.otf') format('opentype');
-    font-weight: 700;
-}
-
-/* Test Tiempos Text Italic */
-
-@font-face {
-    font-family: 'Test Tiempos Text Italic';
-    src: url('../assets/fonts/TestTiemposText-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Bold Italic */
-
-@font-face {
-    font-family: 'Test Tiempos Text Bold Italic';
-    src: url('../assets/fonts/TestTiemposText-BoldItalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Light */
-
-@font-face {
-    font-family: 'Test Tiempos Text Light';
-    src: url('../assets/fonts/TestTiemposText-Light.otf') format('opentype');
-    font-weight: 300;
-}
-
-/* Test Tiempos Text Light Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Light Italic';
-    src: url('../assets/fonts/TestTiemposText-LightItalic.otf') format('opentype');
-    font-weight: 300;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Medium */
-@font-face {
-    font-family: 'Test Tiempos Text Medium';
-    src: url('../assets/fonts/TestTiemposText-Medium.otf') format('opentype');
-    font-weight: 500;
-}
-
-/* Test Tiempos Text Medium Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Medium Italic';
-    src: url('../assets/fonts/TestTiemposText-MediumItalic.otf') format('opentype');
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Semi Bold */
-@font-face {
-    font-family: 'Test Tiempos Text Semi Bold';
-    src: url('../assets/fonts/TestTiemposText-SemiBold.otf') format('opentype');
-    font-weight: 600;
-}
-
-/* Test Tiempos Text Semi Bold Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Semi Bold Italic';
-    src: url('../assets/fonts/TestTiemposText-SemiBoldItalic.otf') format('opentype');
-    font-weight: 600;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Extra Bold */
-@font-face {
-    font-family: 'Test Tiempos Text Extra Bold';
-    src: url('../assets/fonts/TestTiemposText-ExtraBold.otf') format('opentype');
-    font-weight: 800;
-}
-
-/* Test Tiempos Text Extra Bold Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Extra Bold Italic';
-    src: url('../assets/fonts/TestTiemposText-ExtraBoldItalic.otf') format('opentype');
-    font-weight: 800;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Black */
-@font-face {
-    font-family: 'Test Tiempos Text Black';
-    src: url('../assets/fonts/TestTiemposText-Black.otf') format('opentype');
-    font-weight: 900;
-}
-
-/* Test Tiempos Text Black Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Black Italic';
-    src: url('../assets/fonts/TestTiemposText-BlackItalic.otf') format('opentype');
-    font-weight: 900;
-    font-style: italic;
-}
-
-/* Test Tiempos Text Thin */
-@font-face {
-    font-family: 'Test Tiempos Text Thin';
-    src: url('../assets/fonts/TestTiemposText-Thin.otf') format('opentype');
-    font-weight: 100;
-}
-
-/* Test Tiempos Text Thin Italic */
-@font-face {
-    font-family: 'Test Tiempos Text Thin Italic';
-    src: url('../assets/fonts/TestTiemposText-ThinItalic.otf') format('opentype');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Test Tiempos fine Regular';
-    src: url('../assets/fonts/TestTiemposfine-Regular.otf') format('opentype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Test Tiempos fine Bold';
-    src: url('../assets/fonts/TestTiemposfine-Bold.otf') format('opentype');
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'Test Tiempos fine Italic';
-    src: url('../assets/fonts/TestTiemposfine-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-}
+/* Test Tiempos Headline */
 @font-face {
     font-family: 'Test Tiempos Headline Regular';
-    src: url('../assets/fonts/TestTiemposheadline-Regular.otf') format('opentype');
+    src: url('../assets/fonts/TestTiempos/TestTiemposHeadline-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Test Tiempos Headline Bold';
-    src: url('../assets/fonts/TestTiemposheadline-Bold.otf') format('opentype');
+    src: url('../assets/fonts/TestTiempos/TestTiemposHeadline-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
-@font-face {
-    font-family: 'Test Tiempos Headline Italic';
-    src: url('../assets/fonts/TestTiemposheadline-Italic.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Test Tiempos Headline Bold Italic';
-    src: url('../assets/fonts/TestTiemposheadline-BoldItalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-}
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../assets/fonts/futura/FuturaCyrillicLight.woff') format('woff');
-}
 
+/* Futura PT */
 @font-face {
   font-family: 'futura-pt';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/futura/FuturaCyrillicBook.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../assets/fonts/futura/FuturaCyrillicMedium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../assets/fonts/futura/FuturaCyrillicDemi.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../assets/fonts/futura/FuturaCyrillicBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 800;
-  src: url('../assets/fonts/futura/FuturaCyrillicExtraBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'futura-pt';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../assets/fonts/futura/FuturaCyrillicHeavy.woff') format('woff');
+  src: url('../assets/fonts/futura/FuturaCyrillicBook.woff2') format('woff2');
+  font-display: swap;
 }
