@@ -122,7 +122,7 @@ const Header = () => {
 
 
                         <div className="flex flex-col items-end mt-1">
-                            <Link to="/contact" className="btn-primary-header hidden md:inline-flex">Contact</Link>
+                            <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">Contact</Link>
                             <button className="cursor-pointer text-primary md:hidden mt-1" onClick={() => setToggleMenu(true)}>
                                 <Menu />
                             </button>

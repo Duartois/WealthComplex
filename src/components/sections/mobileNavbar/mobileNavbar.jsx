@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Proptypes from "prop-types";
+import { Link } from "react-router-dom";
 import AboutDropdown from '../../utils/dropdowns/AboutDropdown';
 import ServicesDropdown from '../../utils/dropdowns/ServicesDropdown';
 import ResourcesDropdown from '../../utils/dropdowns/ResourcesDropdown';
@@ -86,13 +87,13 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                                 <AnimatedCaret open={activeDrawer === key} />
                             </button>
                         ))}
-                        <a
-                            href="/contact"
+                        <Link
+                            to={"/contact"}
                             className="btn-primary mt-4"
                             onClick={toggleMenu}
                         >
                             Contact
-                        </a>
+                        </Link>
                         <div className="mt-10 flex flex-col gap-3 text-primary text-sm">
                             <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://www.instagram.com/matheus.duarteg/" target="_blank" rel="noopener noreferrer">Instagram</a>
