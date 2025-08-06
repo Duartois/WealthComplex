@@ -95,7 +95,7 @@ const Skills = () => {
                 }}
                 loop
                 speed={700}
-                className="z-10"
+                className="z-10 overscroll-x-auto"
               >
                 {skills.map((skill, i) => {
                   const isVisible = i === activeIndex || i === (activeIndex + 1) % skills.length;

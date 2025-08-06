@@ -47,7 +47,7 @@ const Hero = () => {
             variants={leftSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center bottom-4 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
+            className="relative flex flex-col items-center text-center text-balance bottom-4 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -87,7 +87,7 @@ const Hero = () => {
                 </span>
               </h2>
 
-              <p className="text-hero-description font-normal text-secondary-50 mb-1">
+              <p className="text-hero-description text-balance font-normal text-secondary-50 mb-1">
                 Whether it’s a personal brand or a growing business, craft seamless digital experiences with same tools behind platforms valued at over $250 billion, including Netflix, Shopify, Airbnb and Google.
               </p>
             </div>
@@ -95,7 +95,7 @@ const Hero = () => {
               <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">Contact <Send /></Link>
               <Link to={"/learn-more"} className="btn-primary-white font-bold min-w-[165.27px] justify-center">Learn More</Link>
             </div>
-            <p className="text-extra-sm font-normal text-secondary mt-8">
+            <p className="text-extra-sm  text-balance font-normal text-secondary mt-8">
               I'm always open to new opportunities and collaborations.
             </p>
             {/* <motion.img
