@@ -47,7 +47,7 @@ const Hero = () => {
             variants={leftSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center bottom-16 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
+            className="relative flex flex-col items-center text-center bottom-4 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -121,7 +121,7 @@ const Hero = () => {
               <img
                 src={heroImage}
                 alt="Falcon silhouette"
-                className="hero-image
+                className="hero-image mb-20 sm:mb-0
   absolute w-[100%] max-w-[500px] 
   object-contain opacity-90 z-[-1] drop-shadow-2xl
   translate-y-48 scale-100
