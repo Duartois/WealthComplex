@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { lazy, Suspense } from 'react';
-import SectionTitle from '../sectionTitle/sectionTitle.jsx';
 
-const LuckyBlock = lazy(() => import('../luckyblock/luckyBlock.jsx'));
+const LuckyBlock = lazy(() => import('../../utils/luckyblock/luckyBlock.jsx'));
 
 const Services = () => {
   return (

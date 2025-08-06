@@ -1,10 +1,10 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Proptypes from "prop-types";
-import AboutDropdown from '../dropdowns/AboutDropdown';
-import ServicesDropdown from '../dropdowns/ServicesDropdown';
-import ResourcesDropdown from '../dropdowns/ResourcesDropdown';
-import { AnimatedCaret } from "../ui/AnimatedCaret";
+import AboutDropdown from '../../utils/dropdowns/AboutDropdown';
+import ServicesDropdown from '../../utils/dropdowns/ServicesDropdown';
+import ResourcesDropdown from '../../utils/dropdowns/ResourcesDropdown';
+import { AnimatedCaret } from "../../utils/ui/AnimatedCaret";
 
 const mobileNavbarVariants = {
     hidden: { x: "100%" },

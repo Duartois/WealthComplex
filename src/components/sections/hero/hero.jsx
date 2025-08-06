@@ -2,14 +2,17 @@ import { Link, useLocation } from "react-router-dom";
 import { motion as Motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { Send } from "lucide-react";
-import { heroImage } from "../../constants/assets";
-import { leftSideVariants, rightSideVariants } from "../../constants/motion";
+import { heroImage } from "../../../constants/assets.js";
+import { leftSideVariants, rightSideVariants } from "../../../constants/motion.js";
+import { useResize } from "../../../hook/use-resize.jsx"
 
 const Hero = () => {
   const { scrollY } = useScroll();
   const location = useLocation();
   const isHome = location.hash === ".home" || location.hash === "" || location.pathname === "/";
 
+  const { resizedX } = useResize({ targetX: 768 });
+  const isMobile = !resizedX;
   const scaleTransform = useTransform(scrollY, [0, 300], [1, 0.94]);
   const paddingTransform = useTransform(scrollY, [0, 300], [120, 60]);
 
@@ -31,7 +34,11 @@ const Hero = () => {
       className="hero-section relative min-h-[100vh] w-full pointer-events-none"
     >
       <Motion.div
-        style={{ scale, paddingTop: paddingY, paddingBottom: paddingY }}
+         style={{
+          scale: isMobile ? 1 : scale,
+          paddingTop: isMobile ? 60 : paddingY,
+          paddingBottom: isMobile ? 60 : paddingY,
+        }}
         className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-36 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
@@ -117,10 +124,10 @@ const Hero = () => {
                 className="hero-image
   absolute w-[100%] max-w-[500px] 
   object-contain opacity-90 z-[-1] drop-shadow-2xl
-  translate-y-48 scale-[1.6]
-  sm:translate-y-60 sm:scale-[1.4]
-  md:w-[80%] md:max-w-[600px] md:translate-y-40 md:scale-[1.2]
-  lg:w-full lg:max-w-none lg:translate-y-30 lg:scale-[1.4]
+  translate-y-48 scale-100
+  sm:translate-y-60 sm:scale-105
+  md:w-[80%] md:max-w-[600px] md:translate-y-40 md:scale-110
+  lg:w-full lg:max-w-none lg:translate-y-30 lg:scale-125
 "
 
               />

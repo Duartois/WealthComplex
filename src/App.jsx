@@ -1,9 +1,9 @@
 import { Outlet } from "react-router";
 import { Header, Footer } from "./components";
-import LoaderProgressBar from "./components/loader/LoaderProgressBar";
+import LoaderProgressBar from "./components/utils/loader/LoaderProgressBar";
 import { useFakeProgress } from "./components/useFakeProgress";
 import './app.scss';
-import SectionNav from './components/ui/SectionNav.jsx';
+import SectionNav from './components/utils/ui/SectionNav.jsx';
 
 
 const App = () => {

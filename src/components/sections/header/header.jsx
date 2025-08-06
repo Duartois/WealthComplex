@@ -2,14 +2,14 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
-import { useClickOutside, useResize, useScroll } from '../../hook';
-import { navbarLinks } from '../../constants';
-import { logo } from "../../constants/assets";
+import { useClickOutside, useResize, useScroll } from '../../../hook';
+import { navbarLinks } from '../../../constants';
+import { logo } from "../../../constants/assets";
 import { Menu } from 'lucide-react';
-import { AnimatedCaret } from "../ui/AnimatedCaret";
-import AboutDropdown from '../dropdowns/AboutDropdown';
-import ServicesDropdown from '../dropdowns/ServicesDropdown';
-import ResourcesDropdown from '../dropdowns/ResourcesDropdown';
+import { AnimatedCaret } from "../../utils/ui/AnimatedCaret";
+import AboutDropdown from '../../utils/dropdowns/AboutDropdown';
+import ServicesDropdown from '../../utils/dropdowns/ServicesDropdown';
+import ResourcesDropdown from '../../utils/dropdowns/ResourcesDropdown';
 
 const Header = () => {
     const [openMenu, setOpenMenu] = React.useState(null);

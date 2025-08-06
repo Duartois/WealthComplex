@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
-import { project01, project02, project03, project04, project05, project06, project07, project08, noImage} from "../../constants/assets";
+import { project01, project02, project03, project04, project05, project06, project07, project08, noImage} from "../../../constants/assets";
 
 
 const projects = [
