@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
 import { useClickOutside, useResize, useScroll } from '../../../hook';
 import { navbarLinks } from '../../../constants';
@@ -15,6 +15,8 @@ const Header = () => {
     const [openMenu, setOpenMenu] = React.useState(null);
     const [toggleMenu, setToggleMenu] = React.useState(false);
     const [isHovering, setIsHovering] = React.useState(false);
+    const { pathname } = useLocation();
+    const showDesktopNav = pathname !== '/contact';
 
     const mobileNavbarRef = React.useRef(null);
     const dropdownRef = React.useRef(null);
@@ -90,6 +92,7 @@ const Header = () => {
                             </Link>
 
                             {/* Desktop Nav */}
+                            {showDesktopNav && (
                             <nav className="hidden md:block mt-2">
                                 <ul className="flex gap-x-6">
                                     {navbarLinks.map((link) => (
@@ -114,7 +117,9 @@ const Header = () => {
                                     ))}
                                 </ul>
                             </nav>
+                            )}
                         </div>
+
 
                         <div className="flex flex-col items-end mt-1">
                             <Link to="/contact" className="btn-primary-header hidden md:inline-flex">Contact</Link>
