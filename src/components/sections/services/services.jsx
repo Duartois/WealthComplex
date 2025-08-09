@@ -1,11 +1,13 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { lazy, Suspense } from 'react';
 
 const LuckyBlock = lazy(() => import('../../utils/luckyblock/luckyBlock.jsx'));
 
 const Services = () => {
+  const { t } = useTranslation();
   return (
-    <motion.section id="services" className="services-section py-10  md:py-20 lg:py-32">
+    <Motion.section id="services" className="services-section py-10  md:py-20 lg:py-32">
       <div className="container bg-ice relative flex flex-col items-center justify-center h-full">
 
         <div className="w-full max-w-6xl">
@@ -15,14 +17,14 @@ const Services = () => {
             <div className="services-card relative flex flex-col items-start text-left">
               <div>
                 <p className="uppercase text-md font-normal text-secondary-50">
-                  get in touch
+                  {t('services.subtitle')}
                 </p>
               </div>
               <h2 className="text-h2 md:text-h1 ws-balance">
-                Feels kinda alive, right?
+                {t('services.title')}
               </h2>
               <p className="text-services-description md:text-lg max-w-[500px] mb-6">
-               Dynamic interfaces respond, adapt, and evolve in real time. They’re changing the web, making it more interactive and engaging.
+               {t('services.description')}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -31,13 +33,13 @@ const Services = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Make a free request
+                  {t('services.ctaPrimary')}
                 </a>
                 <a
                   href="/learn-more"
                   className="btn-secondary-white"
                 >
-                  Learn more
+                  {t('services.ctaSecondary')}
                 </a>
               </div>
             </div>
@@ -55,7 +57,7 @@ const Services = () => {
         </div>
 
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 export default Services;

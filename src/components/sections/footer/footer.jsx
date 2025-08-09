@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import { ChevronUp, Github, Linkedin, Instagram } from "lucide-react";
 import "./footer.scss";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -17,7 +19,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Matheus Duarte
           </p>
           <p className="text-md text-gray-90 leading-relaxed">
-            Creative web experiences powered by clean code, bold design and passion for technology.
+            {t('footer.description')}
           </p>
 
           {/* Socials */}
@@ -36,10 +38,10 @@ const Footer = () => {
 
         {/* Navegação */}
         <nav className="footer-nav flex flex-wrap justify-start md:justify-end gap-x-8 gap-y-3 text-lg font-medium">
-          <Link to="/about" className="footer-link footer-hover-underline-animation left">About</Link>
-          <Link to="/services" className="footer-link footer-hover-underline-animation left">Services</Link>
-          <Link to="/projects" className="footer-link footer-hover-underline-animation left">Projects</Link>
-          <Link to="/contact" className="footer-link footer-hover-underline-animation left">Contact</Link>
+          <Link to="/about" className="footer-link footer-hover-underline-animation left">{t('nav.about')}</Link>
+          <Link to="/services" className="footer-link footer-hover-underline-animation left">{t('nav.services')}</Link>
+          <Link to="/projects" className="footer-link footer-hover-underline-animation left">{t('nav.projects')}</Link>
+          <Link to="/contact" className="footer-link footer-hover-underline-animation left">{t('nav.contact')}</Link>
         </nav>
       </div>
 
@@ -47,7 +49,7 @@ const Footer = () => {
       <button
         className="scroll-top-btn hidden md:flex border-t-2 border-sky-950 bg-ice items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-gray-50 transition-colors duration-300"
         onClick={scrollToTop}
-        aria-label="Scroll to top"
+        aria-label={t('footer.scrollTop')}
       >
         <div className="scroll-circle border-t-2 border-sky-950 bg-ice flex items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-gray-50 transition-colors duration-300">
           <ChevronUp size={18} />

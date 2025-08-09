@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,35 +9,12 @@ import "swiper/css/pagination";
 import "./skills.scss";
 
 import { useState, useRef } from "react";
-
-const skills = [
-  {
-    title: "Frontend",
-    tag: "User Interface",
-    theme: "light",
-    stack: ["React.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
-  },
-  {
-    title: "Backend / API",
-    tag: "Server Logic",
-    theme: "dark",
-    stack: ["Node.js", "Express", "MongoDB", "JWT", "REST"],
-  },
-  {
-    title: "Visuals & 3D",
-    tag: "Creative Tech",
-    theme: "light",
-    stack: ["Three.js", "GLSL", "Shaders", "Fallback Video"],
-  },
-  {
-    title: "DevTools",
-    tag: "Workflow",
-    theme: "dark",
-    stack: ["Git", "Zod", "Hook Form", "AWS S3"],
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+  const { t } = useTranslation();
+  const skills = t('skills.items', { returnObjects: true });
+  const title = t('skills.title', { returnObjects: true });
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
 
@@ -50,23 +27,22 @@ const Skills = () => {
         <div className="container mx-auto h-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10 relative z-10 overflow-hidden">
 
           {/* Texto */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full flex flex-col gap-6 z-30"
           >
             <h2 className="text-h2 text-primary leading-tight">
-              Tools that shape <br className="hidden md:block" /> my development flow
+              {title.part1} <br className="hidden md:block" /> {title.part2}
             </h2>
             <p className="text-services-description text-gray-900">
-              Every line of code is backed by tools that empower performance,
-              reliability and design precision.
+              {t('skills.description')}
             </p>
             <Link to="/projects" className="btn-primary">
-              View Projects
+              {t('skills.viewProjects')}
             </Link>
-          </motion.div>
+          </Motion.div>
 
           {/* Slider */}
           <div className="w-full relative z-10 overflow-visible md:overflow-hidden">
@@ -101,7 +77,7 @@ const Skills = () => {
                   const isVisible = i === activeIndex || i === (activeIndex + 1) % skills.length;
                   return (
                     <SwiperSlide key={i}>
-                      <motion.div
+                      <Motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
@@ -132,7 +108,7 @@ const Skills = () => {
                             ))}
                           </ul>
                         </div>
-                      </motion.div>
+                      </Motion.div>
                     </SwiperSlide>
                   );
                 })}

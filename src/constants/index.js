@@ -12,9 +12,9 @@ import {
 } from "./assets";
 
 export const navbarLinks = [
-  { id: "about", label: "About" },
-  { id: "services", label: "Services" },
-  { id: "projects", label: "Resources" },
+  { id: 'about' },
+  { id: 'services' },
+  { id: 'projects' },
 ];
 
 

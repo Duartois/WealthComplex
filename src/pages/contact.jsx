@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { motion as Motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, Briefcase, DollarSign, User } from "lucide-react";
@@ -56,6 +57,7 @@ const fieldVariants = {
 };
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -84,7 +86,7 @@ const Contact = () => {
       !form.budget ||
       !form.description
     ) {
-      setError("Por favor, preencha todos os campos.");
+      setError(t('contact.errors.required'));
       return;
     }
     setLoading(true);
@@ -116,7 +118,7 @@ const Contact = () => {
       });
     } catch (err) {
       console.error(err);
-      setError("Falha ao enviar mensagem. Tente novamente mais tarde.");
+      setError(t('contact.errors.submit'));
     } finally {
       setLoading(false);
     }
@@ -161,12 +163,10 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
           <h2 className="text-h2 leading-tight">
-            Pronto para impulsionar seu próximo projeto?
+            {t('contact.title')}
           </h2>
           <p className="text-services-description max-w-prose">
-            Preencha o formulário e nossa equipe retornará em até 24 horas com uma
-            proposta personalizada para o seu desafio digital. Prefere falar
-            agora?
+            {t('contact.description')}
           </p>
           <ul className="space-y-3 text-services-description">
             <li className="flex items-center gap-3">
@@ -209,7 +209,7 @@ const Contact = () => {
             <Motion.div variants={fieldVariants} className="flex flex-col">
               <label htmlFor="name" className="mb-2 flex items-center gap-2">
                 <User className="h-4 w-4" />
-                Nome completo
+                {t('contact.labels.name')}
               </label>
               <input
                 id="name"
@@ -224,7 +224,7 @@ const Contact = () => {
             <Motion.div variants={fieldVariants} className="flex flex-col">
               <label htmlFor="email" className="mb-2 flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                E-mail
+                {t('contact.labels.email')}
               </label>
               <input
                 id="email"
@@ -239,7 +239,7 @@ const Contact = () => {
             <Motion.div variants={fieldVariants} className="flex flex-col">
               <label htmlFor="company" className="mb-2 flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                Empresa ou telefone
+                {t('contact.labels.company')}
               </label>
               <input
                 id="company"
@@ -254,7 +254,7 @@ const Contact = () => {
             <Motion.div variants={fieldVariants} className="flex flex-col">
               <label htmlFor="service" className="mb-2 flex items-center gap-2">
                 <Briefcase className="h-4 w-4" />
-                Serviço desejado
+                {t('contact.labels.service')}
               </label>
               <select
                 id="service"
@@ -265,32 +265,32 @@ const Contact = () => {
                 className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
               >
                 <option className="text-secondary" value="" disabled hidden>
-                  Selecione um serviço
+                  {t('contact.labels.serviceOptions.default')}
                 </option>
                 <option className="text-primary" value="Website">
-                  Website institucional
+                  {t('contact.labels.serviceOptions.website')}
                 </option>
                 <option className="text-primary" value="E-commerce">
-                  Loja virtual (E-commerce)
+                  {t('contact.labels.serviceOptions.ecommerce')}
                 </option>
                 <option className="text-primary" value="Branding">
-                  Identidade visual (Branding)
+                  {t('contact.labels.serviceOptions.branding')}
                 </option>
                 <option className="text-primary" value="Outro">
-                  UX/UI
+                  {t('contact.labels.serviceOptions.uxui')}
                 </option>
                 <option className="text-primary" value="Outro">
-                  Backend (API)
+                  {t('contact.labels.serviceOptions.backend')}
                 </option>
                 <option className="text-primary" value="Outro">
-                  Outro projeto
+                  {t('contact.labels.serviceOptions.other')}
                 </option>
               </select>
             </Motion.div>
             <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
               <label htmlFor="budget" className="mb-2 flex items-center gap-2">
                 <DollarSign className="h-4 w-4" />
-                Orçamento estimado
+                {t('contact.labels.budget')}
               </label>
               <input
                 id="budget"
@@ -304,7 +304,7 @@ const Contact = () => {
             </Motion.div>
             <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
               <label htmlFor="description" className="mb-2">
-                Descrição do projeto
+                {t('contact.labels.description')}
               </label>
               <textarea
                 id="description"
@@ -324,7 +324,7 @@ const Contact = () => {
             whileTap={{ scale: 0.98 }}
             className="btn-secondary-white w-fit self-start disabled:opacity-50"
           >
-            {loading ? "Enviando..." : "Enviar"}
+            {loading ? t('contact.button.sending') : t('contact.button.send')}
           </Motion.button>
           {submitted && (
             <Motion.p
@@ -332,7 +332,7 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               className="text-green-500"
             >
-              Recebemos sua mensagem! Em breve entraremos em contato.
+              {t('contact.success')}
             </Motion.p>
           )}
           {error && (

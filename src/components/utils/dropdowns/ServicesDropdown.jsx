@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const dropdownVariants = {
   hidden: { opacity: 0, y: -10 },
@@ -7,8 +8,14 @@ const dropdownVariants = {
 };
 
 const ServicesDropdown = () => {
+  const { t } = useTranslation();
+  const frontend = t('servicesDropdown.frontend', { returnObjects: true });
+  const backend = t('servicesDropdown.backend', { returnObjects: true });
+  const infra = t('servicesDropdown.infra', { returnObjects: true });
+  const newLabel = t('servicesDropdown.new');
+
   return (
-    <motion.div
+    <Motion.div
       variants={dropdownVariants}
       initial="hidden"
       animate="visible"
@@ -16,32 +23,35 @@ const ServicesDropdown = () => {
       className="grid grid-cols-12 gap-y-16 gap-x-12 px-10 py-10 bg-white rounded-3xl shadow-xl border border-gray-100 text-gray-900 text-[15px]"
     >
       <div className="col-span-12 md:col-span-4">
-        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">Frontend</span>
+        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">{t('servicesDropdown.frontendTitle')}</span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">React + Tailwind</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Framer Motion</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Three.js / WebGL</a></li>
+          {frontend.map((item, i) => (
+            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+          ))}
         </ul>
       </div>
 
       <div className="col-span-12 md:col-span-4">
-        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">Backend</span>
+        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">{t('servicesDropdown.backendTitle')}</span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Node + Express</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">MongoDB / Mongoose</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Stripe + Auth</a></li>
+          {backend.map((item, i) => (
+            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+          ))}
         </ul>
       </div>
 
       <div className="col-span-12 md:col-span-4">
-        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">Infra & Delivery</span>
+        <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">{t('servicesDropdown.infraTitle')}</span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Vercel / Render</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">S3 Upload</a> <span className="ml-2 text-xs bg-[#e4e9d3] px-2 py-0.5 rounded-full">New</span></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Painéis Admin</a></li>
+          {infra.map((item, i) => (
+            <li key={i} className="flex items-center">
+              <a className="text-xl hover:text-primary transition-colors" href="#">{item}</a>
+              {i === 1 && <span className="ml-2 text-xs bg-[#e4e9d3] px-2 py-0.5 rounded-full">{newLabel}</span>}
+            </li>
+          ))}
         </ul>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 

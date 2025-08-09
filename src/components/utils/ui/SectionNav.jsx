@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const sections = [
-  { id: "hero", label: "Home", theme: "dark" },
-  { id: "services", label: "Services", theme: "light" },
-  { id: "about", label: "About", theme: "light" },
-  { id: "skills", label: "Skills", theme: "light" },
-  { id: "projects", label: "Projects", theme: "dark" },
-  { id: "cta", label: "Contact", theme: "dark" },
+  { id: "hero", label: "home", theme: "dark" },
+  { id: "services", label: "services", theme: "light" },
+  { id: "about", label: "about", theme: "light" },
+  { id: "skills", label: "skills", theme: "light" },
+  { id: "projects", label: "projects", theme: "dark" },
+  { id: "cta", label: "contact", theme: "dark" },
 ];
 
 const SectionNav = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const [hovered, setHovered] = useState(null);
   const [theme, setTheme] = useState("light");
@@ -55,7 +57,7 @@ const SectionNav = () => {
           return (
             <li key={id} className="relative flex items-center">
               {/* Bullet Button */}
-              <motion.button
+              <Motion.button
                 onClick={() => scrollTo(id)}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
@@ -79,7 +81,7 @@ const SectionNav = () => {
                 {/* Halo animado */}
                 <AnimatePresence>
                   {isActive && (
-                    <motion.span
+                    <Motion.span
                       layoutId="bullet-halo"
                       className="absolute rounded-full"
                       initial={{ opacity: 0, scale: 0.6 }}
@@ -94,12 +96,12 @@ const SectionNav = () => {
                     />
                   )}
                 </AnimatePresence>
-              </motion.button>
+              </Motion.button>
 
               {/* Tooltip flutuante */}
               <AnimatePresence>
                 {isHovered && (
-                  <motion.div
+                  <Motion.div
                     className="absolute right-full mr-2 -translate-y-1/2 text-sm font-medium pointer-events-none"
                     initial={{ opacity: 0, x: 8 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -110,8 +112,8 @@ const SectionNav = () => {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {label}
-                  </motion.div>
+                    {t(`nav.${label}`)}
+                  </Motion.div>
                 )}
               </AnimatePresence>
             </li>

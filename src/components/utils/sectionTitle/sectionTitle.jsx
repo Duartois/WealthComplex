@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { centerVariants } from '../../../constants/motion';
 import PropTypes from 'prop-types';
 
 const SectionTitle = ({ title, subtitle }) => {
     return (
-        <motion.div
+        <Motion.div
             variants={centerVariants}
             initial="hidden"
             animate="visible"
@@ -13,7 +13,7 @@ const SectionTitle = ({ title, subtitle }) => {
         >
             <p className="text-lg font-medium text-primary">{title}</p>
             <h3 className="sm:text-h3 text-xxl text-primary">{subtitle}</h3>
-        </motion.div>);
+        </Motion.div>);
 };
 
 SectionTitle.propTypes = {

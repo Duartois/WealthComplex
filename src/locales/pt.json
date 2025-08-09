@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "home": "Início",
+    "skills": "Habilidades",
+    "services": "Serviços",
+    "projects": "Recursos",
+    "contact": "Contato",
+    "back": "Voltar"
+  },
+  "language": {
+    "en": "Inglês",
+    "pt": "Português"
+  },
+  "hero": {
+    "presents": "Duartois Apresenta",
+    "headline": "De ideias simples a grandes soluções",
+    "iam": "Sou",
+    "words": [
+      "Desenvolvedor Front-End",
+      "Desenvolvedor Back-End",
+      "Desenvolvedor Full-Stack",
+      "Desenvolvedor Web",
+      "Desenvolvedor Criativo",
+      "Desenvolvedor UI/UX"
+    ],
+    "description": "Seja para uma marca pessoal ou um negócio em crescimento, crio experiências digitais perfeitas com as mesmas ferramentas por trás de plataformas avaliadas em mais de 250 bilhões de dólares, incluindo Netflix, Shopify, Airbnb e Google.",
+    "contact": "Contato",
+    "learnMore": "Saiba mais",
+    "footnote": "Estou sempre aberto a novas oportunidades e colaborações."
+  },
+  "aboutDropdown": {
+    "stackTitle": "Stack",
+    "stack": ["JavaScript (ESNext)", "React + Tailwind", "Three.js e WebGL"],
+    "profileTitle": "Perfil",
+    "profile": ["Dev criativo e estratégico", "Construtor de UI focado em visual", "Freelancer em transição"],
+    "missionTitle": "Missão",
+    "mission": ["Elevar o padrão de design web", "Colaborar com equipes de produto", "Entregar projetos memoráveis"]
+  },
+  "servicesDropdown": {
+    "frontendTitle": "Frontend",
+    "frontend": ["React + Tailwind", "Framer Motion", "Three.js / WebGL"],
+    "backendTitle": "Backend",
+    "backend": ["Node + Express", "MongoDB / Mongoose", "Stripe + Auth"],
+    "infraTitle": "Infra & Entrega",
+    "infra": ["Vercel / Render", "Upload S3", "Painéis Admin"],
+    "new": "Novo"
+  },
+  "resourcesDropdown": {
+    "projectsTitle": "Projetos",
+    "projects": ["Portfólio animado", "Dashboard com S3", "Sistema CMS"],
+    "experimentsTitle": "Experimentos",
+    "experiments": ["HelloMonday Preloader", "Cropper.js com máscara", "Menu animado"],
+    "comingTitle": "Em breve",
+    "coming": ["Clone Apple", "Stripe Checkout", "WebGL Landing"],
+    "new": "Novo"
+  },
+  "about": {
+    "subtitle": "MATHEUS DUARTE, DESENVOLVEDOR FULL-STACK, ESPECIALISTA EM UI/UX",
+    "title": { "part1": "Atendendo às suas", "part2": "expectativas digitais" },
+    "sections": [
+      {
+        "headline": "Unindo criatividade e código",
+        "text": "Sou um desenvolvedor full-stack apaixonado por construir experiências web dinâmicas, responsivas e acessíveis — sempre com um olhar apurado para design e performance."
+      },
+      {
+        "headline": "Trabalhando com impacto",
+        "text": "De landing pages a plataformas complexas, construo soluções escaláveis que priorizam usabilidade, integração fluida de APIs e uma experiência refinada."
+      },
+      {
+        "headline": "Vamos construir algo grandioso",
+        "text": "Aberto a novos projetos e colaborações. Seja frontend, backend ou direção de UI — trago dedicação e refinamento a cada linha de código."
+      }
+    ]
+  },
+  "services": {
+    "subtitle": "entre em contato",
+    "title": "Parece meio vivo, não é?",
+    "description": "Interfaces dinâmicas respondem, se adaptam e evoluem em tempo real. Elas estão mudando a web, tornando-a mais interativa e envolvente.",
+    "ctaPrimary": "Faça um pedido gratuito",
+    "ctaSecondary": "Saiba mais"
+  },
+  "skills": {
+    "title": { "part1": "Ferramentas que moldam", "part2": "meu fluxo de desenvolvimento" },
+    "description": "Cada linha de código é apoiada por ferramentas que aprimoram desempenho, confiabilidade e precisão de design.",
+    "viewProjects": "Ver Projetos",
+    "items": [
+      { "title": "Frontend", "tag": "Interface do Usuário", "theme": "light", "stack": ["React.js", "Tailwind CSS", "Framer Motion", "TypeScript"] },
+      { "title": "Backend / API", "tag": "Lógica de Servidor", "theme": "dark", "stack": ["Node.js", "Express", "MongoDB", "JWT", "REST"] },
+      { "title": "Visuais & 3D", "tag": "Tecnologia Criativa", "theme": "light", "stack": ["Three.js", "GLSL", "Shaders", "Fallback Video"] },
+      { "title": "Ferramentas de Dev", "tag": "Fluxo de Trabalho", "theme": "dark", "stack": ["Git", "Zod", "Hook Form", "AWS S3"] }
+    ]
+  },
+  "projects": {
+    "title": "PROJETOS"
+  },
+  "cta": {
+    "title": "Vamos construir a web que você imagina",
+    "description": "De landing pages imersivas estilo Three.js a plataformas full-stack com APIs, Stripe e Mongo — crio experiências digitais com performance, capricho e precisão.",
+    "button": "Inicie seu projeto"
+  },
+  "footer": {
+    "description": "Experiências web criativas impulsionadas por código limpo, design ousado e paixão por tecnologia.",
+    "scrollTop": "Voltar ao topo"
+  },
+  "contact": {
+    "title": "Pronto para impulsionar seu próximo projeto?",
+    "description": "Preencha o formulário e nossa equipe retornará em até 24 horas com uma proposta personalizada para o seu desafio digital. Prefere falar agora?",
+    "labels": {
+      "name": "Nome completo",
+      "email": "E-mail",
+      "company": "Empresa ou telefone",
+      "service": "Serviço desejado",
+      "budget": "Orçamento estimado",
+      "description": "Descrição do projeto",
+      "serviceOptions": {
+        "default": "Selecione um serviço",
+        "website": "Website institucional",
+        "ecommerce": "Loja virtual (E-commerce)",
+        "branding": "Identidade visual (Branding)",
+        "uxui": "UX/UI",
+        "backend": "Backend (API)",
+        "other": "Outro projeto"
+      }
+    },
+    "button": {
+      "sending": "Enviando...",
+      "send": "Enviar"
+    },
+    "success": "Recebemos sua mensagem! Em breve entraremos em contato.",
+    "errors": {
+      "required": "Por favor, preencha todos os campos.",
+      "submit": "Falha ao enviar mensagem. Tente novamente mais tarde."
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../../utils/languageSwitcher/languageSwitcher';
+import { AnimatePresence, motion as Motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
-import { useClickOutside, useResize, useScroll } from '../../../hook';
+import { useClickOutside, useResize } from '../../../hook';
 import { navbarLinks } from '../../../constants';
 import { logo } from "../../../constants/assets";
 import { Menu } from 'lucide-react';
@@ -12,9 +14,9 @@ import ServicesDropdown from '../../utils/dropdowns/ServicesDropdown';
 import ResourcesDropdown from '../../utils/dropdowns/ResourcesDropdown';
 
 const Header = () => {
+    const { t } = useTranslation();
     const [openMenu, setOpenMenu] = React.useState(null);
     const [toggleMenu, setToggleMenu] = React.useState(false);
-    const [isHovering, setIsHovering] = React.useState(false);
     const { pathname } = useLocation();
     const showDesktopNav = pathname !== '/contact';
 
@@ -39,7 +41,6 @@ const Header = () => {
     useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
 
     const { resizedX } = useResize({ targetX: 768 });
-    const { scrolledY } = useScroll({ targetY: 50 });
 
     React.useEffect(() => {
         if (resizedX) setToggleMenu(false);
@@ -64,9 +65,6 @@ const Header = () => {
         return () => window.removeEventListener("blur", handleBlur);
     }, []);
 
-    const handleToggleDropdown = (id) => {
-        setOpenMenu(prev => (prev === id ? null : id));
-    };
 
     const renderDropdown = () => {
         switch (openMenu) {
@@ -109,7 +107,7 @@ const Header = () => {
                                                 className={`text-base font-medium text-primary hover-underline-animation flex items-center gap-x-3 transition-colors duration-150 ${openMenu === link.id ? 'text-primary-50' : ''
                                                     }`}
                                             >
-                                                {link.label}
+                                                {t(`nav.${link.id}`)}
                                                 <AnimatedCaret open={openMenu === link.id} />
                                             </button>
 
@@ -122,7 +120,10 @@ const Header = () => {
 
 
                         <div className="flex flex-col items-end mt-1">
-                            <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">Contact</Link>
+                            <div className="flex items-center gap-4">
+                                <LanguageSwitcher />
+                                <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>
+                            </div>
                             <button className="cursor-pointer text-primary md:hidden mt-1" onClick={() => setToggleMenu(true)}>
                                 <Menu />
                             </button>
@@ -131,19 +132,16 @@ const Header = () => {
 
                     <AnimatePresence mode="wait">
                         {openMenu && (
-                            <motion.div
+                            <Motion.div
                                 ref={dropdownRef}
-                                key={openMenu}
-                                onMouseEnter={() => setIsHovering(true)}
-                                onMouseLeave={() => setIsHovering(false)}
-                                initial={{ opacity: 0, y: -12 }}
+                                key={openMenu}                                initial={{ opacity: 0, y: -12 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.2, ease: 'easeOut' }}
                                 className="absolute top-full left-0 w-full bg-white shadow-xl z-[90] px-10 py-6 rounded-b-2xl border-t border-gray-100"
                             >
                                 {renderDropdown()}
-                            </motion.div>
+                            </Motion.div>
                         )}
                     </AnimatePresence>
                 </header>

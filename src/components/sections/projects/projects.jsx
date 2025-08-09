@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
-import { project01, project02, project03, project04, project05, project06, project07, project08, noImage} from "../../../constants/assets";
-
+import { project01, project02, project03, project04, project05, project06, noImage} from "../../../constants/assets";
 
 const projects = [
   { id: 1, title: "act responsable", category: "Illustration", img: project01, link: "#" },
@@ -16,6 +16,7 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(null);
   const cursorRef = useRef(null);
   const sectionRef = useRef(null);
@@ -81,7 +82,7 @@ const Projects = () => {
         <div className="relative w-full h-full rounded-tr-[48px] overflow-hidden hidden md:block">
           <AnimatePresence mode="wait">
             {activeIndex !== null && (
-              <motion.img
+              <Motion.img
                 key={projects[activeIndex].id}
                 src={projects[activeIndex].img}
                 alt={projects[activeIndex].title}
@@ -97,11 +98,11 @@ const Projects = () => {
 
         <div className="w-full">
           <div className="flex justify-between items-end mb-4">
-            <h2 className="text-h2 text-secondary-50 tracking-wide">PROJECTS</h2>
+            <h2 className="text-h2 text-secondary-50 tracking-wide">{t('projects.title')}</h2>
             <span className="text-md text-white">{projects.length}</span>
           </div>
 
-          <motion.hr
+          <Motion.hr
             className="border-t border-white/40 mb-6 origin-left"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -121,7 +122,7 @@ const Projects = () => {
                   >
                     <div className="flex items-center gap-x-2">
                       <div className="relative flex items-center gap-x-2">
-                        <motion.span
+                        <Motion.span
                           initial={false}
                           animate={{
                             x: isActive ? 0 : -12,
@@ -132,8 +133,8 @@ const Projects = () => {
                           className="text-white inline-block"
                         >
                           →
-                        </motion.span>
-                        <motion.h4
+                        </Motion.span>
+                        <Motion.h4
                           initial={false}
                           animate={{
                             x: isActive ? 0 : -10,
@@ -144,7 +145,7 @@ const Projects = () => {
                           className={`text-md font-medium tracking-wide ${isActive ? 'text-white' : 'text-secondary-50'}`}
                         >
                           {project.title}
-                        </motion.h4>
+                        </Motion.h4>
                       </div>
                     </div>
                     <div className="flex items-center gap-x-2 transition-all duration-300">

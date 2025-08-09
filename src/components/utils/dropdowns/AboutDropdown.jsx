@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const dropdownVariants = {
   hidden: { opacity: 0, y: -10 },
@@ -7,8 +8,13 @@ const dropdownVariants = {
 };
 
 const AboutDropdown = () => {
+  const { t } = useTranslation();
+  const stack = t('aboutDropdown.stack', { returnObjects: true });
+  const profile = t('aboutDropdown.profile', { returnObjects: true });
+  const mission = t('aboutDropdown.mission', { returnObjects: true });
+
   return (
-    <motion.div
+    <Motion.div
       variants={dropdownVariants}
       initial="hidden"
       animate="visible"
@@ -17,37 +23,37 @@ const AboutDropdown = () => {
     >
       <div className="col-span-12 md:col-span-4">
         <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">
-          Stack
+          {t('aboutDropdown.stackTitle')}
         </span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">JavaScript (ESNext)</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">React + Tailwind</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Three.js e WebGL</a></li>
+          {stack.map((item, i) => (
+            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+          ))}
         </ul>
       </div>
 
       <div className="col-span-12 md:col-span-4">
         <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">
-          Perfil
+          {t('aboutDropdown.profileTitle')}
         </span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Dev criativo e estratégico</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Visual-first UI builder</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Freelancer em transição</a></li>
+          {profile.map((item, i) => (
+            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+          ))}
         </ul>
       </div>
 
       <div className="col-span-12 md:col-span-4">
         <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">
-          Missão
+          {t('aboutDropdown.missionTitle')}
         </span>
         <ul className="mt-4 space-y-2">
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Elevar o padrão de design web</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Colaborar com equipes de produto</a></li>
-          <li><a className="text-xl hover:text-primary transition-colors" href="#">Entregar projetos memoráveis</a></li>
+          {mission.map((item, i) => (
+            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+          ))}
         </ul>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 

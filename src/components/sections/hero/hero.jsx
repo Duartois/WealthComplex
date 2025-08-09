@@ -4,10 +4,13 @@ import { Typewriter } from "react-simple-typewriter";
 import { Send } from "lucide-react";
 import { heroImage } from "../../../constants/assets.js";
 import { leftSideVariants, rightSideVariants } from "../../../constants/motion.js";
-import { useResize } from "../../../hook/use-resize.jsx"
+import { useResize } from "../../../hook/use-resize.jsx";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const { scrollY } = useScroll();
+  const words = t('hero.words', { returnObjects: true });
   const location = useLocation();
   const isHome = location.hash === ".home" || location.hash === "" || location.pathname === "/";
 
@@ -60,13 +63,13 @@ const Hero = () => {
           /> */}
             <div className="flex flex-col">
               <p className="uppercase text-md font-normal text-secondary-50">
-                Duartois Presents
+                {t('hero.presents')}
               </p>
               <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">
-                Bringing ideas to life frame by frame
+                 {t('hero.headline')}
               </h1>
               <h2 className="text-h4 text-secondary-50 mb-2">
-                I’m a {" "}
+                {t('hero.iam')} {" "}
                 <span className="text-secondary-50 text-h4 typewriter-wrapper">
                   <Typewriter
                     cursor
@@ -75,28 +78,21 @@ const Hero = () => {
                     deleteSpeed={25}
                     typeSpeed={80}
                     loop={0}
-                    words={[
-                      "Front-End Developer",
-                      "Back-End Developer",
-                      "Full-Stack Developer",
-                      "Web Developer",
-                      "Creative Developer",
-                      "UI/UX Enthusiast",
-                    ]}
+                    words={words}
                   />
                 </span>
               </h2>
 
               <p className="text-hero-description text-balance font-normal text-secondary-50 mb-1">
-                Whether it’s a personal brand or a growing business, craft seamless digital experiences with same tools behind platforms valued at over $250 billion, including Netflix, Shopify, Airbnb and Google.
+                {t('hero.description')}
               </p>
             </div>
             <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
-              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">Contact <Send /></Link>
-              <Link to={"/learn-more"} className="btn-primary-white font-bold min-w-[165.27px] justify-center">Learn More</Link>
+              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')} <Send /></Link>
+              <Link to={"/learn-more"} className="btn-primary-white font-bold min-w-[165.27px] justify-center">{t('hero.learnMore')}</Link>
             </div>
             <p className="text-extra-sm  text-balance font-normal text-secondary mt-8">
-              I'm always open to new opportunities and collaborations.
+             {t('hero.footnote')}
             </p>
             {/* <motion.img
             variants={leftSideVariants}

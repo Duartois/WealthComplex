@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
 export default function LoaderProgressBar({ progress = 0, loading = true }) {
@@ -20,7 +20,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
 
   return (
     <AnimatePresence>
-      <motion.div
+      <Motion.div
         key="loader-bg"
         initial={{ x: 0 }}
         animate={exiting ? { x: "-100%" } : { x: 0 }}
@@ -49,7 +49,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
             position: "relative"
           }}
         >
-          <motion.div
+          <Motion.div
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.42, ease: "easeInOut" }}
@@ -59,7 +59,7 @@ export default function LoaderProgressBar({ progress = 0, loading = true }) {
             }}
           />
         </div>
-      </motion.div>
+      </Motion.div>
     </AnimatePresence>
   );
 }
