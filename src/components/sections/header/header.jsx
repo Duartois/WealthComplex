@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../../utils/languageSwitcher/languageSwitcher';
+import LanguageSwitcher from '../../utils/ui/LanguageSwitcher';
 import { AnimatePresence, motion as Motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
@@ -119,7 +119,7 @@ const Header = () => {
                         </div>
 
 
-                        <div className="flex flex-col items-end mt-1">
+                        <div className="flex items-end mt-1">
                             <div className="flex items-center gap-4">
                                 <LanguageSwitcher />
                                 <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>

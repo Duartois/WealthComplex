@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../../utils/LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '../../utils/ui/LanguageSwitcher';
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import Proptypes from "prop-types";
 import { Link } from "react-router-dom";
