@@ -1,14 +1,8 @@
-import { motion as Motion } from "framer-motion";
 import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "./skills.scss";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
@@ -17,6 +11,30 @@ const Skills = () => {
   const title = t('skills.title', { returnObjects: true });
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
+  const [libs, setLibs] = useState({ Motion: null, Swiper: null, SwiperSlide: null, Navigation: null, Pagination: null });
+
+  useEffect(() => {
+    let isMounted = true;
+    (async () => {
+      const [{ motion }, { Swiper, SwiperSlide }] = await Promise.all([
+        import('framer-motion'),
+        import('swiper/react'),
+      ]);
+      const { Navigation, Pagination } = await import('swiper/modules');
+      await Promise.all([
+        import('swiper/css'),
+        import('swiper/css/navigation'),
+        import('swiper/css/pagination'),
+      ]);
+      if (isMounted) {
+        setLibs({ Motion: motion, Swiper, SwiperSlide, Navigation, Pagination });
+      }
+    })();
+    return () => { isMounted = false; };
+  }, []);
+
+  const { Motion, Swiper, SwiperSlide, Navigation, Pagination } = libs;
+  if (!Swiper) return null;
 
   return (
     <section id="skills" className="relative section-skills bg-[#E4E8F1] text-primary">

@@ -1,11 +1,11 @@
-import { StrictMode } from 'react'
+import React, { StrictMode, Suspense } from 'react'
 import { createRoot} from 'react-dom/client'
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import './index.css'
 import './styles/i18n.js'
 import App from './App.jsx'
-import Home from './pages/home.jsx'
-import Contact from './pages/contact.jsx'
+
+const Home = React.lazy(() => import('./pages/home.jsx'))
+const Contact = React.lazy(() => import('./pages/contact.jsx'))
 
 if (import.meta.env.DEV) {
   console.log(`
@@ -79,6 +79,8 @@ const router = createBrowserRouter([
 )
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
   </StrictMode>,
 )
