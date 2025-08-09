@@ -1,6 +1,7 @@
 import logo from "../assets/svg/logo.svg";
 import home from "../assets/gif/home.gif";
-import about from "../assets/about-01.jpg";
+import aboutAvif from "../assets/about-01.avif";
+import aboutWebp from "../assets/about-01.webp";
 import project01 from "../assets/project-01.png";
 import project02 from "../assets/project-02.png";
 import project03 from "../assets/project-03.png";
@@ -25,12 +26,13 @@ import doubleQuotes from "../assets/svg/double-quotes.svg";
 import draw from "../assets/svg/draw.svg";
 import lines from "../assets/svg/lines.svg";
 import rhombus from "../assets/svg/rhombus.svg";
-import heroImage from "../assets/heroImage.png";
+import heroImageWebp from "../assets/heroImage.webp";
 
 export {
     logo,
     home,
-    about,
+    aboutAvif,
+    aboutWebp,
     project01,
     project02,
     project03,
@@ -55,5 +57,5 @@ export {
     draw,
     lines,
     rhombus,
-    heroImage,
+    heroImageWebp,
 };

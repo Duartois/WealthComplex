@@ -12,6 +12,9 @@
     "en": "Inglês",
     "pt": "Português"
   },
+  "common": {
+    "learnMoreAboutWork": "Saiba mais sobre meu trabalho"
+  },
   "hero": {
     "presents": "Duartois Apresenta",
     "headline": "De ideias simples a grandes soluções",
@@ -26,7 +29,6 @@
     ],
     "description": "Seja para uma marca pessoal ou um negócio em crescimento, crio experiências digitais perfeitas com as mesmas ferramentas por trás de plataformas avaliadas em mais de 250 bilhões de dólares, incluindo Netflix, Shopify, Airbnb e Google.",
     "contact": "Contato",
-    "learnMore": "Saiba mais",
     "footnote": "Estou sempre aberto a novas oportunidades e colaborações."
   },
   "aboutDropdown": {
@@ -77,8 +79,7 @@
     "subtitle": "entre em contato",
     "title": "Parece meio vivo, não é?",
     "description": "Interfaces dinâmicas respondem, se adaptam e evoluem em tempo real. Elas estão mudando a web, tornando-a mais interativa e envolvente.",
-    "ctaPrimary": "Faça um pedido gratuito",
-    "ctaSecondary": "Saiba mais"
+    "ctaPrimary": "Faça um pedido gratuito"
   },
   "skills": {
     "title": { "part1": "Ferramentas que moldam", "part2": "meu fluxo de desenvolvimento" },

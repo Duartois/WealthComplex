@@ -18,21 +18,40 @@ const SectionNav = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const positions = sections.map(({ id }) => {
-        const el = document.getElementById(id);
-        return el ? el.getBoundingClientRect().top : Infinity;
-      });
+    const sectionElements = sections
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean);
 
-      const index = positions.findIndex((top) => top > 120);
-      const newIndex = index === -1 ? sections.length - 1 : Math.max(index - 1, 0);
-      setActiveIndex(newIndex);
-      setTheme(sections[newIndex].theme);
-    };
+    if (!('IntersectionObserver' in window) || sectionElements.length === 0) {
+      return undefined;
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort(
+            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
+          );
+
+        if (visible.length > 0) {
+          const { id } = visible[0].target;
+          const index = sections.findIndex((s) => s.id === id);
+          if (index !== -1) {
+            setActiveIndex(index);
+            setTheme(sections[index].theme);
+          }
+        }
+      },
+      {
+        rootMargin: '0px 0px -50% 0px',
+        threshold: 0,
+      },
+    );
+
+    sectionElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   const scrollTo = (id) => {

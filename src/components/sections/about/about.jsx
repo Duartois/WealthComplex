@@ -1,6 +1,6 @@
 import { motion as Motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { about } from "../../../constants/assets";
+import { aboutAvif, aboutWebp } from "../../../constants/assets";
 
 const About = () => {
   const { t } = useTranslation();
@@ -23,11 +23,19 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          <img
-            src={about}
-            alt="Matheus Duarte"
-            className="w-96 h-96 object-cover rounded-full shadow-lg"
-          />
+          <picture>
+            <source srcSet={aboutAvif} type="image/avif" />
+            <source srcSet={aboutWebp} type="image/webp" />
+            <img
+              src={aboutWebp}
+              srcSet={`${aboutWebp} 384w`}
+              sizes="384px"
+              width="384"
+              height="384"
+              alt="Matheus Duarte"
+              className="w-96 h-96 object-cover rounded-full shadow-lg"
+            />
+          </picture>
           <p className="text-extra-sm text-gray-500 mt-4 tracking-wide uppercase text-center">
              {t('about.subtitle')}
           </p>
@@ -48,9 +56,9 @@ const About = () => {
           <div className="space-y-6 text-primary text-services-description">
             {sections.map((sec, i) => (
               <div key={i}>
-                <h4 className="text-headline font-semibold text-primary mb-1">
+                <h3 className="text-headline font-semibold text-primary mb-1">
                   {sec.headline}
-                </h4>
+                </h3>
                 <p>{sec.text}</p>
               </div>
             ))}

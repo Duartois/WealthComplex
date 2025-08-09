@@ -26,18 +26,18 @@ const Header = () => {
     const containerRef = React.useRef(null);
 
     React.useEffect(() => {
-    const handleClickOutside = (e) => {
-        if (
-            dropdownRef.current &&
-            !dropdownRef.current.contains(e.target) &&
-            !headerRef.current.contains(e.target)
-        ) {
-            setOpenMenu(null);
-        }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-}, []);
+        const handleClickOutside = (e) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(e.target) &&
+                !headerRef.current.contains(e.target)
+            ) {
+                setOpenMenu(null);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
     useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
 
     const { resizedX } = useResize({ targetX: 768 });
@@ -91,30 +91,30 @@ const Header = () => {
 
                             {/* Desktop Nav */}
                             {showDesktopNav && (
-                            <nav className="hidden md:block mt-2">
-                                <ul className="flex gap-x-6">
-                                    {navbarLinks.map((link) => (
-                                        <li key={link.id} className="relative">
-                                            <button
-                                                onClick={(e) => {
-                                                    e.currentTarget.blur(); // tira o foco do botão
-                                                    if (openMenu === link.id) {
-                                                        setOpenMenu(null); // fecha se for o mesmo
-                                                    } else {
-                                                        setOpenMenu(link.id); // abre se for diferente
-                                                    }
-                                                }}
-                                                className={`text-base font-medium text-primary hover-underline-animation flex items-center gap-x-3 transition-colors duration-150 ${openMenu === link.id ? 'text-primary-50' : ''
-                                                    }`}
-                                            >
-                                                {t(`nav.${link.id}`)}
-                                                <AnimatedCaret open={openMenu === link.id} />
-                                            </button>
+                                <nav className="hidden md:block mt-2">
+                                    <ul className="flex gap-x-6">
+                                        {navbarLinks.map((link) => (
+                                            <li key={link.id} className="relative">
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.currentTarget.blur(); // tira o foco do botão
+                                                        if (openMenu === link.id) {
+                                                            setOpenMenu(null); // fecha se for o mesmo
+                                                        } else {
+                                                            setOpenMenu(link.id); // abre se for diferente
+                                                        }
+                                                    }}
+                                                    className={`text-base font-medium text-primary hover-underline-animation flex items-center gap-x-3 transition-colors duration-150 ${openMenu === link.id ? 'text-primary-50' : ''
+                                                        }`}
+                                                >
+                                                    {t(`nav.${link.id}`)}
+                                                    <AnimatedCaret open={openMenu === link.id} />
+                                                </button>
 
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
                             )}
                         </div>
 
@@ -124,7 +124,11 @@ const Header = () => {
                                 <LanguageSwitcher />
                                 <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>
                             </div>
-                            <button className="cursor-pointer text-primary md:hidden mt-1" onClick={() => setToggleMenu(true)}>
+                            <button
+                                aria-label="Abrir menu"
+                                className="cursor-pointer text-primary md:hidden mt-1"
+                                onClick={() => setToggleMenu(true)}
+                            >
                                 <Menu />
                             </button>
                         </div>
@@ -134,7 +138,7 @@ const Header = () => {
                         {openMenu && (
                             <Motion.div
                                 ref={dropdownRef}
-                                key={openMenu}                                initial={{ opacity: 0, y: -12 }}
+                                key={openMenu} initial={{ opacity: 0, y: -12 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.2, ease: 'easeOut' }}

@@ -476,9 +476,6 @@ img {
     position: relative;
 }
 
-.hero-image {
-    width: 140%;
-}
 .services-section {
     z-index: 10;
     background-color: #E4E8F1;

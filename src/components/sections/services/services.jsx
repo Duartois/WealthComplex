@@ -1,6 +1,7 @@
 import { motion as Motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
 
 const LuckyBlock = lazy(() => import('../../utils/luckyblock/luckyBlock.jsx'));
 
@@ -27,20 +28,12 @@ const Services = () => {
                {t('services.description')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
-                  className="btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link to="/contact" className="btn-primary">
                   {t('services.ctaPrimary')}
-                </a>
-                <a
-                  href="/learn-more"
-                  className="btn-secondary-white"
-                >
+                </Link>
+                <Link to="/learn-more" className="btn-secondary-white">
                   {t('services.ctaSecondary')}
-                </a>
+                </Link>
               </div>
             </div>
 

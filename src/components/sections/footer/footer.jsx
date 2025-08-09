@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer-inner container mx-auto px-6 py-[80px] flex flex-col gap-12 md:flex-row md:justify-between md:items-start">
         {/* Esquerda */}
         <div className="space-y-6 max-w-md">
-          <p className="text-sm uppercase tracking-widest text-gray-50">
+          <p className="text-sm uppercase tracking-widest text-gray-80">
             © {new Date().getFullYear()} Matheus Duarte
           </p>
           <p className="text-md text-gray-90 leading-relaxed">

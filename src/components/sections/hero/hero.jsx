@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion as Motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { Send } from "lucide-react";
-import { heroImage } from "../../../constants/assets.js";
+import { heroImageWebp } from "../../../constants/assets.js";
 import { leftSideVariants, rightSideVariants } from "../../../constants/motion.js";
 import { useResize } from "../../../hook/use-resize.jsx";
 import { useTranslation } from 'react-i18next';
@@ -89,7 +89,12 @@ const Hero = () => {
             </div>
             <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
               <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')} <Send /></Link>
-              <Link to={"/learn-more"} className="btn-primary-white font-bold min-w-[165.27px] justify-center">{t('hero.learnMore')}</Link>
+              <Link
+                to={"/learn-more"}
+                className="btn-primary-white font-bold min-w-[165.27px] justify-center"
+              >
+                {t('common.learnMoreAboutWork')}
+              </Link>
             </div>
             <p className="text-extra-sm  text-balance font-normal text-secondary mt-8">
              {t('hero.footnote')}
@@ -114,19 +119,19 @@ const Hero = () => {
           >
             {/* Placeholder de vídeo ou imagem */}
             <div className="relative w-full flex justify-center items-center">
-              <img
-                src={heroImage}
-                alt="Falcon silhouette"
-                className="hero-image mb-20 sm:mb-0
-  absolute w-[100%] max-w-[500px] 
-  object-contain opacity-90 z-[-1] drop-shadow-2xl
-  translate-y-48 scale-100
-  sm:translate-y-60 sm:scale-105
-  md:w-[80%] md:max-w-[600px] md:translate-y-40 md:scale-110
-  lg:w-full lg:max-w-none lg:translate-y-30 lg:scale-125
-"
-
-              />
+              <picture>
+                <source srcSet={heroImageWebp} type="image/webp" />
+                <img
+                  src={heroImageWebp}
+                  srcSet={`${heroImageWebp} 640w`}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+                  width="640"
+                  height="972"
+                  fetchPriority="high"
+                  alt="Falcon silhouette"
+                  className="relative flex z-[-1] bottom-10 sm:bottom-20 md:bottom-44 lg:bottom-0 lg:mt-60 lg:max-w-[800px] lg:w-[120%] lg:right-28"
+                />
+              </picture>
             </div>
           </Motion.div>
         </div>
