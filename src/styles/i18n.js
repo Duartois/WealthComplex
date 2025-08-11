@@ -10,11 +10,10 @@ await i18n.use(initReactI18next).init({
   interpolation: { escapeValue: false },
 });
 
-export async function loadNamespaces(ns) {
-  const lang = i18n.language;
-  if (!i18n.hasResourceBundle(lang, 'translation')) {
-    const resources = await import(`../locales/${lang}.json`);
-    i18n.addResourceBundle(lang, 'translation', resources.default || resources);
+export async function loadNamespaces(ns, lng = i18n.language) {
+  if (!i18n.hasResourceBundle(lng, 'translation')) {
+    const resources = await import(`../locales/${lng}.json`);
+    i18n.addResourceBundle(lng, 'translation', resources.default || resources);
   }
   await i18n.loadNamespaces(ns);
 }

@@ -79,7 +79,8 @@
     "subtitle": "get in touch",
     "title": "Feels kinda alive, right?",
     "description": "Dynamic interfaces respond, adapt, and evolve in real time. They’re changing the web, making it more interactive and engaging.",
-    "ctaPrimary": "Make a free request"
+    "ctaPrimary": "Make a free request",
+    "ctaSecondary": "See my work"
   },
   "skills": {
     "title": { "part1": "Tools that shape", "part2": "my development flow" },

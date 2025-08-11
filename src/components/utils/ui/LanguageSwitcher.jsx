@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import brFlag from '../../../assets/svg/br.svg';
 import usFlag from '../../../assets/svg/us.svg';
+import { loadNamespaces } from '../../../styles/i18n.js';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = async (lng) => {
+    await loadNamespaces('translation', lng);
+    await i18n.changeLanguage(lng);
     if (typeof window !== 'undefined') {
       localStorage.setItem('lng', lng);
     }

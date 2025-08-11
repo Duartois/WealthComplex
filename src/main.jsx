@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import React, { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles/i18n.js';
