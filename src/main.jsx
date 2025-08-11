@@ -1,11 +1,34 @@
-import React, { StrictMode, Suspense } from 'react'
-import { createRoot} from 'react-dom/client'
-import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import './styles/i18n.js'
-import App from './App.jsx'
+/* eslint-disable react-refresh/only-export-components */
+import React, { StrictMode, Suspense } from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles/i18n.js';
+import { loadNamespaces } from './styles/i18n.js';
 
-const Home = React.lazy(() => import('./pages/home.jsx'))
-const Contact = React.lazy(() => import('./pages/contact.jsx'))
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from 'react-router-dom';
+
+const App = React.lazy(() => import('./App.jsx'));
+const Home = React.lazy(() => import('./pages/home.jsx'));
+const Contact = React.lazy(() => import('./pages/contact.jsx'));
+
+// garante i18n carregado antes do app
+await loadNamespaces('translation');
+
+// define UM router apenas
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },          // "/" (rota índice)
+      { path: 'contact', element: <Contact /> },   // "/contact"
+    ],
+  },
+  { path: '*', element: <Navigate to="/" /> },
+]);
 
 if (import.meta.env.DEV) {
   console.log(`
@@ -53,34 +76,13 @@ if (import.meta.env.DEV) {
    ||   Feel free to check it out!                 ||      
    ||   👉 https://github.com/Duartois            ||      
    ||______________________________________________||
-
 `);
 }
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/contact',
-        element: <Contact />,
-      }
-    ],
-  },
-  {
-    path: '*',
-    element: <Navigate to="/" />,
-  }
-]
-)
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
       <RouterProvider router={router} />
     </Suspense>
-  </StrictMode>,
-)
+  </StrictMode>
+);

@@ -1,3 +1,6 @@
++21
+-16
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Critters from 'critters'
@@ -14,14 +17,18 @@ function criticalPlugin() {
     },
     async closeBundle() {
       const htmlPath = join(outDir, 'index.html')
-      let html = await readFile(htmlPath, 'utf8')
-      const critters = new Critters({ path: outDir, preload: 'swap', noscript: true })
-      html = await critters.process(html)
-      html = html.replace(
-        /<link rel="stylesheet"([^>]*index-[^>]*\.css"[^>]*)onload="this.rel='stylesheet'">/,
-        '<link rel="preload" as="style"$1onload="this.rel=\'stylesheet\'">',
-      )
-      await writeFile(htmlPath, html)
+      try {
+        let html = await readFile(htmlPath, 'utf8')
+        const critters = new Critters({ path: outDir, preload: 'swap', noscript: true })
+        html = await critters.process(html)
+        html = html.replace(
+          /<link rel="stylesheet"([^>]*index-[^>]*\.css"[^>]*)onload="this.rel='stylesheet'">/,
+          '<link rel="preload" as="style"$1onload="this.rel=\'stylesheet\'">',
+        )
+        await writeFile(htmlPath, html)
+      } catch (err) {
+        console.warn('Critical CSS generation skipped:', err.message)
+      }
     },
   }
 }
@@ -34,6 +41,7 @@ export default defineConfig({
   ],
   build: {
     sourcemap: true,
+    target: 'esnext',
   },
   test: {
     environment: 'jsdom',

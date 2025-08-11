@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { motion as Motion } from "framer-motion";
+const { motion: Motion } = await import('framer-motion');
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, Briefcase, DollarSign, User } from "lucide-react";
 

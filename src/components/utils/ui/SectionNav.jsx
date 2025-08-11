@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion as Motion, AnimatePresence } from "framer-motion";
+const { motion: Motion, AnimatePresence } = await import('framer-motion');
 import { useTranslation } from 'react-i18next';
 
 const sections = [
@@ -83,7 +83,9 @@ const SectionNav = () => {
                 className="relative flex items-center justify-center w-5 h-5 rounded-full"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={t(`nav.${label}`)}
               >
+                <span className="sr-only">{t(`nav.${label}`)}</span>
                 {/* Bullet Core */}
                 <span
                   className="absolute rounded-full transition-all duration-300"
