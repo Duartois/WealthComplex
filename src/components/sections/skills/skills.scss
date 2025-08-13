@@ -32,8 +32,8 @@
   perspective: inherit !important;
 }
 .section-skills {
-    height: 110vh;
-    overflow: hidden;
+    height: 100vh;
+    overflow: visible;
 }
 
 .swiper-slide .swiper-slide-next {
@@ -52,7 +52,7 @@
 }
 .skills-slider-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
   &::before,
   &::after {

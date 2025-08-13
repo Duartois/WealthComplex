@@ -37,7 +37,7 @@ const ResourcesDropdown = () => {
           {experiments.map((item, i) => (
             <li key={i} className="flex items-center">
               <a className="text-xl hover:text-primary transition-colors" href="#">{item}</a>
-              {i === 2 && <span className="ml-2 text-xs bg-[#e4e9d3] px-2 py-0.5 rounded-full">{newLabel}</span>}
+              {i === 2 && <span className="ml-2 text-xs bg-[#d3e4e9] px-2 py-0.5 rounded-full">{newLabel}</span>}
             </li>
           ))}
         </ul>

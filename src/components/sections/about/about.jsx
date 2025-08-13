@@ -9,7 +9,6 @@ const About = () => {
   const title = t("about.title", { returnObjects: true });
   const sectionsData = t("about.sections", { returnObjects: true });
   const sections = Array.isArray(sectionsData) ? sectionsData : [];
-  const cta = t("about.cta");
 
   const imageClasses =
     "relative z-[1] w-full aspect-[4/3] rounded-3xl object-cover shadow-[0_20px_60px_rgba(0,0,0,0.20)] ring-1 ring-black/5";
