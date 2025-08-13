@@ -27,7 +27,7 @@ const Services = () => {
               <p className="text-services-description md:text-lg text-center md:text-start max-w-[500px] mb-6">
                {t('services.description')}
               </p>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-col items-center md:flex-row gap-4">
                 <Link to="/contact" className="btn-primary">
                   {t('services.ctaPrimary')}
                 </Link>

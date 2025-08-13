@@ -39,7 +39,7 @@ const Skills = () => {
   return (
     <section id="skills" className="relative section-skills bg-[#E4E8F1] text-primary">
       {/* WRAPPER EXTERNO */}
-      <div className="relative h-full py-14 overflow-hidden">
+      <div className="relative h-auto min-h-screen py-14 overflow-visible">
 
         {/* GRID INTERNO */}
         <div className="container mx-auto h-full grid grid-cols-1 lg:grid-cols-2 items-center gap-10 relative z-10 overflow-hidden">
