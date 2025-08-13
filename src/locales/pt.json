@@ -27,72 +27,172 @@
       "Desenvolvedor Criativo",
       "Desenvolvedor UI/UX"
     ],
-    "description": "Seja para um negócio ou uma marca pessoal em crescimento, crio experiências digitais perfeitas com as mesmas ferramentas por trás de plataformas avaliadas em mais de 250 bilhões de dólares, incluindo Netflix, Shopify, Airbnb e Google.",
+    "description": "Seja para um negócio ou uma marca pessoal em crescimento, conquiste resultados de alto impacto com tecnologias adotadas por empresas como Netflix, Shopify, Airbnb e Google — referências mundiais em inovação e experiência do usuário.",
     "contact": "Contato",
     "footnote": "Estou sempre aberto a novas oportunidades e colaborações."
   },
   "aboutDropdown": {
-    "stackTitle": "Stack",
-    "stack": ["JavaScript (ESNext)", "React + Tailwind", "Three.js e WebGL"],
-    "profileTitle": "Perfil",
-    "profile": ["Dev criativo e estratégico", "Construtor de UI focado em visual", "Freelancer em transição"],
-    "missionTitle": "Missão",
-    "mission": ["Elevar o padrão de design web", "Colaborar com equipes de produto", "Entregar projetos memoráveis"]
+    "stackTitle": "Stack Principal",
+    "stack": [
+      "JavaScript (ESNext)",
+      "React + Tailwind CSS",
+      "Three.js/WebGL para 3D",
+      "Node.js + Express",
+      "Stripe e APIs de pagamento"
+    ],
+    "profileTitle": "Quem Sou",
+    "profile": [
+      "Desenvolvedor full-stack orientado a resultados",
+      "Especialista em interfaces visuais e interativas",
+      "Experiência com clientes globais e em projetos remotos"
+    ],
+    "missionTitle": "Entregas",
+    "mission": [
+      "Sites e apps rápidos, escaláveis e seguros",
+      "Integrações que aumentam conversões",
+      "Experiências que destacam sua marca no digital"
+    ]
   },
   "servicesDropdown": {
     "frontendTitle": "Frontend",
-    "frontend": ["React + Tailwind", "Framer Motion", "Three.js / WebGL"],
+    "frontend": [
+      "UI moderna com React + Tailwind",
+      "Animações suaves com Framer Motion",
+      "Experiências imersivas com Three.js/WebGL",
+      "Design responsivo para qualquer dispositivo"
+    ],
     "backendTitle": "Backend",
-    "backend": ["Node + Express", "MongoDB / Mongoose", "Stripe + Auth"],
-    "infraTitle": "Infra & Entrega",
-    "infra": ["Vercel / Render", "Upload S3", "Painéis Admin"],
+    "backend": [
+      "APIs escaláveis com Node.js + Express",
+      "Banco de dados MongoDB/Mongoose",
+      "Integrações de pagamento com Stripe",
+      "Autenticação e segurança avançadas"
+    ],
+    "infraTitle": "Infra e Entrega",
+    "infra": [
+      "Deploy otimizado em Vercel/Render",
+      "Armazenamento seguro com AWS S3",
+      "Painéis administrativos personalizados",
+      "Integração com serviços externos"
+    ],
     "new": "Novo"
   },
   "resourcesDropdown": {
     "projectsTitle": "Projetos",
-    "projects": ["Portfólio animado", "Dashboard com S3", "Sistema CMS"],
+    "projects": [
+      "Portfólio interativo em React",
+      "Dashboard com upload para S3",
+      "Sistema CMS personalizado",
+      "E-commerce com Stripe integrado"
+    ],
     "experimentsTitle": "Experimentos",
-    "experiments": ["HelloMonday Preloader", "Cropper.js com máscara", "Menu animado"],
+    "experiments": [
+      "Preloader estilo Hello Monday",
+      "Cropper.js com máscara dinâmica",
+      "Menu animado com Framer Motion",
+      "Componentes React reutilizáveis"
+    ],
     "comingTitle": "Em breve",
-    "coming": ["Clone Apple", "Stripe Checkout", "WebGL Landing"],
+    "coming": [
+      "Clone da Apple Store",
+      "Checkout customizado com Stripe",
+      "Landing page 3D com WebGL",
+      "Ferramenta SaaS simples para agendamento"
+    ],
     "new": "Novo"
   },
   "about": {
-  "title": { "part1": "Produtos digitais", "part2": "que dão resultado" },
-  "lead": "Sou desenvolvedor full-stack especializado em criar interfaces envolventes e sistemas robustos, unindo design, performance e código limpo. Atuo do conceito à entrega, integrando tecnologias modernas como React, Tailwind, Three.js, Node.js e Stripe para transformar ideias em experiências digitais reais.",
-  "cta": "Iniciar conversa",
-  "image_alt": "Desenvolvedor trabalhando focado em um projeto",
-  "sections": [
-    { "headline": "Do início ao lançamento", "text": "Atuo desde a concepção visual até a implementação final, garantindo coerência e qualidade em cada etapa." },
-    { "headline": "Stack atualizada", "text": "React, Tailwind, Three.js, Node.js, APIs, Stripe e MongoDB — tecnologias que domino para entregar soluções completas." },
-    { "headline": "Entrega que gera confiança", "text": "Cumpro prazos e mantenho comunicação clara, garantindo que o resultado final supere expectativas." }
-  ]
+    "title": {
+      "part1": "Produtos digitais",
+      "part2": "que dão resultado"
+    },
+    "lead": "Sou desenvolvedor full-stack especializado em criar interfaces envolventes e sistemas robustos, unindo design, performance e código limpo. Atuo do conceito à entrega, integrando tecnologias modernas como React, Tailwind, Three.js, Node.js e Stripe para transformar ideias em experiências digitais reais.",
+    "cta": "Iniciar conversa",
+    "image_alt": "Desenvolvedor trabalhando focado em um projeto",
+    "sections": [
+      {
+        "headline": "Do início ao lançamento",
+        "text": "Da concepção visual à implementação final, cada etapa mantém coerência, qualidade e alinhamento com os objetivos do projeto."
+      },
+      {
+        "headline": "Stack atualizada",
+        "text": "React, Tailwind, Three.js, Node.js, APIs, Stripe e MongoDB — tecnologias aplicadas para criar soluções completas e escaláveis."
+      },
+      {
+        "headline": "Entrega que gera confiança",
+        "text": "Prazos cumpridos, comunicação clara e resultados que superam expectativas."
+      }
+    ]
   },
   "services": {
-    "subtitle": "entre em contato",
+    "subtitle": "Entre em contato",
     "title": "Parece meio vivo, não é?",
     "description": "Interfaces dinâmicas respondem, se adaptam e evoluem em tempo real. Elas estão mudando a web, tornando-a mais interativa e envolvente.",
-    "ctaPrimary": "Faça um pedido gratuito",
+    "ctaPrimary": "Solicite uma proposta gratuita",
     "ctaSecondary": "Veja meu trabalho"
   },
   "skills": {
-    "title": { "part1": "Ferramentas que moldam", "part2": "meu fluxo de desenvolvimento" },
-    "description": "Cada linha de código é apoiada por ferramentas que aprimoram desempenho, confiabilidade e precisão de design.",
+    "title": {
+      "part1": "Ferramentas que moldam",
+      "part2": "meu fluxo de desenvolvimento"
+    },
+    "description": "Cada linha de código é apoiada por ferramentas que aprimoram desempenho, confiabilidade e precisão no design.",
     "viewProjects": "Ver Projetos",
     "items": [
-      { "title": "Frontend", "tag": "Interface do Usuário", "theme": "light", "stack": ["React.js", "Tailwind CSS", "Framer Motion", "TypeScript"] },
-      { "title": "Backend / API", "tag": "Lógica de Servidor", "theme": "dark", "stack": ["Node.js", "Express", "MongoDB", "JWT", "REST"] },
-      { "title": "Visuais & 3D", "tag": "Tecnologia Criativa", "theme": "light", "stack": ["Three.js", "GLSL", "Shaders", "Fallback Video"] },
-      { "title": "Ferramentas de Dev", "tag": "Fluxo de Trabalho", "theme": "dark", "stack": ["Git", "Zod", "Hook Form", "AWS S3"] }
+      {
+        "title": "Frontend",
+        "tag": "Interface do usuário",
+        "theme": "light",
+        "stack": [
+          "React.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "Backend / API",
+        "tag": "Lógica de servidor",
+        "theme": "dark",
+        "stack": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "JWT",
+          "REST"
+        ]
+      },
+      {
+        "title": "Visuais e 3D",
+        "tag": "Tecnologia criativa",
+        "theme": "light",
+        "stack": [
+          "Three.js",
+          "GLSL",
+          "Shaders",
+          "Fallback de vídeo"
+        ]
+      },
+      {
+        "title": "Ferramentas de Dev",
+        "tag": "Fluxo de trabalho",
+        "theme": "dark",
+        "stack": [
+          "Git",
+          "Zod",
+          "React Hook Form",
+          "AWS S3"
+        ]
+      }
     ]
   },
   "projects": {
     "title": "PROJETOS"
   },
   "cta": {
-    "title": "Vamos construir a web que você imagina",
-    "description": "De landing pages imersivas estilo Three.js a plataformas full-stack com APIs, Stripe e Mongo — crio experiências digitais com performance, capricho e precisão.",
-    "button": "Inicie seu projeto"
+    "title": "Transforme sua ideia em realidade",
+    "description": "Propostas únicas, design refinado e execução impecável para destacar sua marca no mundo digital.",
+    "button": "Comece agora"
   },
   "footer": {
     "description": "Experiências web criativas impulsionadas por código limpo, design ousado e paixão por tecnologia.",
@@ -100,7 +200,7 @@
   },
   "contact": {
     "title": "Pronto para impulsionar seu próximo projeto?",
-    "description": "Preencha o formulário e nossa equipe retornará em até 24 horas com uma proposta personalizada para o seu desafio digital. Prefere falar agora?",
+    "description": "Preencha o formulário e receba uma proposta personalizada em até 24 horas. Prefere falar agora?",
     "labels": {
       "name": "Nome completo",
       "email": "E-mail",
@@ -122,7 +222,7 @@
       "sending": "Enviando...",
       "send": "Enviar"
     },
-    "success": "Recebemos sua mensagem! Em breve entraremos em contato.",
+    "success": "Mensagem recebida! Retorno em breve.",
     "errors": {
       "required": "Por favor, preencha todos os campos.",
       "submit": "Falha ao enviar mensagem. Tente novamente mais tarde."

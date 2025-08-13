@@ -1,3 +1,12 @@
+.text-skills-title {
+    font-family: 'Test Tiempos Headline Regular', serif;
+    font-size: clamp(2.25rem, 1.88vw + 1.88rem, 2.7rem) !important;
+    line-height: 100% !important;
+    font-weight: 500 !important;
+    letter-spacing: .01em !important;
+    text-wrap: balance;
+}
+
 .swiper-bullet {
   width: 10px;
   height: 10px;

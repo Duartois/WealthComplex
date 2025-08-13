@@ -45,9 +45,9 @@ const Hero = () => {
         className="relative pointer-events-auto lg:absolute inset-0 z-10 flex items-center lg:mt-36 bg-hero rounded-b-2xl overflow-hidden"
       >
         <div className="container hero-container flex flex-col items-center md:gap-16 lg:flex-row-reverse lg:justify-between">
-          {/* Hero Lado Esquerdo */}
+          {/* Hero Lado Direito */}
           <Motion.div
-            variants={leftSideVariants}
+            variants={rightSideVariants}
             initial="hidden"
             animate="visible"
             className="relative flex flex-col items-center text-center text-balance bottom-4 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
@@ -110,9 +110,9 @@ const Hero = () => {
           /> */}
           </Motion.div>
 
-          {/* Hero Lado Direito */}
+          {/* Hero Lado Esquerdo */}
           <Motion.div
-            variants={rightSideVariants}
+            variants={leftSideVariants}
             initial="hidden"
             animate="visible"
             className="relative flex justify-center w-1/2"

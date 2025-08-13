@@ -49,12 +49,12 @@ const Skills = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full flex flex-col gap-6 z-30"
+            className="w-full flex flex-col gap-6 z-30 items-center md:items-start"
           >
-            <h2 className="text-h2 text-primary leading-tight">
+            <h2 className="text-skills-title text-center md:text-start text-primary leading-tight">
               {title.part1} <br className="hidden md:block" /> {title.part2}
             </h2>
-            <p className="text-services-description text-gray-900">
+            <p className="text-services-description text-center md:text-start text-gray-900">
               {t('skills.description')}
             </p>
             <Link to="/projects" className="btn-primary">

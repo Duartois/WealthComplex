@@ -15,19 +15,19 @@ const Services = () => {
           <div className="bg-services rounded-2xl p-0 text-secondary flex flex-col lg:flex-row items-center justify-between lg:gap-12 shadow-lg min-h-[600px]">
 
             {/* Bloco de texto */}
-            <div className="services-card relative flex flex-col items-start text-left">
+            <div className="services-card relative flex flex-col md:items-start text-center md:text-start">
               <div>
-                <p className="uppercase text-md font-normal text-secondary-50">
+                <p className="uppercase text-md font-normal  text-secondary-50">
                   {t('services.subtitle')}
                 </p>
               </div>
-              <h2 className="text-h2 md:text-h1 ws-balance">
+              <h2 className="text-h2 md:text-h1 text-center md:text-start ws-balance">
                 {t('services.title')}
               </h2>
-              <p className="text-services-description md:text-lg max-w-[500px] mb-6">
+              <p className="text-services-description md:text-lg text-center md:text-start max-w-[500px] mb-6">
                {t('services.description')}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <Link to="/contact" className="btn-primary">
                   {t('services.ctaPrimary')}
                 </Link>

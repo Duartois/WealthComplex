@@ -50,7 +50,7 @@ const About = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="font-serif -tracking-[0.01em] text-[clamp(1.75rem,3.2vw,2.6rem)] leading-[1.08]">
+            <h2 className="text-h2 -tracking-[0.01em] text-[clamp(1.75rem,3.2vw,2.6rem)] leading-[1.08]">
               {title.part1}
               <br />
               {title.part2}

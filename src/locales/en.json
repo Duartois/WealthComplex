@@ -17,90 +17,190 @@
   },
   "hero": {
     "presents": "Duartois Presents",
-    "headline": "Bringing ideas to life frame by frame",
-    "iam": "I’m a",
+    "headline": "Bringing ideas to life, frame by frame",
+    "iam": "I am",
     "words": [
       "Front-End Developer",
       "Back-End Developer",
       "Full-Stack Developer",
       "Web Developer",
       "Creative Developer",
-      "UI/UX Enthusiast"
+      "UI/UX Developer"
     ],
-    "description": "Whether it’s a personal brand or a growing business, craft seamless digital experiences with same tools behind platforms valued at over $250 billion, including Netflix, Shopify, Airbnb and Google.",
+    "description": "Whether for a business or a growing personal brand, I deliver high-impact results using technologies trusted by companies like Netflix, Shopify, Airbnb, and Google — global leaders in innovation and user experience.",
     "contact": "Contact",
-    "footnote": "I'm always open to new opportunities and collaborations."
+    "footnote": "Always open to exciting opportunities and collaborations."
   },
   "aboutDropdown": {
-    "stackTitle": "Stack",
-    "stack": ["JavaScript (ESNext)", "React + Tailwind", "Three.js and WebGL"],
+    "stackTitle": "Core Stack",
+    "stack": [
+      "JavaScript (ESNext)",
+      "React + Tailwind CSS",
+      "Three.js / WebGL for 3D",
+      "Node.js + Express",
+      "Stripe & Payment APIs"
+    ],
     "profileTitle": "Profile",
-    "profile": ["Creative and strategic dev", "Visual-first UI builder", "Freelancer in transition"],
-    "missionTitle": "Mission",
-    "mission": ["Raise the standard of web design", "Collaborate with product teams", "Deliver memorable projects"]
+    "profile": [
+      "Full-stack developer focused on results",
+      "Specialist in visual and interactive interfaces",
+      "Experience with global clients and remote projects"
+    ],
+    "missionTitle": "Deliverables",
+    "mission": [
+      "Fast, scalable, and secure websites and apps",
+      "Integrations that drive conversions",
+      "Experiences that make your brand stand out online"
+    ]
   },
   "servicesDropdown": {
     "frontendTitle": "Frontend",
-    "frontend": ["React + Tailwind", "Framer Motion", "Three.js / WebGL"],
+    "frontend": [
+      "Modern UI with React + Tailwind",
+      "Smooth animations with Framer Motion",
+      "Immersive experiences with Three.js / WebGL",
+      "Responsive design for any device"
+    ],
     "backendTitle": "Backend",
-    "backend": ["Node + Express", "MongoDB / Mongoose", "Stripe + Auth"],
-    "infraTitle": "Infra & Delivery",
-    "infra": ["Vercel / Render", "S3 Upload", "Admin Panels"],
+    "backend": [
+      "Scalable APIs with Node.js + Express",
+      "MongoDB / Mongoose databases",
+      "Payment integrations with Stripe",
+      "Advanced authentication and security"
+    ],
+    "infraTitle": "Infrastructure & Delivery",
+    "infra": [
+      "Optimized deployment on Vercel / Render",
+      "Secure storage with AWS S3",
+      "Custom admin dashboards",
+      "Integration with external services"
+    ],
     "new": "New"
   },
   "resourcesDropdown": {
     "projectsTitle": "Projects",
-    "projects": ["Animated portfolio", "Dashboard with S3", "CMS system"],
+    "projects": [
+      "Interactive React portfolio",
+      "Dashboard with S3 upload",
+      "Custom CMS system",
+      "E-commerce with integrated Stripe"
+    ],
     "experimentsTitle": "Experiments",
-    "experiments": ["HelloMonday Preloader", "Cropper.js with mask", "Animated menu"],
-    "comingTitle": "Coming soon",
-    "coming": ["Apple clone", "Stripe Checkout", "WebGL Landing"],
+    "experiments": [
+      "Hello Monday-style preloader",
+      "Cropper.js with dynamic mask",
+      "Animated menu with Framer Motion",
+      "Reusable React components"
+    ],
+    "comingTitle": "Coming Soon",
+    "coming": [
+      "Apple Store clone",
+      "Custom Stripe checkout",
+      "3D WebGL landing page",
+      "Simple SaaS scheduling tool"
+    ],
     "new": "New"
   },
-  "about": {
-  "title": { "part1": "Digital products", "part2": "that deliver results" },
-  "lead": "I’m a full-stack developer specialized in building engaging interfaces and robust systems, blending design, performance, and clean code. From concept to delivery, I integrate modern technologies like React, Tailwind, Three.js, Node.js, and Stripe to turn ideas into real digital experiences.",
-  "cta": "Start a project",
-  "image_alt": "Developer working on a laptop",
-  "sections": [
-    { "headline": "From design to deployment", "text": "I merge aesthetic sense and technical rigor to ship performant interfaces that scale." },
-    { "headline": "Focused on results", "text": "Every project is engineered for usability, accessibility, and maintainability." },
-    { "headline": "Ready for new challenges", "text": "Let's collaborate to build products that stand out and deliver value." }
-  ]
-  },
   "services": {
-    "subtitle": "get in touch",
-    "title": "Feels kinda alive, right?",
-    "description": "Dynamic interfaces respond, adapt, and evolve in real time. They’re changing the web, making it more interactive and engaging.",
-    "ctaPrimary": "Make a free request",
+    "subtitle": "Get in touch",
+    "title": "Feels kind of alive, right?",
+    "description": "Dynamic interfaces that respond, adapt, and evolve in real time — redefining the web and making it more interactive and engaging.",
+    "ctaPrimary": "Request a free quote",
     "ctaSecondary": "See my work"
   },
+  "about": {
+    "title": {
+      "part1": "Digital products",
+      "part2": "that deliver results"
+    },
+    "lead": "Full-stack developer specialized in creating engaging interfaces and robust systems — blending design, performance, and clean code. From concept to delivery, leveraging modern technologies like React, Tailwind, Three.js, Node.js, and Stripe to turn ideas into impactful digital experiences.",
+    "cta": "Start a conversation",
+    "image_alt": "Developer working intently on a project",
+    "sections": [
+      {
+        "headline": "From start to launch",
+        "text": "From initial design to final implementation, every step ensures consistency, quality, and alignment with your project goals."
+      },
+      {
+        "headline": "Up-to-date stack",
+        "text": "React, Tailwind, Three.js, Node.js, APIs, Stripe, and MongoDB — applied to deliver complete and scalable solutions."
+      },
+      {
+        "headline": "Delivery that builds trust",
+        "text": "Deadlines met, clear communication, and results that go beyond expectations."
+      }
+    ]
+  },
   "skills": {
-    "title": { "part1": "Tools that shape", "part2": "my development flow" },
-    "description": "Every line of code is backed by tools that empower performance, reliability and design precision.",
+    "title": {
+      "part1": "Tools that shape",
+      "part2": "my development flow"
+    },
+    "description": "Every line of code is powered by tools that enhance performance, reliability, and design precision.",
     "viewProjects": "View Projects",
     "items": [
-      { "title": "Frontend", "tag": "User Interface", "theme": "light", "stack": ["React.js", "Tailwind CSS", "Framer Motion", "TypeScript"] },
-      { "title": "Backend / API", "tag": "Server Logic", "theme": "dark", "stack": ["Node.js", "Express", "MongoDB", "JWT", "REST"] },
-      { "title": "Visuals & 3D", "tag": "Creative Tech", "theme": "light", "stack": ["Three.js", "GLSL", "Shaders", "Fallback Video"] },
-      { "title": "DevTools", "tag": "Workflow", "theme": "dark", "stack": ["Git", "Zod", "Hook Form", "AWS S3"] }
+      {
+        "title": "Frontend",
+        "tag": "User Interface",
+        "theme": "light",
+        "stack": [
+          "React.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": "Backend / API",
+        "tag": "Server Logic",
+        "theme": "dark",
+        "stack": [
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "JWT",
+          "REST"
+        ]
+      },
+      {
+        "title": "Visuals & 3D",
+        "tag": "Creative Technology",
+        "theme": "light",
+        "stack": [
+          "Three.js",
+          "GLSL",
+          "Shaders",
+          "Video Fallback"
+        ]
+      },
+      {
+        "title": "Dev Tools",
+        "tag": "Workflow",
+        "theme": "dark",
+        "stack": [
+          "Git",
+          "Zod",
+          "React Hook Form",
+          "AWS S3"
+        ]
+      }
     ]
   },
   "projects": {
     "title": "PROJECTS"
   },
   "cta": {
-    "title": "Let’s build the web you imagine",
-    "description": "From immersive landing pages a la Three.js to full-stack platforms with APIs, Stripe, and Mongo — I craft digital experiences with performance, polish, and precision.",
-    "button": "Start your project"
+    "title": "Turn your idea into reality",
+    "description": "Tailored solutions, refined design, and flawless execution to make your brand stand out in the digital world.",
+    "button": "Start now"
   },
   "footer": {
-    "description": "Creative web experiences powered by clean code, bold design and passion for technology.",
-    "scrollTop": "Scroll to top"
+    "description": "Creative web experiences driven by clean code, bold design, and a passion for technology.",
+    "scrollTop": "Back to top"
   },
   "contact": {
     "title": "Ready to boost your next project?",
-    "description": "Fill out the form and our team will get back within 24 hours with a customized proposal for your digital challenge. Prefer to talk now?",
+    "description": "Fill out the form and get a personalized proposal within 24 hours. Prefer to chat now?",
     "labels": {
       "name": "Full name",
       "email": "E-mail",
@@ -122,10 +222,10 @@
       "sending": "Sending...",
       "send": "Send"
     },
-    "success": "We received your message! We'll get in touch soon.",
+    "success": "Message received! I'll get back to you shortly.",
     "errors": {
       "required": "Please fill in all fields.",
-      "submit": "Failed to send message. Please try again later."
+      "submit": "Something went wrong. Please try again later."
     }
   }
 }
