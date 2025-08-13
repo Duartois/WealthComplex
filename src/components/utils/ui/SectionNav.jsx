@@ -30,9 +30,7 @@ const SectionNav = () => {
       (entries) => {
         const visible = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
-          );
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
         if (visible.length > 0) {
           const { id } = visible[0].target;
@@ -44,9 +42,9 @@ const SectionNav = () => {
         }
       },
       {
-        rootMargin: '0px 0px -50% 0px',
-        threshold: 0,
-      },
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: [0, 0.5],
+     },
     );
 
     sectionElements.forEach((el) => observer.observe(el));

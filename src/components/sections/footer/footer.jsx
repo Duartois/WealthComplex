@@ -47,7 +47,7 @@ const Footer = () => {
 
       {/* Scroll top */}
       <button
-        className="scroll-top-btn hidden md:flex border-t-2 border-sky-950 bg-ice items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-gray-50 transition-colors duration-300"
+        className="scroll-top-btn hidden md:flex border-t-2 border-sky-950 bg-ice items-center justify-center w-12 h-12 rounded-full shadow-lg hover:bg-ice transition-colors duration-300"
         onClick={scrollToTop}
         aria-label={t('footer.scrollTop')}
       >
