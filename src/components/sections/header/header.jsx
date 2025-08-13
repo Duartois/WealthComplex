@@ -7,7 +7,7 @@ import MobileNavbar from '../mobileNavbar/mobileNavbar';
 import { useClickOutside, useResize } from '../../../hook';
 import { navbarLinks } from '../../../constants';
 import { logo } from "../../../constants/assets";
-import { Menu } from 'lucide-react';
+import MenuToggle from '../../utils/ui/MenuToggle';
 import { AnimatedCaret } from "../../utils/ui/AnimatedCaret";
 import AboutDropdown from '../../utils/dropdowns/AboutDropdown';
 import ServicesDropdown from '../../utils/dropdowns/ServicesDropdown';
@@ -124,13 +124,7 @@ const Header = () => {
                                 <LanguageSwitcher />
                                 <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>
                             </div>
-                            <button
-                                aria-label="Abrir menu"
-                                className="cursor-pointer text-primary md:hidden mt-1"
-                                onClick={() => setToggleMenu(true)}
-                            >
-                                <Menu />
-                            </button>
+                            <MenuToggle isOpen={toggleMenu} toggle={() => setToggleMenu((prev) => !prev)} />
                         </div>
                     </div>
 

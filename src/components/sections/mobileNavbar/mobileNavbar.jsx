@@ -22,41 +22,11 @@ const drawerVariants = {
     exit: { x: "100%", transition: { duration: 0.2 } },
 };
 
-// === MENU TOGGLE inline ===
-const MenuToggle = ({ toggle, isOpen }) => {
-    const Path = ({ d }) => (
-        <Motion.path
-            d={d}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-        />
-    );
-
-    return (
-        <button
-            className="absolute right-4 top-4 z-50 p-2"
-            onClick={toggle}
-            aria-label="Toggle menu"
-        >
-            <svg width="24" height="24" viewBox="0 0 24 24">
-                <Path d={isOpen ? "M3 3L21 21" : "M3 6h18"} />
-                {!isOpen && <Path d="M3 12h18" />}
-                <Path d={isOpen ? "M3 21L21 3" : "M3 18h18"} />
-            </svg>
-        </button>
-    );
-};
 const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
     const { t } = useTranslation();
-    const [isOpen, setIsOpen] = React.useState(true);
     const [activeDrawer, setActiveDrawer] = React.useState(null);
 
-    const toggleMenu = () => {
-        setIsOpen((prev) => !prev);
-        setToggleMenu((prev) => !prev);
-    };
+    const closeMenu = () => setToggleMenu(false);
 
     const goBack = () => setActiveDrawer(null);
 
@@ -77,8 +47,6 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                 animate="visible"
                 exit="exit"
             >
-                <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
-
                 {!activeDrawer && (
                     <nav className="flex flex-col gap-6 mt-10">
                         {navbarLinks.map((link) => (
@@ -95,7 +63,7 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                         <Link
                             to={"/contact"}
                             className="btn-primary mt-4"
-                            onClick={toggleMenu}
+                            onClick={closeMenu}
                         >
                             {t('nav.contact')}
                         </Link>
