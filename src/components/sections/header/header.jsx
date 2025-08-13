@@ -4,7 +4,7 @@ import LanguageSwitcher from '../../utils/ui/LanguageSwitcher';
 import { AnimatePresence, motion as Motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import MobileNavbar from '../mobileNavbar/mobileNavbar';
-import { useClickOutside, useResize } from '../../../hook';
+import { useResize } from '../../../hook';
 import { navbarLinks } from '../../../constants';
 import { logo } from "../../../constants/assets";
 import MenuToggle from '../../utils/ui/MenuToggle';
@@ -24,6 +24,7 @@ const Header = () => {
     const dropdownRef = React.useRef(null);
     const headerRef = React.useRef(null);
     const containerRef = React.useRef(null);
+    const toggleRef = React.useRef(null);
 
     React.useEffect(() => {
         const handleClickOutside = (e) => {
@@ -38,7 +39,20 @@ const Header = () => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    useClickOutside(mobileNavbarRef, () => setToggleMenu(false));
+    React.useEffect(() => {
+        if (!toggleMenu) return;
+        const handleOutsideClick = (event) => {
+            if (
+                mobileNavbarRef.current &&
+                !mobileNavbarRef.current.contains(event.target) &&
+                !toggleRef.current?.contains(event.target)
+            ) {
+                setToggleMenu(false);
+            }
+        };
+        window.addEventListener('mousedown', handleOutsideClick);
+        return () => window.removeEventListener('mousedown', handleOutsideClick);
+    }, [toggleMenu]);
 
     const { resizedX } = useResize({ targetX: 768 });
 
@@ -124,7 +138,11 @@ const Header = () => {
                                 <LanguageSwitcher />
                                 <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>
                             </div>
-                            <MenuToggle isOpen={toggleMenu} toggle={() => setToggleMenu((prev) => !prev)} />
+                            <MenuToggle
+                                ref={toggleRef}
+                                isOpen={toggleMenu}
+                                toggle={() => setToggleMenu((prev) => !prev)}
+                            />
                         </div>
                     </div>
 
