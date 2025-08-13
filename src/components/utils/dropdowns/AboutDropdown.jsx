@@ -19,7 +19,7 @@ const AboutDropdown = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="grid grid-cols-12 gap-y-16 gap-x-12 px-10 py-10 bg-white rounded-3xl shadow-xl border border-gray-100 text-gray-900 text-[15px]"
+      className="w-full max-w-full grid grid-cols-12 gap-y-8 md:gap-y-16 gap-x-0 md:gap-x-12 px-6 py-8 md:px-10 md:py-10 bg-white rounded-3xl shadow-xl border border-gray-100 text-gray-900 text-[15px]"
     >
       <div className="col-span-12 md:col-span-4">
         <span className="text-sm md:text-base uppercase tracking-wide text-primary-50 font-semibold">
@@ -27,7 +27,7 @@ const AboutDropdown = () => {
         </span>
         <ul className="mt-4 space-y-2">
           {stack.map((item, i) => (
-            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+            <li key={i}><a className="block text-xl break-words hover:text-primary transition-colors" href="#">{item}</a></li>
           ))}
         </ul>
       </div>
@@ -38,7 +38,7 @@ const AboutDropdown = () => {
         </span>
         <ul className="mt-4 space-y-2">
           {profile.map((item, i) => (
-            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+            <li key={i}><a className="block text-xl break-words hover:text-primary transition-colors" href="#">{item}</a></li>
           ))}
         </ul>
       </div>
@@ -49,7 +49,7 @@ const AboutDropdown = () => {
         </span>
         <ul className="mt-4 space-y-2">
           {mission.map((item, i) => (
-            <li key={i}><a className="text-xl hover:text-primary transition-colors" href="#">{item}</a></li>
+            <li key={i}><a className="block text-xl break-words hover:text-primary transition-colors" href="#">{item}</a></li>
           ))}
         </ul>
       </div>
