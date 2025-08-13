@@ -111,7 +111,7 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                     {activeDrawer !== null && (
                         <Motion.div
                             key={activeDrawer}
-                            className="absolute inset-0 z-10 bg-white px-6 py-8"
+                            className="absolute inset-x-0 top-0 z-10 min-h-full bg-white px-6 py-8"
                             variants={drawerVariants}
                             initial="initial"
                             animate="animate"
