@@ -58,22 +58,15 @@
     "new": "New"
   },
   "about": {
-    "subtitle": "MATHEUS DUARTE, FULL-STACK DEVELOPER, UI/UX SPECIALIST",
-    "title": { "part1": "Meeting your", "part2": "digital expectations" },
-    "sections": [
-      {
-        "headline": "Bridging creativity and code",
-        "text": "I’m a full-stack developer passionate about building dynamic, responsive, and accessible web experiences — always with a sharp eye for design and performance."
-      },
-      {
-        "headline": "Working with impact",
-        "text": "From landing pages to complex platforms, I build scalable solutions that prioritize usability, seamless API integration, and a refined user experience."
-      },
-      {
-        "headline": "Let’s build something great",
-        "text": "Open to new projects and collaborations. Whether it’s frontend, backend or UI direction — I bring dedication and polish to every line of code."
-      }
-    ]
+  "title": { "part1": "Digital products", "part2": "that deliver results" },
+  "lead": "I’m a full-stack developer specialized in building engaging interfaces and robust systems, blending design, performance, and clean code. From concept to delivery, I integrate modern technologies like React, Tailwind, Three.js, Node.js, and Stripe to turn ideas into real digital experiences.",
+  "cta": "Start a project",
+  "image_alt": "Developer working on a laptop",
+  "sections": [
+    { "headline": "From design to deployment", "text": "I merge aesthetic sense and technical rigor to ship performant interfaces that scale." },
+    { "headline": "Focused on results", "text": "Every project is engineered for usability, accessibility, and maintainability." },
+    { "headline": "Ready for new challenges", "text": "Let's collaborate to build products that stand out and deliver value." }
+  ]
   },
   "services": {
     "subtitle": "get in touch",

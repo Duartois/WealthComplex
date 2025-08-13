@@ -1,13 +1,15 @@
 import { motion as Motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { aboutAvif, aboutWebp } from "../../../constants/assets";
+import { Link } from "react-router-dom";
+import { Send } from "lucide-react";
 
 const About = () => {
   const { t } = useTranslation();
   const title = t("about.title", { returnObjects: true });
   const sectionsData = t("about.sections", { returnObjects: true });
   const sections = Array.isArray(sectionsData) ? sectionsData : [];
-  const cta = t("about.cta", { defaultValue: "Começar" });
+  const cta = t("about.cta");
 
   const imageClasses =
     "relative z-[1] w-full aspect-[4/3] rounded-3xl object-cover shadow-[0_20px_60px_rgba(0,0,0,0.20)] ring-1 ring-black/5";
@@ -23,40 +25,10 @@ const About = () => {
     >
       <div className="container">
         {/* Conteúdo principal: imagem + texto */}
-        <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-20">
-          {/* TEXTO */}
-          <Motion.div
-            className="w-full max-w-md text-center lg:w-1/2 lg:text-left"
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h2 className="font-serif -tracking-[0.02em] text-[clamp(2.4rem,5vw,4.5rem)] leading-[0.95]">
-              {title.part1}
-              <br />
-              {title.part2}
-            </h2>
-
-            <p className="mt-6 mx-auto max-w-md text-[1.0625rem] leading-relaxed text-primary/80 lg:mx-0">
-              {t("about.lead", {
-                defaultValue:
-                  "Obtenha uma conta sem mensalidade e produtos inteligentes para crescer no longo prazo.",
-              })}
-            </p>
-
-            <div className="mt-8 flex justify-center lg:justify-start">
-              <a
-                href="#contact"
-                className="inline-flex items-center rounded-full bg-primary px-7 py-3 text-[0.95rem] font-medium text-ice shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none"
-              >
-                {cta}
-              </a>
-            </div>
-          </Motion.div>
-
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
           {/* IMAGEM */}
           <Motion.div
-            className="relative w-full max-w-[580px] lg:w-1/2 mx-auto"
+            className="relative w-full max-w-[480px] lg:w-1/2 mx-auto"
             initial={{ x: 30, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -66,10 +38,35 @@ const About = () => {
               <source srcSet={aboutWebp} type="image/webp" />
               <img
                 src={aboutWebp}
-                alt={t("about.image_alt", { defaultValue: "Prévia do produto" })}
+                alt={t("about.image_alt")}
                 className={imageClasses}
               />
             </picture>
+          </Motion.div>
+
+          {/* TEXTO */}
+          <Motion.div
+            className="w-full max-w-md text-center lg:w-1/2 lg:text-left"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h2 className="font-serif -tracking-[0.01em] text-[clamp(1.75rem,3.2vw,2.6rem)] leading-[1.08]">
+              {title.part1}
+              <br />
+              {title.part2}
+            </h2>
+
+            <p className="mt-5 mx-auto max-w-lg text-[1.05rem] leading-relaxed text-primary/80 lg:mx-0">
+              {t("about.lead", {
+                defaultValue:
+                  "Obtenha uma conta sem mensalidade e produtos inteligentes para crescer no longo prazo.",
+              })}
+            </p>
+
+            <div className="mt-8 flex justify-center lg:justify-start">
+              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')} <Send /></Link>
+            </div>
           </Motion.div>
         </div>
 

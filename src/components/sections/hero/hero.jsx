@@ -87,7 +87,7 @@ const Hero = () => {
                 {t('hero.description')}
               </p>
             </div>
-            <div className="flex flex-col gap-y-4 sm:flex-row sm:justify-between gap-x-4 pt-4">
+            <div className="flex flex-col gap-y-4 items-center md:flex-row sm:justify-between gap-x-4 pt-4">
               <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')} <Send /></Link>
               <Link
                 to={"/learn-more"}

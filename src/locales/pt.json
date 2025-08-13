@@ -27,7 +27,7 @@
       "Desenvolvedor Criativo",
       "Desenvolvedor UI/UX"
     ],
-    "description": "Seja para uma marca pessoal ou um negócio em crescimento, crio experiências digitais perfeitas com as mesmas ferramentas por trás de plataformas avaliadas em mais de 250 bilhões de dólares, incluindo Netflix, Shopify, Airbnb e Google.",
+    "description": "Seja para um negócio ou uma marca pessoal em crescimento, crio experiências digitais perfeitas com as mesmas ferramentas por trás de plataformas avaliadas em mais de 250 bilhões de dólares, incluindo Netflix, Shopify, Airbnb e Google.",
     "contact": "Contato",
     "footnote": "Estou sempre aberto a novas oportunidades e colaborações."
   },
@@ -58,28 +58,22 @@
     "new": "Novo"
   },
   "about": {
-    "subtitle": "MATHEUS DUARTE, DESENVOLVEDOR FULL-STACK, ESPECIALISTA EM UI/UX",
-    "title": { "part1": "Atendendo às suas", "part2": "expectativas digitais" },
-    "sections": [
-      {
-        "headline": "Unindo criatividade e código",
-        "text": "Sou um desenvolvedor full-stack apaixonado por construir experiências web dinâmicas, responsivas e acessíveis — sempre com um olhar apurado para design e performance."
-      },
-      {
-        "headline": "Trabalhando com impacto",
-        "text": "De landing pages a plataformas complexas, construo soluções escaláveis que priorizam usabilidade, integração fluida de APIs e uma experiência refinada."
-      },
-      {
-        "headline": "Vamos construir algo grandioso",
-        "text": "Aberto a novos projetos e colaborações. Seja frontend, backend ou direção de UI — trago dedicação e refinamento a cada linha de código."
-      }
-    ]
+  "title": { "part1": "Produtos digitais", "part2": "que dão resultado" },
+  "lead": "Sou desenvolvedor full-stack especializado em criar interfaces envolventes e sistemas robustos, unindo design, performance e código limpo. Atuo do conceito à entrega, integrando tecnologias modernas como React, Tailwind, Three.js, Node.js e Stripe para transformar ideias em experiências digitais reais.",
+  "cta": "Iniciar conversa",
+  "image_alt": "Desenvolvedor trabalhando focado em um projeto",
+  "sections": [
+    { "headline": "Do início ao lançamento", "text": "Atuo desde a concepção visual até a implementação final, garantindo coerência e qualidade em cada etapa." },
+    { "headline": "Stack atualizada", "text": "React, Tailwind, Three.js, Node.js, APIs, Stripe e MongoDB — tecnologias que domino para entregar soluções completas." },
+    { "headline": "Entrega que gera confiança", "text": "Cumpro prazos e mantenho comunicação clara, garantindo que o resultado final supere expectativas." }
+  ]
   },
   "services": {
     "subtitle": "entre em contato",
     "title": "Parece meio vivo, não é?",
     "description": "Interfaces dinâmicas respondem, se adaptam e evoluem em tempo real. Elas estão mudando a web, tornando-a mais interativa e envolvente.",
-    "ctaPrimary": "Faça um pedido gratuito"
+    "ctaPrimary": "Faça um pedido gratuito",
+    "ctaSecondary": "Veja meu trabalho"
   },
   "skills": {
     "title": { "part1": "Ferramentas que moldam", "part2": "meu fluxo de desenvolvimento" },
