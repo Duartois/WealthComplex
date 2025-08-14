@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-const { motion: Motion } = await import('framer-motion');
+import { motion as Motion } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 import { Mail, Phone, Briefcase, DollarSign, User } from "lucide-react";
 
@@ -18,7 +18,7 @@ const saveLead = async (data) => {
         properties: {
           email: data.email,
           firstname: data.name,
-          phone: data.company,
+          phone: data.phone,
           service_interest: data.service,
           project_budget: data.budget,
           message: data.description,
@@ -38,7 +38,7 @@ const notifySlack = async (data) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        text: `Lead recebido de ${data.name} (${data.email})\nEmpresa/Telefone: ${data.company}\nServiço: ${data.service}\nOrçamento: ${data.budget}\n${data.description}`,
+        text: `Lead recebido de ${data.name} (${data.email})\nTelefone: ${data.phone}\nServiço: ${data.service}\nOrçamento: ${data.budget}\n${data.description}`,
       }),
     });
   } catch (err) {
@@ -61,7 +61,7 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    company: "",
+    phone: "",
     service: "",
     budget: "",
     description: "",
@@ -81,7 +81,7 @@ const Contact = () => {
     if (
       !form.name ||
       !form.email ||
-      !form.company ||
+      !form.phone ||
       !form.service ||
       !form.budget ||
       !form.description
@@ -89,6 +89,16 @@ const Contact = () => {
       setError(t('contact.errors.required'));
       return;
     }
+    const serviceMap = {
+      Website: t('contact.labels.serviceOptions.website'),
+      'E-commerce': t('contact.labels.serviceOptions.ecommerce'),
+      Branding: t('contact.labels.serviceOptions.branding'),
+      UXUI: t('contact.labels.serviceOptions.uxui'),
+      Backend: t('contact.labels.serviceOptions.backend'),
+      Outro: t('contact.labels.serviceOptions.other'),
+    };
+    const serviceLabel = serviceMap[form.service] || form.service;
+
     setLoading(true);
     try {
       await emailjs.send(
@@ -97,21 +107,21 @@ const Contact = () => {
         {
           from_name: form.name,
           from_email: form.email,
-          company: form.company,
-          service: form.service,
+          phone: form.phone,
+          service: serviceLabel,
           budget: form.budget,
           message: form.description,
         },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       await saveLead(form);
-      await notifySlack(form);
+      await notifySlack({ ...form, service: serviceLabel });
       setSubmitted(true);
       setError("");
       setForm({
         name: "",
         email: "",
-        company: "",
+        phone: "",
         service: "",
         budget: "",
         description: "",
@@ -162,192 +172,192 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-          <h2 className="text-h2 leading-tight">
-            {t('contact.title')}
-          </h2>
-          <p className="text-services-description max-w-prose">
-            {t('contact.description')}
-          </p>
-          <ul className="space-y-3 text-services-description">
-            <li className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-white" />
-              <a
-                href="mailto:matheusduartegon@gmail.com"
-                className="hover-white-underline-animation"
-              >
-                matheusduartegon@gmail.com
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-white" />
-              <a href="tel:+5511958060256" className="hover-white-underline-animation">
-                +55 (11) 95806-0256
-              </a>
-            </li>
-          </ul>
-        </Motion.div>
-
-        <Motion.form
-          onSubmit={handleSubmit}
-          variants={formVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="flex flex-col gap-8"
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <input
-            type="text"
-            name="website"
-            value={honeypot}
-            onChange={(e) => setHoneypot(e.target.value)}
-            className="hidden"
-            tabIndex="-1"
-            autoComplete="off"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Motion.div variants={fieldVariants} className="flex flex-col">
-              <label htmlFor="name" className="mb-2 flex items-center gap-2">
-                <User className="h-4 w-4" />
-                {t('contact.labels.name')}
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={form.name}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              />
-            </Motion.div>
-            <Motion.div variants={fieldVariants} className="flex flex-col">
-              <label htmlFor="email" className="mb-2 flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                {t('contact.labels.email')}
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              />
-            </Motion.div>
-            <Motion.div variants={fieldVariants} className="flex flex-col">
-              <label htmlFor="company" className="mb-2 flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                {t('contact.labels.company')}
-              </label>
-              <input
-                id="company"
-                name="company"
-                type="text"
-                value={form.company}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              />
-            </Motion.div>
-            <Motion.div variants={fieldVariants} className="flex flex-col">
-              <label htmlFor="service" className="mb-2 flex items-center gap-2">
-                <Briefcase className="h-4 w-4" />
-                {t('contact.labels.service')}
-              </label>
-              <select
-                id="service"
-                name="service"
-                value={form.service}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              >
-                <option className="text-secondary" value="" disabled hidden>
-                  {t('contact.labels.serviceOptions.default')}
-                </option>
-                <option className="text-primary" value="Website">
-                  {t('contact.labels.serviceOptions.website')}
-                </option>
-                <option className="text-primary" value="E-commerce">
-                  {t('contact.labels.serviceOptions.ecommerce')}
-                </option>
-                <option className="text-primary" value="Branding">
-                  {t('contact.labels.serviceOptions.branding')}
-                </option>
-                <option className="text-primary" value="Outro">
-                  {t('contact.labels.serviceOptions.uxui')}
-                </option>
-                <option className="text-primary" value="Outro">
-                  {t('contact.labels.serviceOptions.backend')}
-                </option>
-                <option className="text-primary" value="Outro">
-                  {t('contact.labels.serviceOptions.other')}
-                </option>
-              </select>
-            </Motion.div>
-            <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
-              <label htmlFor="budget" className="mb-2 flex items-center gap-2">
-                <DollarSign className="h-4 w-4" />
-                {t('contact.labels.budget')}
-              </label>
-              <input
-                id="budget"
-                name="budget"
-                type="text"
-                value={form.budget}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              />
-            </Motion.div>
-            <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
-              <label htmlFor="description" className="mb-2">
-                {t('contact.labels.description')}
-              </label>
-              <textarea
-                id="description"
-                name="description"
-                rows="4"
-                value={form.description}
-                onChange={handleChange}
-                required
-                className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
-              />
-            </Motion.div>
-          </div>
-          <Motion.button
-            type="submit"
-            disabled={loading}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="btn-secondary-white w-fit self-start disabled:opacity-50"
-          >
-            {loading ? t('contact.button.sending') : t('contact.button.send')}
-          </Motion.button>
-          {submitted && (
-            <Motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-green-500"
-            >
-              {t('contact.success')}
-            </Motion.p>
-          )}
-          {error && (
-            <Motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-red-500"
-            >
-              {error}
-            </Motion.p>
-          )}
-          </Motion.form>
+            <h2 className="text-h2 leading-tight">
+              {t('contact.title')}
+            </h2>
+            <p className="text-services-description max-w-prose">
+              {t('contact.description')}
+            </p>
+            <ul className="space-y-3 text-services-description">
+              <li className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-white" />
+                <a
+                  href="mailto:matheusduartegon@gmail.com"
+                  className="hover-white-underline-animation"
+                >
+                  matheusduartegon@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-white" />
+                <a href="tel:+5511958060256" className="hover-white-underline-animation">
+                  +55 (11) 95806-0256
+                </a>
+              </li>
+            </ul>
           </Motion.div>
-        </div>
-      </Motion.section>
+
+          <Motion.form
+            onSubmit={handleSubmit}
+            variants={formVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col gap-8"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              className="hidden"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Motion.div variants={fieldVariants} className="flex flex-col">
+                <label htmlFor="phone" className="mb-2 flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  {t('contact.labels.phone')}
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col">
+                <label htmlFor="email" className="mb-2 flex items-center gap-2">
+                  <Mail className="h-4 w-4" />
+                  {t('contact.labels.email')}
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col">
+                <label htmlFor="company" className="mb-2 flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  {t('contact.labels.company')}
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={form.company}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col">
+                <label htmlFor="service" className="mb-2 flex items-center gap-2">
+                  <Briefcase className="h-4 w-4" />
+                  {t('contact.labels.service')}
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={form.service}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                >
+                  <option className="text-secondary" value="" disabled hidden>
+                    {t('contact.labels.serviceOptions.default')}
+                  </option>
+                  <option className="text-primary" value="Website">
+                    {t('contact.labels.serviceOptions.website')}
+                  </option>
+                  <option className="text-primary" value="E-commerce">
+                    {t('contact.labels.serviceOptions.ecommerce')}
+                  </option>
+                  <option className="text-primary" value="Branding">
+                    {t('contact.labels.serviceOptions.branding')}
+                  </option>
+                  <option className="text-primary" value="UXUI">
+                    {t('contact.labels.serviceOptions.uxui')}
+                  </option>
+                  <option className="text-primary" value="Backend">
+                    {t('contact.labels.serviceOptions.backend')}
+                  </option>
+                  <option className="text-primary" value="Outro">
+                    {t('contact.labels.serviceOptions.other')}
+                  </option>
+                </select>
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
+                <label htmlFor="budget" className="mb-2 flex items-center gap-2">
+                  <DollarSign className="h-4 w-4" />
+                  {t('contact.labels.budget')}
+                </label>
+                <input
+                  id="budget"
+                  name="budget"
+                  type="text"
+                  value={form.budget}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col md:col-span-2">
+                <label htmlFor="description" className="mb-2">
+                  {t('contact.labels.description')}
+                </label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="4"
+                  value={form.description}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+            </div>
+            <Motion.button
+              type="submit"
+              disabled={loading}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="btn-secondary-white w-fit self-start disabled:opacity-50"
+            >
+              {loading ? t('contact.button.sending') : t('contact.button.send')}
+            </Motion.button>
+            {submitted && (
+              <Motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-green-500"
+              >
+                {t('contact.success')}
+              </Motion.p>
+            )}
+            {error && (
+              <Motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-red-500"
+              >
+                {error}
+              </Motion.p>
+            )}
+          </Motion.form>
+        </Motion.div>
+      </div>
+    </Motion.section>
   );
 };
 

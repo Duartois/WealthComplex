@@ -204,7 +204,7 @@
     "labels": {
       "name": "Full name",
       "email": "E-mail",
-      "company": "Company or phone",
+      "phone": "Phone",
       "service": "Desired service",
       "budget": "Estimated budget",
       "description": "Project description",
