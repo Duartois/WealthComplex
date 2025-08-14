@@ -62,6 +62,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    company: "",
     service: "",
     budget: "",
     description: "",
@@ -122,6 +123,7 @@ const Contact = () => {
         name: "",
         email: "",
         phone: "",
+        company: "",
         service: "",
         budget: "",
         description: "",
@@ -272,7 +274,6 @@ const Contact = () => {
                   type="text"
                   value={form.company}
                   onChange={handleChange}
-                  required
                   className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
                 />
               </Motion.div>
