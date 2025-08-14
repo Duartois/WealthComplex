@@ -19,6 +19,7 @@ const saveLead = async (data) => {
           email: data.email,
           firstname: data.name,
           phone: data.phone,
+          company: data.company,
           service_interest: data.service,
           project_budget: data.budget,
           message: data.description,
