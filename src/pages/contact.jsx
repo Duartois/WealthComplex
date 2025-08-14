@@ -83,6 +83,7 @@ const Contact = () => {
       !form.name ||
       !form.email ||
       !form.phone ||
+      !form.company ||
       !form.service ||
       !form.budget ||
       !form.description
@@ -109,6 +110,7 @@ const Contact = () => {
           from_name: form.name,
           from_email: form.email,
           phone: form.phone,
+          company: form.company,
           service: serviceLabel,
           budget: form.budget,
           message: form.description,
