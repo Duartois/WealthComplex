@@ -217,6 +217,21 @@ const Contact = () => {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Motion.div variants={fieldVariants} className="flex flex-col">
+                <label htmlFor="name" className="mb-2 flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  {t('contact.labels.name')}
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className="p-3 rounded-md bg-white/10 border border-white/20 text-secondary placeholder-secondary-50 focus:border-primary-30 focus:ring-2 focus:ring-primary-30 transition-colors"
+                />
+              </Motion.div>
+              <Motion.div variants={fieldVariants} className="flex flex-col">
                 <label htmlFor="phone" className="mb-2 flex items-center gap-2">
                   <Phone className="h-4 w-4" />
                   {t('contact.labels.phone')}
