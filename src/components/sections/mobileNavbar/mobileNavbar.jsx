@@ -26,11 +26,7 @@ const drawerVariants = {
 const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
     const { t } = useTranslation();
     const [activeDrawer, setActiveDrawer] = React.useState(null);
-    const [showClose, setShowClose] = React.useState(false);
-
-    React.useEffect(() => {
-        setShowClose(true);
-    }, []);
+    
     const closeMenu = () => setToggleMenu(false);
 
     const goBack = () => setActiveDrawer(null);
@@ -52,18 +48,8 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                 animate="visible"
                 exit="exit"
             >
-                <button
-                    onClick={closeMenu}
-                    aria-label="Close menu"
-                    className="absolute right-4 top-4 p-2 text-primary"
-                >
-                    <span className="relative block w-6 h-6">
-                        <span className="absolute left-0 top-1/2 w-6 h-[2px] bg-current rotate-45"></span>
-                        <span className="absolute left-0 top-1/2 w-6 h-[2px] bg-current -rotate-45"></span>
-                    </span>
-                </button>
                 <MenuToggle
-                    isOpen={showClose}
+                    isOpen={true}
                     toggle={closeMenu}
                     className="absolute right-4 top-4 p-2 text-primary"
                 />
