@@ -9,7 +9,7 @@ const MenuToggle = React.forwardRef(({ isOpen, toggle }, ref) => {
       ref={ref}
       aria-label={isOpen ? "Close menu" : "Open menu"}
       onClick={toggle}
-      className="fixed right-4 top-4 z-[100001] md:hidden p-2 text-primary"
+      className="md:hidden p-2 ml-4 text-primary-60 relative z-[1001]"
     >
       <span className="relative block w-6 h-6">
         <Motion.span

@@ -136,13 +136,13 @@ const Header = () => {
                         <div className="flex items-end mt-1">
                             <div className="flex items-center gap-4">
                                 <LanguageSwitcher />
+                                <MenuToggle
+                                    ref={toggleRef}
+                                    isOpen={toggleMenu}
+                                    toggle={() => setToggleMenu((prev) => !prev)}
+                                />
                                 <Link to={"/contact"} className="btn-primary-header hidden md:inline-flex">{t('nav.contact')}</Link>
                             </div>
-                            <MenuToggle
-                                ref={toggleRef}
-                                isOpen={toggleMenu}
-                                toggle={() => setToggleMenu((prev) => !prev)}
-                            />
                         </div>
                     </div>
 
