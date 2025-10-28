@@ -2,17 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import "./projects.scss";
-import { project01, project02, project03, project04, project05, project06, noImage} from "../../../constants/assets";
+import { project01, project02, project03, project04, project05, project06 } from "../../../constants/assets";
 
 const projects = [
-  { id: 1, title: "act responsable", category: "Illustration", img: project01, link: "#" },
-  { id: 2, title: "Biobloom AI", category: "Web Development", img: project02, link: "#" },
-  { id: 3, title: "Bichinhos Ousados", category: "Design UX/UI", img: project03, link: "https://bichinhosousados.com" },
-  { id: 4, title: "Lévi", category: "Branding", img: project04, link: "#" },
-  { id: 5, title: "lucky Block", category: "Game Design", img: project05, link: "#" },
-  { id: 6, title: "Saas Book", category: "Web Development", img: project06, link: "https://saas-ebook-seven.vercel.app/" },
-  { id: 7, title: "Admin Dashboard", category: "Registration System", img: noImage, link: "#" },
-  { id: 8, title: "API’s", category: "API Systems", img: noImage, link: "#" },
+  { id: 1, title: "WealthComplex Invest", category: "Automated investing", img: project01, link: "https://www.wealthcomplex.com/en-ca/invest" },
+  { id: 2, title: "WealthComplex Cash", category: "Save & spend", img: project02, link: "https://www.wealthcomplex.com/en-ca/cash" },
+  { id: 3, title: "WealthComplex Tax", category: "File for free", img: project03, link: "https://www.wealthcomplex.com/en-ca/tax" },
+  { id: 4, title: "WealthComplex Crypto", category: "Regulated trading", img: project04, link: "https://www.wealthcomplex.com/en-ca/crypto" },
+  { id: 5, title: "Private Credit", category: "Alternative investments", img: project05, link: "https://www.wealthcomplex.com/en-ca/private-credit" },
+  { id: 6, title: "Stories & Magazine", category: "Money inspiration", img: project06, link: "https://www.wealthcomplex.com/en-ca/magazine" },
 ];
 
 const Projects = () => {

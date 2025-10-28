@@ -74,9 +74,9 @@ const MobileNavbar = React.forwardRef(({ setToggleMenu }, ref) => {
                             {t('nav.contact')}
                         </Link>
                         <div className="mt-10 flex flex-col gap-3 text-primary text-sm">
-                            <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer">GitHub</a>
-                            <a href="https://www.instagram.com/matheus.duarteg/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                            <a href="https://www.linkedin.com/in/matheusduartegoncalves/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="https://www.wealthcomplex.com/en-ca/magazine" target="_blank" rel="noopener noreferrer">Stories</a>
+                            <a href="https://www.linkedin.com/company/wealthcomplex/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="https://x.com/wealthcomplex" target="_blank" rel="noopener noreferrer">X</a>
                         </div>
                     </nav>
                 )}

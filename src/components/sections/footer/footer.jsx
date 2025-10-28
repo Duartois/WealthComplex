@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { ChevronUp, Github, Linkedin, Instagram } from "lucide-react";
+import { ChevronUp, Linkedin, Instagram, Twitter } from "lucide-react";
 import "./footer.scss";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Esquerda */}
         <div className="space-y-6 max-w-md">
           <p className="text-sm uppercase tracking-widest text-gray-80">
-            © {new Date().getFullYear()} Matheus Duarte
+            © {new Date().getFullYear()} WealthComplex Technologies Inc.
           </p>
           <p className="text-md text-gray-90 leading-relaxed">
             {t('footer.description')}
@@ -24,14 +24,14 @@ const Footer = () => {
 
           {/* Socials */}
           <div className="flex gap-6 items-center pt-2">
-            <a href="https://github.com/Duartois" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
-              <Github size={22} />
-            </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/wealthcomplex/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WealthComplex on LinkedIn">
               <Linkedin size={22} />
             </a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+            <a href="https://www.instagram.com/wealthcomplex/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WealthComplex on Instagram">
               <Instagram size={22} />
+            </a>
+            <a href="https://x.com/wealthcomplex" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WealthComplex on X">
+              <Twitter size={22} />
             </a>
           </div>
         </div>

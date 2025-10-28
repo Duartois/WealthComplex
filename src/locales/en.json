@@ -1,229 +1,226 @@
 {
   "nav": {
-    "about": "About",
+    "about": "Why WealthComplex",
     "home": "Home",
-    "skills": "Skills",
-    "services": "Services",
-    "projects": "Resources",
-    "contact": "Contact",
+    "skills": "Features",
+    "services": "Products",
+    "projects": "Stories",
+    "contact": "Support",
     "back": "Back"
   },
   "language": {
     "en": "English",
-    "pt": "Portuguese"
+    "pt": "English"
   },
   "common": {
-    "learnMoreAboutWork": "Learn more about my work"
+    "learnMoreAboutWork": "Explore all products"
   },
   "hero": {
-    "presents": "Duartois Presents",
-    "headline": "Bringing ideas to life, frame by frame",
-    "iam": "I am",
+    "presents": "WealthComplex",
+    "headline": "Money, simplified.",
+    "iam": "Get started with",
     "words": [
-      "Front-End Developer",
-      "Back-End Developer",
-      "Full-Stack Developer",
-      "Web Developer",
-      "Creative Developer",
-      "UI/UX Developer"
+      "WealthComplex Invest",
+      "WealthComplex Cash",
+      "WealthComplex Tax",
+      "WealthComplex Crypto"
     ],
-    "description": "Whether for a business or a growing personal brand, I deliver high-impact results using technologies trusted by companies like Netflix, Shopify, Airbnb, and Google — global leaders in innovation and user experience.",
-    "contact": "Contact",
-    "footnote": "Always open to exciting opportunities and collaborations."
+    "description": "Invest, save, spend, and file taxes with a single intuitive app. Enjoy low fees, smart automated portfolios, and real human advice whenever you need it.",
+    "contact": "Get started",
+    "footnote": "Join over 3 million Canadians growing their money with WealthComplex."
   },
   "aboutDropdown": {
-    "stackTitle": "Core Stack",
+    "stackTitle": "Products",
     "stack": [
-      "JavaScript (ESNext)",
-      "React + Tailwind CSS",
-      "Three.js / WebGL for 3D",
-      "Node.js + Express",
-      "Stripe & Payment APIs"
+      "WealthComplex Invest",
+      "WealthComplex Cash",
+      "WealthComplex Tax",
+      "WealthComplex Crypto",
+      "WealthComplex Private Credit"
     ],
-    "profileTitle": "Profile",
+    "profileTitle": "Why people choose us",
     "profile": [
-      "Full-stack developer focused on results",
-      "Specialist in visual and interactive interfaces",
-      "Experience with global clients and remote projects"
+      "Built for Canadians with guidance from real advisors",
+      "Low-fee portfolios designed by a team of experts",
+      "CIPF-protected accounts and bank-level security"
     ],
-    "missionTitle": "Deliverables",
+    "missionTitle": "What you get",
     "mission": [
-      "Fast, scalable, and secure websites and apps",
-      "Integrations that drive conversions",
-      "Experiences that make your brand stand out online"
+      "Automated investing with personalized portfolios",
+      "Save and spend with up to 5% interest and instant transfers",
+      "Crypto trading with regulated custody and transparent pricing"
     ]
   },
   "servicesDropdown": {
-    "frontendTitle": "Frontend",
+    "frontendTitle": "Invest",
     "frontend": [
-      "Modern UI with React + Tailwind",
-      "Smooth animations with Framer Motion",
-      "Immersive experiences with Three.js / WebGL",
-      "Responsive design for any device"
+      "Personalized portfolios built by experts",
+      "Automatic rebalancing and dividend reinvestment",
+      "Responsible, halal, and private credit options",
+      "Advice from real humans when you need it"
     ],
-    "backendTitle": "Backend",
+    "backendTitle": "Save & spend",
     "backend": [
-      "Scalable APIs with Node.js + Express",
-      "MongoDB / Mongoose databases",
-      "Payment integrations with Stripe",
-      "Advanced authentication and security"
+      "Earn 5% interest on your cash",
+      "No account minimums or monthly fees",
+      "Instant deposits and free Interac e-Transfers",
+      "Spend anywhere with a sleek metal card"
     ],
-    "infraTitle": "Infrastructure & Delivery",
+    "infraTitle": "Tax & crypto",
     "infra": [
-      "Optimized deployment on Vercel / Render",
-      "Secure storage with AWS S3",
-      "Custom admin dashboards",
-      "Integration with external services"
+      "File your taxes in minutes for free",
+      "Import your investment slips automatically",
+      "Trade crypto with regulated custody",
+      "Clear, transparent pricing on every trade"
     ],
     "new": "New"
   },
   "resourcesDropdown": {
-    "projectsTitle": "Projects",
+    "projectsTitle": "Stories",
     "projects": [
-      "Interactive React portfolio",
-      "Dashboard with S3 upload",
-      "Custom CMS system",
-      "E-commerce with integrated Stripe"
+      "Money Diaries",
+      "Investing Master Class",
+      "Market updates",
+      "Client success stories"
     ],
-    "experimentsTitle": "Experiments",
+    "experimentsTitle": "Guides",
     "experiments": [
-      "Hello Monday-style preloader",
-      "Cropper.js with dynamic mask",
-      "Animated menu with Framer Motion",
-      "Reusable React components"
+      "How to start investing",
+      "Understanding ETFs",
+      "Budgeting for big goals",
+      "Planning for retirement"
     ],
-    "comingTitle": "Coming Soon",
+    "comingTitle": "Updates",
     "coming": [
-      "Apple Store clone",
-      "Custom Stripe checkout",
-      "3D WebGL landing page",
-      "Simple SaaS scheduling tool"
+      "New product releases",
+      "Rate announcements",
+      "Feature deep dives",
+      "Insights from our experts"
     ],
     "new": "New"
   },
   "services": {
-    "subtitle": "Get in touch",
-    "title": "Feels kind of alive, right?",
-    "description": "Dynamic interfaces that respond, adapt, and evolve in real time — redefining the web and making it more interactive and engaging.",
-    "ctaPrimary": "Request a free quote",
-    "ctaSecondary": "See my work"
+    "subtitle": "Products",
+    "title": "Do more with your money",
+    "description": "Automate your investments, earn industry-leading cash rates, file your taxes, and trade crypto — all inside Canada’s most-loved money app.",
+    "ctaPrimary": "Open an account",
+    "ctaSecondary": "See how it works"
   },
   "about": {
     "title": {
-      "part1": "Digital products",
-      "part2": "that deliver results"
+      "part1": "A modern financial app",
+      "part2": "built for every Canadian"
     },
-    "lead": "Full-stack developer specialized in creating engaging interfaces and robust systems — blending design, performance, and clean code. From concept to delivery, leveraging modern technologies like React, Tailwind, Three.js, Node.js, and Stripe to turn ideas into impactful digital experiences.",
-    "cta": "Start a conversation",
-    "image_alt": "Developer working intently on a project",
+    "lead": "WealthComplex gives everyone powerful tools to invest, save, spend, and grow their money with confidence. Start with as little as $1 and get a portfolio designed by experts who keep your goals on track.",
+    "cta": "See why people trust us",
+    "image_alt": "People using the WealthComplex app",
     "sections": [
       {
-        "headline": "From start to launch",
-        "text": "From initial design to final implementation, every step ensures consistency, quality, and alignment with your project goals."
+        "headline": "Investing on autopilot",
+        "text": "Personalized portfolios with automatic rebalancing, dividend reinvestment, and tax-efficient strategies built for Canadian investors."
       },
       {
-        "headline": "Up-to-date stack",
-        "text": "React, Tailwind, Three.js, Node.js, APIs, Stripe, and MongoDB — applied to deliver complete and scalable solutions."
+        "headline": "Cash that works harder",
+        "text": "Earn up to 5% interest, send and receive money instantly, and pay anywhere with a sleek metal card that gives you cashback."
       },
       {
-        "headline": "Delivery that builds trust",
-        "text": "Deadlines met, clear communication, and results that go beyond expectations."
+        "headline": "Guidance from real humans",
+        "text": "Talk to real portfolio managers, planners, and tax experts who are on your side whenever you need support."
       }
     ]
   },
   "skills": {
     "title": {
-      "part1": "Tools that shape",
-      "part2": "my development flow"
+      "part1": "Everything you need",
+      "part2": "to build wealth"
     },
-    "description": "Every line of code is powered by tools that enhance performance, reliability, and design precision.",
-    "viewProjects": "View Projects",
+    "description": "Our technology pairs effortless automation with trusted advice so you can reach every money goal without the guesswork.",
+    "viewProjects": "Explore plans",
     "items": [
       {
-        "title": "Frontend",
-        "tag": "User Interface",
+        "title": "Automated investing",
+        "tag": "WealthComplex Invest",
         "theme": "light",
         "stack": [
-          "React.js",
-          "Tailwind CSS",
-          "Framer Motion",
-          "TypeScript"
+          "Customized portfolios for your goals",
+          "Automatic rebalancing",
+          "Dividend reinvestment",
+          "Socially responsible options"
         ]
       },
       {
-        "title": "Backend / API",
-        "tag": "Server Logic",
+        "title": "Save & spend",
+        "tag": "WealthComplex Cash",
         "theme": "dark",
         "stack": [
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "JWT",
-          "REST"
+          "Earn 5% interest on cash",
+          "Instant transfers",
+          "Sleek cash card",
+          "No monthly fees"
         ]
       },
       {
-        "title": "Visuals & 3D",
-        "tag": "Creative Technology",
+        "title": "File taxes fast",
+        "tag": "WealthComplex Tax",
         "theme": "light",
         "stack": [
-          "Three.js",
-          "GLSL",
-          "Shaders",
-          "Video Fallback"
+          "File in minutes for free",
+          "Auto-import your data",
+          "TurboTax transfer",
+          "Audit protection"
         ]
       },
       {
-        "title": "Dev Tools",
-        "tag": "Workflow",
+        "title": "Crypto made clear",
+        "tag": "WealthComplex Crypto",
         "theme": "dark",
         "stack": [
-          "Git",
-          "Zod",
-          "React Hook Form",
-          "AWS S3"
+          "Canada’s first regulated crypto platform",
+          "Dozens of coins",
+          "Cold storage with Coincover",
+          "Transparent fees"
         ]
       }
     ]
   },
   "projects": {
-    "title": "PROJECTS"
+    "title": "OUR PRODUCTS"
   },
   "cta": {
-    "title": "Turn your idea into reality",
-    "description": "Tailored solutions, refined design, and flawless execution to make your brand stand out in the digital world.",
-    "button": "Start now"
+    "title": "Start building your future",
+    "description": "Join the millions of people who trust WealthComplex to invest, save, spend, and grow their money the simple way.",
+    "button": "Get started"
   },
   "footer": {
-    "description": "Creative web experiences driven by clean code, bold design, and a passion for technology.",
+    "description": "WealthComplex is Canada’s leading digital financial company, helping millions invest, save, spend, and grow their money with confidence.",
     "scrollTop": "Back to top"
   },
   "contact": {
-    "title": "Ready to boost your next project?",
-    "description": "Fill out the form and get a personalized proposal within 24 hours. Prefer to chat now?",
+    "title": "Ready to do more with your money?",
+    "description": "Share a few details and a WealthComplex specialist will reach out with guidance tailored to your goals.",
     "labels": {
       "name": "Full name",
-      "email": "E-mail",
+      "email": "Email",
       "phone": "Phone",
-      "company": "Company name (optional)",
-      "service": "Desired service",
-      "budget": "Estimated budget",
-      "description": "Project description",
+      "company": "Company or household (optional)",
+      "service": "Interested product",
+      "budget": "Estimated assets or savings",
+      "description": "How can we help?",
       "serviceOptions": {
-        "default": "Select a service",
-        "website": "Institutional website",
-        "ecommerce": "Online store (E-commerce)",
-        "branding": "Visual identity (Branding)",
-        "uxui": "UX/UI",
-        "backend": "Backend (API)",
-        "other": "Other project"
+        "default": "Select a product",
+        "website": "WealthComplex Invest",
+        "ecommerce": "WealthComplex Cash",
+        "branding": "WealthComplex Tax",
+        "uxui": "WealthComplex Crypto",
+        "backend": "Private credit",
+        "other": "Something else"
       }
     },
     "button": {
       "sending": "Sending...",
-      "send": "Send"
+      "send": "Submit"
     },
-    "success": "Message received! I'll get back to you shortly.",
+    "success": "Thanks! A WealthComplex specialist will be in touch soon.",
     "errors": {
       "required": "Please fill in all fields.",
       "submit": "Something went wrong. Please try again later."
