@@ -93,12 +93,12 @@ const Contact = () => {
       return;
     }
     const serviceMap = {
-      Website: t('contact.labels.serviceOptions.website'),
-      'E-commerce': t('contact.labels.serviceOptions.ecommerce'),
-      Branding: t('contact.labels.serviceOptions.branding'),
-      UXUI: t('contact.labels.serviceOptions.uxui'),
-      Backend: t('contact.labels.serviceOptions.backend'),
-      Outro: t('contact.labels.serviceOptions.other'),
+      Invest: t('contact.labels.serviceOptions.website'),
+      Cash: t('contact.labels.serviceOptions.ecommerce'),
+      Tax: t('contact.labels.serviceOptions.branding'),
+      Crypto: t('contact.labels.serviceOptions.uxui'),
+      'Private Credit': t('contact.labels.serviceOptions.backend'),
+      Other: t('contact.labels.serviceOptions.other'),
     };
     const serviceLabel = serviceMap[form.service] || form.service;
 
@@ -187,16 +187,16 @@ const Contact = () => {
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-white" />
                 <a
-                  href="mailto:matheusduartegon@gmail.com"
+                  href="mailto:support@wealthcomplex.com"
                   className="hover-white-underline-animation"
                 >
-                  matheusduartegon@gmail.com
+                  support@wealthcomplex.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-white" />
-                <a href="tel:+5511958060256" className="hover-white-underline-animation">
-                  +55 (11) 95806-0256
+                <a href="tel:1-855-255-9038" className="hover-white-underline-animation">
+                  1-855-255-9038
                 </a>
               </li>
             </ul>
@@ -296,22 +296,22 @@ const Contact = () => {
                   <option className="text-secondary" value="" disabled hidden>
                     {t('contact.labels.serviceOptions.default')}
                   </option>
-                  <option className="text-primary" value="Website">
+                  <option className="text-primary" value="Invest">
                     {t('contact.labels.serviceOptions.website')}
                   </option>
-                  <option className="text-primary" value="E-commerce">
+                  <option className="text-primary" value="Cash">
                     {t('contact.labels.serviceOptions.ecommerce')}
                   </option>
-                  <option className="text-primary" value="Branding">
+                  <option className="text-primary" value="Tax">
                     {t('contact.labels.serviceOptions.branding')}
                   </option>
-                  <option className="text-primary" value="UXUI">
+                  <option className="text-primary" value="Crypto">
                     {t('contact.labels.serviceOptions.uxui')}
                   </option>
-                  <option className="text-primary" value="Backend">
+                  <option className="text-primary" value="Private Credit">
                     {t('contact.labels.serviceOptions.backend')}
                   </option>
-                  <option className="text-primary" value="Outro">
+                  <option className="text-primary" value="Other">
                     {t('contact.labels.serviceOptions.other')}
                   </option>
                 </select>

@@ -100,7 +100,7 @@ const Header = () => {
                     <div className="container h-full flex items-center justify-between py-2 md:py-4">
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-y-2 md:gap-x-8 mt-2">
                             <Link to="/">
-                                <img src={logo} alt="Matheus Duarte Logo" className="h-8 w-auto object-contain" />
+                                <img src={logo} alt="WealthComplex logo" className="h-8 w-auto object-contain" />
                             </Link>
 
                             {/* Desktop Nav */}

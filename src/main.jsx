@@ -64,16 +64,13 @@ if (import.meta.env.DEV) {
         /._______,|__________,'⣆
         '--.____,'|_________,-'
    ||                                              ||      
-   ||   Hey there, curious one!                    ||      
-   ||                                              ||      
-   ||   You're probably wondering how cool         ||      
-   ||   this site is.                              ||      
-   ||   Bart is guarding the secrets of            || 
-   ||   the source.                                || 
-   ||                                              ||      
-   ||   🔍 Want to unveil the code?               ||      
-   ||   Feel free to check it out!                 ||      
-   ||   👉 https://github.com/Duartois            ||      
+   ||   Hey there, curious one!                    ||
+   ||                                              ||
+   ||   WealthComplex keeps money simple            ||
+   ||   with smart tools and human advice.         ||
+   ||                                              ||
+   ||   🔍 Explore our products:                  ||
+   ||   👉 https://www.wealthcomplex.com/          ||
    ||______________________________________________||
 `);
 }
