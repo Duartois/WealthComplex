@@ -48,7 +48,7 @@ const Hero = () => {
             variants={rightSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center md:items-start md:text-left text-balance bottom-4 lg:top-20 h-auto lg:w-full"
+            className="relative flex flex-col items-center text-center md:items-start md:text-left text-balance bottom-4 lg:top-20 h-auto lg:w-full hero-right"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -60,13 +60,13 @@ const Hero = () => {
             className="absolute right-0 hidden w-16 -translate-y-full lg:block"
           /> */}
             <div className="flex flex-col">
-              <p className="uppercase text-md font-normal text-secondary-50">
+              <p className="uppercase text-md font-normal text-secondary-50 hero-right-subtitle">
                 {t('hero.presents')}
               </p>
-              <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">
+              <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50 hero-right-title">
                  {t('hero.headline')}
               </h1>
-              <p className="text-hero-description text-balance font-normal text-secondary-50 mb-1">
+              <p className="text-hero-description text-balance font-normal text-secondary-50 mb-1 hero-right-description">
                 {t('hero.description')}
               </p>
             </div>

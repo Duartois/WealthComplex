@@ -476,6 +476,20 @@ img {
     position: relative;
 }
 
+@media (min-width: 1024px) {
+    .hero-right .hero-right-subtitle {
+        font-size: clamp(1rem, 0.45vw + 0.95rem, 1.35rem);
+    }
+
+    .hero-right .hero-right-title {
+        font-size: clamp(3.75rem, 3.5vw + 2.8rem, 6.5rem);
+    }
+
+    .hero-right .hero-right-description {
+        font-size: clamp(1.125rem, 0.5vw + 1rem, 1.5rem);
+    }
+}
+
 .services-section {
     z-index: 10;
     background-color: #E4E8F1;
