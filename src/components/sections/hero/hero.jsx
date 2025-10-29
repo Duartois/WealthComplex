@@ -1,7 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion as Motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
-import { Send } from "lucide-react";
 import { heroImageWebp } from "../../../constants/assets.js";
 import { leftSideVariants, rightSideVariants } from "../../../constants/motion.js";
 import { useResize } from "../../../hook/use-resize.jsx";
@@ -50,7 +48,7 @@ const Hero = () => {
             variants={rightSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center text-balance bottom-4 lg:top-20 h-auto lg:w-[80%] lg:items-start lg:text-start"
+            className="relative flex flex-col items-center text-center text-balance bottom-4 lg:top-20 h-auto lg:w-full lg:text-start"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -68,35 +66,14 @@ const Hero = () => {
               <h1 className="text-h1 text-wrap my-1 font-Supabold text-secondary-50">
                  {t('hero.headline')}
               </h1>
-              <h2 className="text-h4 text-secondary-50 mb-2">
-                {t('hero.iam')} {" "}
-                <span className="text-secondary-50 text-h4 typewriter-wrapper">
-                  <Typewriter
-                    cursor
-                    cursorBlinking
-                    delaySpeed={1300}
-                    deleteSpeed={25}
-                    typeSpeed={80}
-                    loop={0}
-                    words={words}
-                  />
-                </span>
-              </h2>
-
               <p className="text-hero-description text-balance font-normal text-secondary-50 mb-1">
                 {t('hero.description')}
               </p>
             </div>
-            <div className="flex flex-col gap-y-4 items-center md:flex-row sm:justify-between gap-x-4 pt-4">
-              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')} <Send /></Link>
-              <Link
-                to={"/learn-more"}
-                className="btn-primary-white font-bold min-w-[165.27px] justify-center"
-              >
-                {t('common.learnMoreAboutWork')}
-              </Link>
+            <div className="flex flex-col gap-y-4 items-start gap-x-4 pt-4">
+              <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')}</Link>
             </div>
-            <p className="text-extra-sm  text-balance font-normal text-secondary mt-8">
+            <p className="text-extra-sm text-balance font-normal text-secondary mt-8">
              {t('hero.footnote')}
             </p>
             {/* <motion.img
@@ -115,7 +92,7 @@ const Hero = () => {
             variants={leftSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex justify-center w-1/2"
+            className="relative flex justify-center w-full"
           >
             {/* Placeholder de vídeo ou imagem */}
             <div className="relative w-full flex justify-center items-center">

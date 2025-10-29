@@ -1,6 +1,6 @@
 {
   "nav": {
-    "about": "Why WealthComplex",
+    "about": "What we offer",
     "home": "Home",
     "skills": "Features",
     "services": "Products",
@@ -16,18 +16,11 @@
     "learnMoreAboutWork": "Explore all products"
   },
   "hero": {
-    "presents": "WealthComplex",
-    "headline": "Money, simplified.",
-    "iam": "Get started with",
-    "words": [
-      "WealthComplex Invest",
-      "WealthComplex Cash",
-      "WealthComplex Tax",
-      "WealthComplex Crypto"
-    ],
-    "description": "Invest, save, spend, and file taxes with a single intuitive app. Enjoy low fees, smart automated portfolios, and real human advice whenever you need it.",
-    "contact": "Get started",
-    "footnote": "Join over 3 million Canadians growing their money with WealthComplex."
+    "presents": "WealthComplex presents",
+    "headline": "Better than your bank",
+    "description": "Get the most out of your money with smart investing products and dedicated financial planning and advice services to build long-term wealth.",
+    "footnote": "Join over 3 million Canadians growing their money with WealthComplex.",
+    "contact": "Get started"
   },
   "aboutDropdown": {
     "stackTitle": "Products",
