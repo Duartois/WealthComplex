@@ -48,7 +48,7 @@ const Hero = () => {
             variants={rightSideVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex flex-col items-center text-center text-balance bottom-4 lg:top-20 h-auto lg:w-full lg:text-start"
+            className="relative flex flex-col items-center text-center md:items-start md:text-left text-balance bottom-4 lg:top-20 h-auto lg:w-full"
           >
             {/* <motion.img
             variants={leftSideVariants}
@@ -70,10 +70,10 @@ const Hero = () => {
                 {t('hero.description')}
               </p>
             </div>
-            <div className="flex flex-col gap-y-4 items-start gap-x-4 pt-4">
+            <div className="flex flex-col gap-y-4 items-center md:items-start gap-x-4 pt-4">
               <Link to={"/contact"} className="btn-primary font-bold min-w-[165.27px] justify-center">{t('hero.contact')}</Link>
             </div>
-            <p className="text-extra-sm text-balance font-normal text-secondary mt-8">
+            <p className="text-extra-sm text-balance font-normal text-secondary mt-8 md:self-start md:text-left">
              {t('hero.footnote')}
             </p>
             {/* <motion.img
