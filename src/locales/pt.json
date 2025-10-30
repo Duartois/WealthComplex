@@ -1,29 +1,29 @@
 {
   "nav": {
     "about": "O que oferecemos",
-    "home": "Home",
-    "skills": "Features",
-    "services": "Products",
-    "projects": "Stories",
-    "contact": "Support",
-    "back": "Back"
+    "home": "Início",
+    "skills": "Recursos",
+    "services": "Produtos",
+    "projects": "Histórias",
+    "contact": "Suporte",
+    "back": "Voltar"
   },
   "language": {
-    "en": "English",
-    "pt": "English"
+    "en": "Inglês",
+    "pt": "Português (Brasil)"
   },
   "common": {
-    "learnMoreAboutWork": "Explore all products"
+    "learnMoreAboutWork": "Explore todos os produtos"
   },
   "hero": {
-    "presents": "WealthComplex presents",
-    "headline": "Better than your bank",
-    "description": "Get the most out of your money with smart investing products and dedicated financial planning and advice services to build long-term wealth.",
-    "footnote": "Join over 3 million Canadians growing their money with WealthComplex.",
-    "contact": "Get started"
+    "presents": "WealthComplex apresenta",
+    "headline": "Melhor que o seu banco",
+    "description": "Tire o máximo do seu dinheiro com produtos de investimento inteligentes e serviços dedicados de planejamento financeiro e consultoria para construir patrimônio a longo prazo.",
+    "footnote": "Junte-se a mais de 3 milhões de canadenses que fazem seu dinheiro crescer com a WealthComplex.",
+    "contact": "Comece agora"
   },
   "aboutDropdown": {
-    "stackTitle": "Products",
+    "stackTitle": "Produtos",
     "stack": [
       "WealthComplex Invest",
       "WealthComplex Cash",
@@ -31,191 +31,191 @@
       "WealthComplex Crypto",
       "WealthComplex Private Credit"
     ],
-    "profileTitle": "Why people choose us",
+    "profileTitle": "Por que as pessoas nos escolhem",
     "profile": [
-      "Built for Canadians with guidance from real advisors",
-      "Low-fee portfolios designed by a team of experts",
-      "CIPF-protected accounts and bank-level security"
+      "Feito para canadenses com orientação de consultores reais",
+      "Portfólios com baixas taxas, criados por uma equipe de especialistas",
+      "Contas protegidas pelo CIPF e segurança de nível bancário"
     ],
-    "missionTitle": "What you get",
+    "missionTitle": "O que você recebe",
     "mission": [
-      "Automated investing with personalized portfolios",
-      "Save and spend with up to 5% interest and instant transfers",
-      "Crypto trading with regulated custody and transparent pricing"
+      "Investimentos automatizados com portfólios personalizados",
+      "Economize e gaste com até 5% de juros e transferências instantâneas",
+      "Negociação de cripto com custódia regulada e preços transparentes"
     ]
   },
   "servicesDropdown": {
-    "frontendTitle": "Invest",
+    "frontendTitle": "Investir",
     "frontend": [
-      "Personalized portfolios built by experts",
-      "Automatic rebalancing and dividend reinvestment",
-      "Responsible, halal, and private credit options",
-      "Advice from real humans when you need it"
+      "Portfólios personalizados criados por especialistas",
+      "Rebalanceamento automático e reinvestimento de dividendos",
+      "Opções responsáveis, halal e de crédito privado",
+      "Orientação de pessoas de verdade quando você precisar"
     ],
-    "backendTitle": "Save & spend",
+    "backendTitle": "Poupar e gastar",
     "backend": [
-      "Earn 5% interest on your cash",
-      "No account minimums or monthly fees",
-      "Instant deposits and free Interac e-Transfers",
-      "Spend anywhere with a sleek metal card"
+      "Ganhe 5% de juros sobre seu dinheiro",
+      "Sem depósito mínimo ou tarifas mensais",
+      "Depósitos instantâneos e transferências Interac gratuitas",
+      "Gaste em qualquer lugar com um cartão metálico elegante"
     ],
-    "infraTitle": "Tax & crypto",
+    "infraTitle": "Imposto e cripto",
     "infra": [
-      "File your taxes in minutes for free",
-      "Import your investment slips automatically",
-      "Trade crypto with regulated custody",
-      "Clear, transparent pricing on every trade"
+      "Declare seus impostos em minutos e de graça",
+      "Importe seus comprovantes de investimento automaticamente",
+      "Negocie cripto com custódia regulada",
+      "Preços claros e transparentes em cada negociação"
     ],
-    "new": "New"
+    "new": "Novo"
   },
   "resourcesDropdown": {
-    "projectsTitle": "Stories",
+    "projectsTitle": "Histórias",
     "projects": [
-      "Money Diaries",
-      "Investing Master Class",
-      "Market updates",
-      "Client success stories"
+      "Diários Financeiros",
+      "Master Class de Investimentos",
+      "Atualizações de mercado",
+      "Histórias de sucesso de clientes"
     ],
-    "experimentsTitle": "Guides",
+    "experimentsTitle": "Guias",
     "experiments": [
-      "How to start investing",
-      "Understanding ETFs",
-      "Budgeting for big goals",
-      "Planning for retirement"
+      "Como começar a investir",
+      "Entendendo ETFs",
+      "Orçamento para grandes objetivos",
+      "Planejando a aposentadoria"
     ],
-    "comingTitle": "Updates",
+    "comingTitle": "Novidades",
     "coming": [
-      "New product releases",
-      "Rate announcements",
-      "Feature deep dives",
-      "Insights from our experts"
+      "Lançamentos de novos produtos",
+      "Anúncios de taxas",
+      "Análises profundas de recursos",
+      "Insights dos nossos especialistas"
     ],
-    "new": "New"
+    "new": "Novo"
   },
   "services": {
-    "subtitle": "Chequing",
-    "title": "No monthly fees, all the perks",
-    "description": "Get a minimum 1.5% interest, no monthly fees, and the highest-interest rate for a chequing account in Canada.",
-    "cta": "Get a chequing account"
+    "subtitle": "Conta corrente",
+    "title": "Sem mensalidades, com todos os benefícios",
+    "description": "Receba no mínimo 1,5% de juros, sem tarifas mensais, e a maior taxa de juros para uma conta corrente no Canadá.",
+    "cta": "Abra uma conta corrente"
   },
   "about": {
     "title": {
-      "part1": "A modern financial app",
-      "part2": "built for every Canadian"
+      "part1": "Um app financeiro moderno",
+      "part2": "criado para cada canadense"
     },
-    "lead": "WealthComplex gives everyone powerful tools to invest, save, spend, and grow their money with confidence. Start with as little as $1 and get a portfolio designed by experts who keep your goals on track.",
-    "cta": "See why people trust us",
-    "image_alt": "People using the WealthComplex app",
+    "lead": "A WealthComplex oferece a todos ferramentas poderosas para investir, poupar, gastar e fazer o dinheiro crescer com confiança. Comece com apenas $1 e tenha um portfólio criado por especialistas que mantêm seus objetivos no rumo certo.",
+    "cta": "Veja por que as pessoas confiam em nós",
+    "image_alt": "Pessoas usando o app da WealthComplex",
     "sections": [
       {
-        "headline": "Investing on autopilot",
-        "text": "Personalized portfolios with automatic rebalancing, dividend reinvestment, and tax-efficient strategies built for Canadian investors."
+        "headline": "Investimentos no piloto automático",
+        "text": "Portfólios personalizados com rebalanceamento automático, reinvestimento de dividendos e estratégias eficientes em impostos feitas para investidores canadenses."
       },
       {
-        "headline": "Cash that works harder",
-        "text": "Earn up to 5% interest, send and receive money instantly, and pay anywhere with a sleek metal card that gives you cashback."
+        "headline": "Dinheiro que rende mais",
+        "text": "Ganhe até 5% de juros, envie e receba dinheiro instantaneamente e pague em qualquer lugar com um cartão metálico elegante que dá cashback."
       },
       {
-        "headline": "Guidance from real humans",
-        "text": "Talk to real portfolio managers, planners, and tax experts who are on your side whenever you need support."
+        "headline": "Orientação de pessoas de verdade",
+        "text": "Converse com gestores de portfólio, planejadores e especialistas tributários que estão ao seu lado sempre que precisar de suporte."
       }
     ]
   },
   "skills": {
     "title": {
-      "part1": "Everything you need",
-      "part2": "to build wealth"
+      "part1": "Tudo o que você precisa",
+      "part2": "para construir patrimônio"
     },
-    "description": "Our technology pairs effortless automation with trusted advice so you can reach every money goal without the guesswork.",
-    "viewProjects": "Explore plans",
+    "description": "Nossa tecnologia combina automação sem esforço com orientação confiável para que você alcance cada meta financeira sem adivinhações.",
+    "viewProjects": "Explorar planos",
     "items": [
       {
-        "title": "Automated investing",
+        "title": "Investimento automatizado",
         "tag": "WealthComplex Invest",
         "theme": "light",
         "stack": [
-          "Customized portfolios for your goals",
-          "Automatic rebalancing",
-          "Dividend reinvestment",
-          "Socially responsible options"
+          "Portfólios personalizados para seus objetivos",
+          "Rebalanceamento automático",
+          "Reinvestimento de dividendos",
+          "Opções socialmente responsáveis"
         ]
       },
       {
-        "title": "Save & spend",
+        "title": "Poupar e gastar",
         "tag": "WealthComplex Cash",
         "theme": "dark",
         "stack": [
-          "Earn 5% interest on cash",
-          "Instant transfers",
-          "Sleek cash card",
-          "No monthly fees"
+          "Ganhe 5% de juros em dinheiro",
+          "Transferências instantâneas",
+          "Cartão cash elegante",
+          "Sem tarifas mensais"
         ]
       },
       {
-        "title": "File taxes fast",
+        "title": "Declare impostos rápido",
         "tag": "WealthComplex Tax",
         "theme": "light",
         "stack": [
-          "File in minutes for free",
-          "Auto-import your data",
-          "TurboTax transfer",
-          "Audit protection"
+          "Declare em minutos e de graça",
+          "Importe seus dados automaticamente",
+          "Transferência para o TurboTax",
+          "Proteção contra auditoria"
         ]
       },
       {
-        "title": "Crypto made clear",
+        "title": "Cripto descomplicado",
         "tag": "WealthComplex Crypto",
         "theme": "dark",
         "stack": [
-          "Canada’s first regulated crypto platform",
-          "Dozens of coins",
-          "Cold storage with Coincover",
-          "Transparent fees"
+          "Primeira plataforma de cripto regulada do Canadá",
+          "Dezenas de moedas",
+          "Armazenamento a frio com a Coincover",
+          "Tarifas transparentes"
         ]
       }
     ]
   },
   "projects": {
-    "title": "OUR PRODUCTS"
+    "title": "NOSSOS PRODUTOS"
   },
   "cta": {
-    "title": "Start building your future",
-    "description": "Join the millions of people who trust WealthComplex to invest, save, spend, and grow their money the simple way.",
-    "button": "Get started"
+    "title": "Comece a construir o seu futuro",
+    "description": "Junte-se às milhões de pessoas que confiam na WealthComplex para investir, poupar, gastar e fazer o dinheiro crescer de forma simples.",
+    "button": "Comece agora"
   },
   "footer": {
-    "description": "WealthComplex is Canada’s leading digital financial company, helping millions invest, save, spend, and grow their money with confidence.",
-    "scrollTop": "Back to top"
+    "description": "A WealthComplex é a principal empresa financeira digital do Canadá, ajudando milhões a investir, poupar, gastar e fazer seu dinheiro crescer com confiança.",
+    "scrollTop": "Voltar ao topo"
   },
   "contact": {
-    "title": "Ready to do more with your money?",
-    "description": "Share a few details and a WealthComplex specialist will reach out with guidance tailored to your goals.",
+    "title": "Pronto para fazer mais com o seu dinheiro?",
+    "description": "Compartilhe alguns detalhes e um especialista da WealthComplex entrará em contato com orientações sob medida para os seus objetivos.",
     "labels": {
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone",
-      "company": "Company or household (optional)",
-      "service": "Interested product",
-      "budget": "Estimated assets or savings",
-      "description": "How can we help?",
+      "name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "company": "Empresa ou residência (opcional)",
+      "service": "Produto de interesse",
+      "budget": "Patrimônio ou economias estimados",
+      "description": "Como podemos ajudar?",
       "serviceOptions": {
-        "default": "Select a product",
+        "default": "Selecione um produto",
         "website": "WealthComplex Invest",
         "ecommerce": "WealthComplex Cash",
         "branding": "WealthComplex Tax",
         "uxui": "WealthComplex Crypto",
-        "backend": "Private credit",
-        "other": "Something else"
+        "backend": "Crédito privado",
+        "other": "Outro"
       }
     },
     "button": {
-      "sending": "Sending...",
-      "send": "Submit"
+      "sending": "Enviando...",
+      "send": "Enviar"
     },
-    "success": "Thanks! A WealthComplex specialist will be in touch soon.",
+    "success": "Obrigado! Um especialista da WealthComplex entrará em contato em breve.",
     "errors": {
-      "required": "Please fill in all fields.",
-      "submit": "Something went wrong. Please try again later."
+      "required": "Preencha todos os campos.",
+      "submit": "Algo deu errado. Tente novamente mais tarde."
     }
   }
 }
