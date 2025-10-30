@@ -1468,6 +1468,7 @@ img {
     padding: 2rem 2rem 0rem 2rem;
     align-self: center;
     z-index: 2;
+    max-width: 700px;
 }
 
 .services-three {
