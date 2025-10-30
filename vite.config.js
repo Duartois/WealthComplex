@@ -1,6 +1,3 @@
-+21
--16
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Critters from 'critters'

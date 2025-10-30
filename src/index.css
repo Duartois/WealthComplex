@@ -3,51 +3,6 @@
 @tailwind components;
 
 
-@layer utilities {
-    .text {
-        &-gray-10 {
-            --tw-text-opacity: 1;
-            color: rgb(244 244 245 / var(--tw-text-opacity));
-        }
-
-        &-gray-50 {
-            --tw-text-opacity: 1;
-            color: rgb(113 113 122 / var(--tw-text-opacity));
-        }
-
-        &-gray-90 {
-            --tw-text-opacity: 1;
-            color: rgb(24 24 27 / var(--tw-text-opacity));
-        }
-
-        &-green-90 {
-            color: #47667b;
-        }
-
-        &-primary {
-            --tw-text-opacity: 1;
-            color: #282A3E;
-        }
-
-        &-primary-50 {
-            --tw-text-opacity: 1;
-            color: #445374;
-        }
-
-        &-secondary,
-        &-secondary-50 {
-            --tw-text-opacity: 1;
-            color: #E4E8F1;
-        }
-    }
-
-    .bg {
-        &-ice {
-            background-color: #E4E8F1;
-        }
-    }
-}
-
 
 @layer base {
     * {
@@ -98,6 +53,47 @@
     .ws-balance {
         text-wrap: balance;
     }
+    .text-gray-10 {
+    --tw-text-opacity: 1;
+    color: rgb(244 244 245 / var(--tw-text-opacity))
+}
+
+.text-gray-50 {
+    --tw-text-opacity: 1;
+    color: rgb(113 113 122 / var(--tw-text-opacity))
+}
+
+.text-gray-90 {
+    --tw-text-opacity: 1;
+    color: rgb(24 24 27 / var(--tw-text-opacity))
+}
+
+.text-green-90 {
+    color: #47667b
+}
+
+.text-primary {
+    --tw-text-opacity: 1;
+    color: #282A3E
+}
+
+.text-primary-50 {
+    --tw-text-opacity: 1;
+    color: #445374
+}
+
+.text-secondary {
+    --tw-text-opacity: 1;
+    color: #E4E8F1;
+}
+
+.text-secondary-50 {
+    color: #E4E8F1;
+}
+
+.bg-ice {
+    background-color: #E4E8F1;
+}
 }
 
 

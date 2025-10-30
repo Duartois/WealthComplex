@@ -1,11 +1,10 @@
 .projects {
   background-color: #fff;
   padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 8vw, 6rem);
-  color: #0f0f0f;
 }
 
 .projects__container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -14,7 +13,7 @@
   grid-template-columns: 1fr;
   gap: clamp(2rem, 5vw, 3rem);
   text-align: center;
-  border-top: 1px solid rgba(15, 15, 15, 0.08);
+  border-top: 2px solid rgba(15, 15, 15, 0.08);
   border-bottom: 1px solid rgba(15, 15, 15, 0.08);
   padding-block: clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -28,20 +27,11 @@
   padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
-.projects__value {
-  margin: 0;
-  font-family: 'Test Tiempos Headline Regular', serif;
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.05;
-  color: #000;
-}
-
 .projects__description {
   margin: 0;
   font-size: clamp(0.95rem, 1.6vw, 1.125rem);
-  color: rgba(15, 15, 15, 0.7);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.6;
   max-width: 28ch;
 }
