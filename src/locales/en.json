@@ -93,11 +93,10 @@
     "new": "New"
   },
   "services": {
-    "subtitle": "Products",
-    "title": "Do more with your money",
-    "description": "Automate your investments, earn industry-leading cash rates, file your taxes, and trade crypto — all inside Canada’s most-loved money app.",
-    "ctaPrimary": "Open an account",
-    "ctaSecondary": "See how it works"
+    "subtitle": "Chequing",
+    "title": "No monthly fees, all the perks",
+    "description": "Get a minimum 1.5% interest, no monthly fees, and the highest-interest rate for a chequing account in Canada.",
+    "cta": "Get a chequing account"
   },
   "about": {
     "title": {

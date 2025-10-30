@@ -29,17 +29,14 @@ const Services = () => {
               </p>
               <div className="flex flex-col items-center md:flex-row gap-4">
                 <Link to="/contact" className="btn-primary">
-                  {t('services.ctaPrimary')}
-                </Link>
-                <Link to="/learn-more" className="btn-secondary-white">
-                  {t('services.ctaSecondary')}
+                  {t('services.cta')}
                 </Link>
               </div>
             </div>
 
             {/* Bloco de mídia (vídeo, LuckyBlock ou imagem) */}
             <div className="services-three flex-1 relative w-full min-h-[500px] overflow-hidden">
-              <div className=" absolute inset-0 scale-100 pointer-events-none z-10">
+              <div className=" absolute inset-0 pointer-events-none z-10">
                 <Suspense fallback={null}>
                   <LuckyBlock />
                 </Suspense>

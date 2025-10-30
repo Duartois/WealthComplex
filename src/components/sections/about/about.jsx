@@ -1,6 +1,6 @@
 import { motion as Motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { aboutAvif, aboutWebp } from "../../../constants/assets";
+import { about } from "../../../constants/assets";
 import { Link } from "react-router-dom";
 import { Send } from "lucide-react";
 
@@ -32,15 +32,11 @@ const About = () => {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <picture>
-              <source srcSet={aboutAvif} type="image/avif" />
-              <source srcSet={aboutWebp} type="image/webp" />
               <img
-                src={aboutWebp}
+                src={about}
                 alt={t("about.image_alt")}
                 className={imageClasses}
               />
-            </picture>
           </Motion.div>
 
           {/* TEXTO */}

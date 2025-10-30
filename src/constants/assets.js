@@ -1,7 +1,6 @@
 import logo from "../assets/svg/logo.svg";
 import home from "../assets/gif/home.gif";
-import aboutAvif from "../assets/about-01.avif";
-import aboutWebp from "../assets/about-01.webp";
+import about from "../assets/about.jpg";
 import project01 from "../assets/project-01.png";
 import project02 from "../assets/project-02.png";
 import project03 from "../assets/project-03.png";
@@ -31,8 +30,7 @@ import heroImageWebp from "../assets/heroImage.webp";
 export {
     logo,
     home,
-    aboutAvif,
-    aboutWebp,
+    about,
     project01,
     project02,
     project03,

@@ -80,11 +80,11 @@ export default function LuckyBlock() {
                 const screenWidth = window.innerWidth;
                 let scale = 1;
                 if (screenWidth > 1280) {
-                    scale = 1.2;
+                    scale = 1;
                 } else if (screenWidth > 1024) {
-                    scale = 1.0;
-                } else if (screenWidth > 768) {
-                    scale = 0.8;
+                    scale = 1;
+                } else if (screenWidth < 768) {
+                    scale = 0.5;
                 }
                 group.scale.set(scale, scale, scale);
             });
