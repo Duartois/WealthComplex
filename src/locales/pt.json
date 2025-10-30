@@ -176,7 +176,21 @@
     ]
   },
   "projects": {
-    "title": "NOSSOS PRODUTOS"
+    "title": "NOSSOS PRODUTOS",
+    "stats": [
+      {
+        "value": "3 milhões+",
+        "description": "Canadenses confiam em nós para cuidar e fazer seu patrimônio crescer"
+      },
+      {
+        "value": "$100+ bilhões",
+        "description": "Em ativos sob administração, crescendo todos os dias"
+      },
+      {
+        "value": "$1 milhão",
+        "description": "Cobertura elegível com o CDIC para conta corrente e com o CIPF para investimentos"
+      }
+    ]
   },
   "cta": {
     "title": "Comece a construir o seu futuro",

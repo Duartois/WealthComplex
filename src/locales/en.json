@@ -176,7 +176,21 @@
     ]
   },
   "projects": {
-    "title": "OUR PRODUCTS"
+    "title": "OUR PRODUCTS",
+    "stats": [
+      {
+        "value": "3 million+",
+        "description": "Canadians trust us to manage and grow their wealth"
+      },
+      {
+        "value": "$100+ billion",
+        "description": "Assets under administration, and growing every single day"
+      },
+      {
+        "value": "$1 million",
+        "description": "Eligible coverage with CDIC for chequing and CIPF for investments"
+      }
+    ]
   },
   "cta": {
     "title": "Start building your future",
