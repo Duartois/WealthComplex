@@ -1,3 +1,5 @@
+import './projects.scss';
+
 const Projects = () => {
   return (
     <section
